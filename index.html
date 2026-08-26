@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NEXORAS GROUPE | Véhicules, Électroménager & Maison</title>
+<title>NEXORAS GROUPE | Automobile & Électroménager</title>
 
-<meta name="description"
-content="NEXORAS GROUPE propose des véhicules modernes, des solutions électroménagères et des équipements maison. Disponibilités et tarifs sur demande.">
-
-<meta name="keywords"
-content="NEXORAS GROUPE, voitures, BYD, Chery, Geely, Deepal, véhicules, électroménager, Bénin, Afrique">
-
-<meta name="author" content="NEXORAS GROUPE">
-
-<meta name="theme-color" content="#080808">
-
-<link rel="icon"
-href="https://cdn-icons-png.flaticon.com/512/741/741407.png">
+<meta name="description" content="NEXORAS GROUPE - Catalogue de véhicules, automobiles premium et appareils électroménagers. Découvrez nos modèles et demandez une offre personnalisée.">
 
 <style>
 
-/* =====================================================
-   RESET
-===================================================== */
+/* =========================================================
+   NEXORAS GROUPE — VERSION PREMIUM
+   ========================================================= */
 
 *{
     margin:0;
@@ -40,882 +26,779 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#080808;
+    background:#070707;
     color:#fff;
     line-height:1.6;
 }
 
-img{
-    max-width:100%;
+a{
+    text-decoration:none;
 }
 
 button,
-input{
-    font-family:inherit;
+input,
+select{
+    font:inherit;
 }
 
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 
-/* =====================================================
+:root{
+    --gold:#d4af37;
+    --gold-light:#f2d675;
+    --black:#070707;
+    --dark:#101010;
+    --card:#151515;
+    --border:#2c2c2c;
+    --muted:#999;
+    --white:#fff;
+}
+
+/* =========================================================
    HEADER
-===================================================== */
+   ========================================================= */
 
 header{
     position:sticky;
     top:0;
-    z-index:1000;
-
-    background:rgba(5,5,5,.97);
-
-    border-bottom:1px solid #b89435;
-
-    padding:17px 6%;
-
+    z-index:9999;
+    background:rgba(5,5,5,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,55,.45);
+    padding:15px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:2px;
-    color:#d4af37;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo span{
+.logo-mark{
+    width:42px;
+    height:42px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-weight:900;
+    font-size:18px;
+    box-shadow:0 0 18px rgba(212,175,55,.18);
+}
+
+.logo-text{
+    line-height:1;
+}
+
+.logo-main{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:var(--gold);
+}
+
+.logo-sub{
+    font-size:9px;
+    letter-spacing:5px;
     color:#fff;
+    margin-top:5px;
 }
 
 nav{
     display:flex;
     align-items:center;
-    flex-wrap:wrap;
+    gap:20px;
 }
 
 nav a{
-    color:#fff;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:14px;
+    color:#eee;
+    font-size:13px;
+    font-weight:bold;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#d4af37;
+    color:var(--gold);
 }
 
-
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+   ========================================================= */
 
 .hero{
-
-    min-height:90vh;
-
+    min-height:88vh;
     display:flex;
     align-items:center;
-
+    position:relative;
+    overflow:hidden;
     padding:80px 7%;
 
-    position:relative;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.66),
-        rgba(0,0,0,.93)
-    ),
+    linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55),rgba(0,0,0,.85)),
     url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=90")
     center/cover;
 }
 
 .hero-content{
-    max-width:820px;
+    max-width:850px;
 }
 
-.badge{
+.hero-badge{
     display:inline-block;
-
-    border:1px solid #d4af37;
-
-    color:#d4af37;
-
     padding:8px 16px;
-
+    border:1px solid var(--gold);
+    color:var(--gold);
     border-radius:30px;
-
     font-size:12px;
-
-    margin-bottom:20px;
-
-    letter-spacing:1.5px;
+    letter-spacing:1px;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(50px,9vw,100px);
-
+    font-size:clamp(48px,9vw,95px);
+    line-height:.9;
     letter-spacing:6px;
-
-    line-height:1;
-
-    color:#d4af37;
+    color:var(--gold);
+    margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:clamp(25px,4vw,40px);
-
-    margin:15px 0;
+    font-size:clamp(24px,4vw,42px);
+    letter-spacing:5px;
+    margin-bottom:20px;
 }
 
 .hero p{
+    max-width:650px;
     color:#ddd;
-
-    font-size:19px;
-
-    max-width:700px;
+    font-size:18px;
 }
 
 .hero-buttons{
-    margin-top:30px;
+    margin-top:32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
 .btn{
     display:inline-block;
-
     padding:14px 24px;
-
     border-radius:5px;
-
-    text-decoration:none;
-
     font-weight:bold;
-
-    margin:5px;
-
-    cursor:pointer;
+    transition:.3s;
 }
 
 .btn-gold{
-    background:#d4af37;
-
+    background:var(--gold);
     color:#111;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    transform:translateY(-3px);
 }
 
 .btn-outline{
-    border:1px solid #d4af37;
-
-    color:#d4af37;
+    border:1px solid var(--gold);
+    color:var(--gold);
 }
 
 .btn-outline:hover{
-    background:#d4af37;
-
+    background:var(--gold);
     color:#111;
 }
 
+/* =========================================================
+   STATS
+   ========================================================= */
 
-/* =====================================================
-   SECTIONS
-===================================================== */
+.stats{
+    background:#0c0c0c;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    text-align:center;
+    padding:28px 15px;
+    border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    color:var(--gold);
+    font-size:28px;
+}
+
+.stat span{
+    color:#aaa;
+    font-size:13px;
+}
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
 
 section{
-    padding:85px 7%;
+    padding:85px 6%;
 }
 
 .section-title{
     text-align:center;
-
     margin-bottom:45px;
 }
 
 .section-title h2{
-    color:#d4af37;
-
+    color:var(--gold);
     font-size:36px;
-
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .section-title p{
-    color:#999;
+    color:var(--muted);
 }
 
+/* =========================================================
+   PROMO BANNERS
+   ========================================================= */
 
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.cards{
+.promo-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
-
-    gap:25px;
-}
-
-.card{
-    background:#141414;
-
-    border:1px solid #292929;
-
-    border-radius:13px;
-
-    padding:32px 22px;
-
-    text-align:center;
-
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-
-    border-color:#d4af37;
-}
-
-.icon{
-    font-size:48px;
-
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#d4af37;
-
-    font-size:21px;
-
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#aaa;
-}
-
-
-/* =====================================================
-   CATALOGUE
-===================================================== */
-
-.products{
-    background:#101010;
-}
-
-
-/* SEARCH */
-
-.catalogue-tools{
-
-    max-width:1000px;
-
-    margin:0 auto 35px;
-
-    display:flex;
-
-    flex-direction:column;
-
+    grid-template-columns:repeat(3,1fr);
     gap:20px;
+    margin-bottom:70px;
 }
 
-.search-box{
-
+.promo{
+    min-height:210px;
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:14px;
     display:flex;
-
-    background:#181818;
-
-    border:1px solid #333;
-
-    border-radius:8px;
-
-    overflow:hidden;
-}
-
-.search-box input{
-
-    width:100%;
-
-    padding:15px;
-
-    background:transparent;
-
-    border:none;
-
-    outline:none;
-
-    color:#fff;
-
-    font-size:15px;
-}
-
-.search-box input::placeholder{
-    color:#777;
-}
-
-
-/* FILTERS */
-
-.filters{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
+    flex-direction:column;
     justify-content:center;
+    overflow:hidden;
+    position:relative;
+}
 
-    gap:10px;
+.promo::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(212,175,55,.08);
+    right:-50px;
+    bottom:-60px;
+}
+
+.promo.gold{
+    background:linear-gradient(135deg,#17130a,#0b0b0b);
+    border-color:rgba(212,175,55,.5);
+}
+
+.promo.dark{
+    background:linear-gradient(135deg,#171717,#0b0b0b);
+}
+
+.promo h3{
+    color:var(--gold);
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.promo p{
+    color:#bbb;
+    max-width:350px;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.catalog-tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:35px;
+    justify-content:center;
+}
+
+.catalog-tools input,
+.catalog-tools select{
+    background:#151515;
+    border:1px solid #333;
+    color:white;
+    padding:13px 16px;
+    border-radius:6px;
+    outline:none;
+    min-width:210px;
+}
+
+.catalog-tools input:focus,
+.catalog-tools select:focus{
+    border-color:var(--gold);
+}
+
+.filter-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:35px;
 }
 
 .filter-btn{
-
-    padding:10px 16px;
-
+    background:#141414;
+    color:#ddd;
+    border:1px solid #333;
+    padding:9px 15px;
     border-radius:30px;
-
-    border:1px solid #444;
-
-    background:#181818;
-
-    color:#ccc;
-
     cursor:pointer;
-
     transition:.3s;
-
-    font-size:13px;
 }
 
 .filter-btn:hover,
 .filter-btn.active{
-
-    background:#d4af37;
-
+    background:var(--gold);
     color:#111;
-
-    border-color:#d4af37;
+    border-color:var(--gold);
 }
 
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
 
-/* PRODUCT GRID */
+.products-section{
+    background:#0c0c0c;
+}
 
 .product-grid{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:28px;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
 }
 
-.product{
-
-    background:#181818;
-
-    border-radius:13px;
-
-    overflow:hidden;
-
+.product-card{
+    background:#151515;
     border:1px solid #292929;
-
-    transition:.3s;
-
-    position:relative;
+    border-radius:13px;
+    overflow:hidden;
+    transition:.35s;
 }
 
-.product:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#d4af37;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.55);
-}
-
-.product.hidden{
-    display:none;
+.product-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
 .product-image{
+    height:220px;
     position:relative;
+    overflow:hidden;
+    background:#111;
 }
 
-.product img{
-
+.product-image img{
     width:100%;
-
-    height:235px;
-
+    height:100%;
     object-fit:cover;
-
     display:block;
-
-    background:#222;
+    transition:.5s;
 }
 
-.product-badge{
+.product-card:hover .product-image img{
+    transform:scale(1.05);
+}
 
+.badge{
     position:absolute;
-
-    top:14px;
-
-    left:14px;
-
-    background:#d4af37;
-
-    color:#111;
-
+    top:13px;
+    left:13px;
     padding:6px 10px;
-
-    border-radius:20px;
-
-    font-size:10px;
-
-    font-weight:bold;
-}
-
-.product-content{
-
-    padding:22px;
-}
-
-.category{
-
-    color:#888;
-
-    font-size:11px;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-}
-
-.product h3{
-
-    color:#d4af37;
-
-    font-size:22px;
-
-    margin:7px 0 9px;
-}
-
-.product p{
-
-    color:#aaa;
-
-    margin-bottom:18px;
-
-    font-size:14px;
-}
-
-.product-contact{
-
-    display:inline-block;
-
-    padding:10px 16px;
-
-    background:#d4af37;
-
+    background:var(--gold);
     color:#111;
-
-    border-radius:5px;
-
+    font-size:11px;
     font-weight:bold;
-
-    font-size:13px;
+    border-radius:4px;
+    z-index:2;
 }
 
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.catalogue-cta{
-
-    margin-top:60px;
-
-    padding:45px 25px;
-
-    text-align:center;
-
-    background:#141414;
-
-    border:1px solid #b89435;
-
-    border-radius:13px;
+.badge.dark{
+    background:#111;
+    color:var(--gold);
+    border:1px solid var(--gold);
 }
 
-.catalogue-cta h3{
-
-    color:#d4af37;
-
-    font-size:28px;
-
-    margin-bottom:10px;
+.product-info{
+    padding:20px;
 }
 
-.catalogue-cta p{
+.brand{
+    color:#888;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:11px;
+    margin-bottom:4px;
+}
 
-    max-width:700px;
+.product-info h3{
+    color:var(--gold);
+    font-size:21px;
+    margin-bottom:7px;
+}
 
-    margin:auto;
-
+.product-info p{
     color:#aaa;
-}
-
-.contact-number{
-
-    display:inline-block;
-
-    margin-top:22px;
-
-    padding:15px 24px;
-
-    border:1px solid #d4af37;
-
-    border-radius:6px;
-
-    color:#d4af37;
-
-    font-size:20px;
-
-    font-weight:bold;
-}
-
-
-/* =====================================================
-   AVANTAGES
-===================================================== */
-
-.advantages{
-
-    background:
-    linear-gradient(
-        rgba(8,8,8,.95),
-        rgba(8,8,8,.98)
-    );
-}
-
-.advantage-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:22px;
-}
-
-.advantage{
-
-    padding:28px;
-
-    background:#141414;
-
-    border-left:3px solid #d4af37;
-
-    border-radius:8px;
-}
-
-.advantage h3{
-
-    color:#d4af37;
-
-    margin-bottom:8px;
-}
-
-.advantage p{
-
-    color:#aaa;
-
     font-size:14px;
+    min-height:65px;
 }
 
+.specs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:15px 0;
+}
 
-/* =====================================================
-   A PROPOS
-===================================================== */
+.spec{
+    padding:5px 8px;
+    background:#202020;
+    border-radius:4px;
+    color:#bbb;
+    font-size:11px;
+}
+
+.price{
+    color:#fff;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+.price span{
+    color:var(--gold);
+}
+
+.product-btn{
+    display:block;
+    text-align:center;
+    padding:11px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    border-radius:5px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.product-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about{
-
     text-align:center;
 }
 
 .about-content{
-
-    max-width:850px;
-
+    max-width:900px;
     margin:auto;
 }
 
-.about p{
-
+.about-content p{
     color:#ccc;
-
     font-size:17px;
+    margin-bottom:18px;
 }
 
+/* =========================================================
+   VALUES
+   ========================================================= */
 
-/* =====================================================
+.values{
+    background:#0d0d0d;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.value-card{
+    background:#151515;
+    border:1px solid #292929;
+    padding:28px 20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.value-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.value-card h3{
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+.value-card p{
+    color:#999;
+    font-size:14px;
+}
+
+/* =========================================================
    CONTACT
-===================================================== */
+   ========================================================= */
 
 .contact{
-
     text-align:center;
-
     background:
-    linear-gradient(
-        rgba(0,0,0,.82),
-        rgba(0,0,0,.94)
-    ),
-    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85")
+    linear-gradient(rgba(0,0,0,.87),rgba(0,0,0,.94)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85")
     center/cover;
 }
 
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:rgba(15,15,15,.88);
+    border:1px solid rgba(212,175,55,.4);
+    padding:45px 25px;
+    border-radius:15px;
+}
+
 .contact h2{
-
-    color:#d4af37;
-
-    font-size:37px;
-
+    color:var(--gold);
+    font-size:38px;
     margin-bottom:12px;
 }
 
 .contact p{
-
-    color:#ddd;
-
-    max-width:700px;
-
-    margin:auto;
+    color:#ccc;
+    margin-bottom:20px;
 }
 
-.contact-actions{
-
-    margin-top:25px;
-}
-
-.copy-btn{
-
+.contact-number{
     display:inline-block;
-
-    padding:14px 23px;
-
-    background:#d4af37;
-
-    color:#111;
-
-    border:none;
-
-    border-radius:5px;
-
+    font-size:28px;
     font-weight:bold;
-
-    cursor:pointer;
-
-    margin:5px;
+    color:#fff;
+    letter-spacing:1px;
+    margin:15px 0 25px;
 }
 
-.share-btn{
-
-    display:inline-block;
-
-    padding:14px 23px;
-
-    border:1px solid #d4af37;
-
-    color:#d4af37;
-
-    background:transparent;
-
-    border-radius:5px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    margin:5px;
+.contact-note{
+    color:#888;
+    font-size:13px;
 }
 
-
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+   ========================================================= */
 
 footer{
-
-    text-align:center;
-
-    padding:40px 20px;
-
     background:#050505;
-
     border-top:1px solid #292929;
+    text-align:center;
+    padding:35px 20px;
 }
 
-footer strong{
-
-    color:#d4af37;
-
-    font-size:21px;
-
-    letter-spacing:2px;
+.footer-logo{
+    color:var(--gold);
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:3px;
 }
 
 footer p{
-
     color:#777;
-
     font-size:13px;
-
-    margin-top:8px;
+    margin-top:7px;
 }
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:700px){
+@media(max-width:900px){
 
     header{
-
         flex-direction:column;
-
-        gap:13px;
+        gap:14px;
     }
 
     nav{
-
+        flex-wrap:wrap;
         justify-content:center;
     }
 
-    nav a{
-
-        margin:0 6px;
-
-        font-size:11px;
+    .stats{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero{
-
-        min-height:82vh;
-
-        padding:60px 5%;
+    .promo-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero p{
-
-        font-size:16px;
-    }
-
-    section{
-
-        padding:60px 5%;
-    }
-
-    .section-title h2{
-
-        font-size:29px;
-    }
-
-    .product img{
-
-        height:205px;
-    }
-
-    .contact-number{
-
-        font-size:17px;
-    }
-
-    .filters{
-
-        justify-content:flex-start;
-
-        overflow-x:auto;
-
-        padding-bottom:5px;
-    }
-
-    .filter-btn{
-
-        flex-shrink:0;
+    .values-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
+@media(max-width:600px){
+
+    section{
+        padding:65px 5%;
+    }
+
+    .hero{
+        min-height:80vh;
+        padding:65px 5%;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        padding:22px 8px;
+    }
+
+    .stat strong{
+        font-size:23px;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo-main{
+        font-size:20px;
+    }
+
+    .logo-sub{
+        font-size:8px;
+    }
+
+    .contact h2{
+        font-size:28px;
+    }
+
+    .contact-number{
+        font-size:22px;
+    }
+
+}
+
+/* =========================================================
+   HIDDEN CLASS
+   ========================================================= */
+
+.hidden{
+    display:none !important;
+}
+
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+     ========================================================= -->
 
 <header>
 
 <div class="logo">
-NEXORAS <span>GROUPE</span>
+
+    <div class="logo-mark">N</div>
+
+    <div class="logo-text">
+        <div class="logo-main">NEXORAS</div>
+        <div class="logo-sub">GROUPE</div>
+    </div>
+
 </div>
 
 <nav>
-
-<a href="#accueil">Accueil</a>
-
-<a href="#services">Services</a>
-
-<a href="#produits">Catalogue</a>
-
-<a href="#apropos">À propos</a>
-
-<a href="#contact">Contact</a>
-
+    <a href="#accueil">Accueil</a>
+    <a href="#automobiles">Automobiles</a>
+    <a href="#electromenager">Électroménager</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 </header>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+     ========================================================= -->
 
 <section class="hero" id="accueil">
 
 <div class="hero-content">
 
-<div class="badge">
-QUALITÉ • CONFIANCE • PROFESSIONNALISME
+<div class="hero-badge">
+NEXORAS GROUPE • SHOWROOM PREMIUM
 </div>
 
 <h1>NEXORAS</h1>
 
-<h2>GROUPE</h2>
+<h2>AUTOMOBILE & ÉQUIPEMENT</h2>
 
 <p>
-Votre partenaire pour les véhicules modernes,
-l'électroménager et les équipements de maison.
-Des solutions sélectionnées selon vos besoins.
+Découvrez une sélection de véhicules modernes,
+de marques chinoises, européennes et japonaises,
+ainsi qu'une large gamme d'appareils électroménagers
+pour votre maison.
 </p>
 
 <div class="hero-buttons">
 
-<div class="btn btn-gold">
-📞 +233 53 983 4824
-</div>
+<a href="#automobiles" class="btn btn-gold">
+Découvrir les véhicules
+</a>
 
-<a
-href="#produits"
-class="btn btn-outline">
-
-Découvrir le catalogue
-
+<a href="#electromenager" class="btn btn-outline">
+Voir l'électroménager
 </a>
 
 </div>
@@ -925,80 +808,873 @@ Découvrir le catalogue
 </section>
 
 
+<!-- =========================================================
+     STATS
+     ========================================================= -->
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+<div class="stats">
 
-<section id="services">
+<div class="stat">
+<strong>50+</strong>
+<span>Modèles présentés</span>
+</div>
+
+<div class="stat">
+<strong>15+</strong>
+<span>Marques</span>
+</div>
+
+<div class="stat">
+<strong>2</strong>
+<span>Univers produits</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Catalogue en ligne</span>
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     PROMOTIONS
+     ========================================================= -->
+
+<section>
 
 <div class="section-title">
 
-<h2>Nos activités</h2>
+<h2>Nos offres</h2>
 
 <p>
-Des solutions adaptées aux besoins de nos clients.
+Des solutions adaptées à vos besoins et à votre budget.
+</p>
+
+</div>
+
+<div class="promo-grid">
+
+<div class="promo gold">
+
+<h3>🚘 Automobile</h3>
+
+<p>
+Découvrez notre sélection de véhicules modernes,
+premium, familiaux et urbains.
+</p>
+
+</div>
+
+<div class="promo dark">
+
+<h3>🔥 Nouveautés</h3>
+
+<p>
+De nouveaux modèles sont régulièrement ajoutés
+à notre catalogue.
+</p>
+
+</div>
+
+<div class="promo gold">
+
+<h3>🏠 Maison</h3>
+
+<p>
+Équipez votre intérieur avec nos différentes
+solutions électroménagères.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     AUTOMOBILES
+     ========================================================= -->
+
+<section class="products-section" id="automobiles">
+
+<div class="section-title">
+
+<h2>Catalogue Automobile</h2>
+
+<p>
+Véhicules chinois, allemands, japonais et britanniques.
 </p>
 
 </div>
 
 
-<div class="cards">
+<div class="catalog-tools">
 
+<input
+type="text"
+id="searchCar"
+placeholder="🔎 Rechercher une marque ou un modèle..."
+>
 
-<div class="card">
+<select id="carCategory">
 
-<div class="icon">🚘</div>
+<option value="all">Toutes les catégories</option>
+<option value="suv">SUV</option>
+<option value="sedan">Berline</option>
+<option value="electric">Électrique</option>
+<option value="luxury">Premium</option>
+<option value="family">Familiale</option>
 
-<h3>Véhicules</h3>
-
-<p>
-SUV, berlines, véhicules familiaux,
-véhicules électriques et modèles modernes.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🏠</div>
-
-<h3>Électroménager</h3>
-
-<p>
-Réfrigérateurs, téléviseurs, climatiseurs,
-machines à laver, cuisinières et plus.
-</p>
+</select>
 
 </div>
 
 
-<div class="card">
+<div class="filter-buttons">
 
-<div class="icon">📦</div>
+<button class="filter-btn active" data-brand="all">
+Toutes
+</button>
 
-<h3>Sur commande</h3>
+<button class="filter-btn" data-brand="BYD">
+BYD
+</button>
 
-<p>
-Vous recherchez un modèle particulier ?
-Nous pouvons étudier votre demande.
-</p>
+<button class="filter-btn" data-brand="Geely">
+Geely
+</button>
+
+<button class="filter-btn" data-brand="Chery">
+Chery
+</button>
+
+<button class="filter-btn" data-brand="Deepal">
+Deepal
+</button>
+
+<button class="filter-btn" data-brand="Mercedes-Benz">
+Mercedes-Benz
+</button>
+
+<button class="filter-btn" data-brand="Lexus">
+Lexus
+</button>
+
+<button class="filter-btn" data-brand="Toyota">
+Toyota
+</button>
+
+<button class="filter-btn" data-brand="Range Rover">
+Range Rover
+</button>
 
 </div>
 
 
-<div class="card">
+<div class="product-grid" id="carGrid">
 
-<div class="icon">🤝</div>
 
-<h3>Accompagnement</h3>
+<!-- BYD -->
+
+<div class="product-card car-item"
+data-brand="BYD"
+data-category="electric suv">
+
+<div class="product-image">
+
+<span class="badge">NOUVEAU</span>
+
+<img
+src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=85"
+alt="BYD SUV"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">BYD</div>
+
+<h3>BYD ATTO 2</h3>
 
 <p>
-Nous vous accompagnons dans votre recherche
-afin de vous orienter vers la solution adaptée.
+SUV compact moderne, pensé pour la mobilité
+urbaine et les déplacements quotidiens.
 </p>
 
+<div class="specs">
+<span class="spec">Électrique</span>
+<span class="spec">SUV</span>
+<span class="spec">Moderne</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="BYD"
+data-category="electric suv">
+
+<div class="product-image">
+
+<span class="badge dark">PREMIUM</span>
+
+<img
+src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1000&q=85"
+alt="BYD Sealion 7"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">BYD</div>
+
+<h3>BYD SEALION 7</h3>
+
+<p>
+SUV électrique au design sportif et à
+l'allure premium.
+</p>
+
+<div class="specs">
+<span class="spec">Électrique</span>
+<span class="spec">SUV</span>
+<span class="spec">Premium</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- GEELY -->
+
+<div class="product-card car-item"
+data-brand="Geely"
+data-category="suv">
+
+<div class="product-image">
+
+<span class="badge">NOUVEAU</span>
+
+<img
+src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=85"
+alt="Geely Coolray"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Geely</div>
+
+<h3>GEELY COOLRAY</h3>
+
+<p>
+SUV urbain sportif combinant confort,
+technologie et style contemporain.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Sportif</span>
+<span class="spec">Technologie</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Geely"
+data-category="suv luxury">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1000&q=85"
+alt="Geely Monjaro"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Geely</div>
+
+<h3>GEELY MONJARO</h3>
+
+<p>
+Grand SUV au style élégant, conçu pour
+le confort et les longs trajets.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Premium</span>
+<span class="spec">Confort</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- CHERY -->
+
+<div class="product-card car-item"
+data-brand="Chery"
+data-category="suv family">
+
+<div class="product-image">
+
+<span class="badge">POPULAIRE</span>
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Chery Tiggo 8 Pro Max"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Chery</div>
+
+<h3>TIGGO 8 PRO MAX</h3>
+
+<p>
+Grand SUV familial offrant espace,
+confort et équipements modernes.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">7 places</span>
+<span class="spec">Familiale</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Chery"
+data-category="suv">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=85"
+alt="Chery SUV"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Chery</div>
+
+<h3>CHERY TIGGO</h3>
+
+<p>
+Gamme SUV moderne adaptée à la ville,
+aux voyages et à la famille.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Confort</span>
+<span class="spec">Famille</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- DEEPAL -->
+
+<div class="product-card car-item"
+data-brand="Deepal"
+data-category="electric suv">
+
+<div class="product-image">
+
+<span class="badge">NOUVEAU</span>
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Deepal S05"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Deepal</div>
+
+<h3>DEEPAL S05</h3>
+
+<p>
+SUV nouvelle génération au design futuriste
+et à l'orientation technologique.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Nouvelle génération</span>
+<span class="spec">Technologie</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- MERCEDES -->
+
+<div class="product-card car-item"
+data-brand="Mercedes-Benz"
+data-category="luxury suv">
+
+<div class="product-image">
+
+<span class="badge dark">LUXURY</span>
+
+<img
+src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=85"
+alt="Mercedes-Benz SUV"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Mercedes-Benz</div>
+
+<h3>GLC SUV</h3>
+
+<p>
+SUV premium associant élégance,
+confort et technologies embarquées.
+</p>
+
+<div class="specs">
+<span class="spec">Premium</span>
+<span class="spec">SUV</span>
+<span class="spec">Confort</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Mercedes-Benz"
+data-category="luxury sedan">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=85"
+alt="Mercedes-Benz Classe E"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Mercedes-Benz</div>
+
+<h3>CLASSE E</h3>
+
+<p>
+Berline premium destinée aux clients
+à la recherche de confort et de prestige.
+</p>
+
+<div class="specs">
+<span class="spec">Berline</span>
+<span class="spec">Premium</span>
+<span class="spec">Élégance</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Mercedes-Benz"
+data-category="luxury">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Mercedes-Benz Classe S"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Mercedes-Benz</div>
+
+<h3>CLASSE S</h3>
+
+<p>
+Une référence du luxe automobile,
+avec un niveau élevé de confort.
+</p>
+
+<div class="specs">
+<span class="spec">Luxe</span>
+<span class="spec">Premium</span>
+<span class="spec">Prestige</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- LEXUS -->
+
+<div class="product-card car-item"
+data-brand="Lexus"
+data-category="luxury suv">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Lexus SUV"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Lexus</div>
+
+<h3>LEXUS RX</h3>
+
+<p>
+SUV premium japonais combinant design,
+raffinement et confort.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Premium</span>
+<span class="spec">Japon</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Lexus"
+data-category="luxury">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=85"
+alt="Lexus berline"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Lexus</div>
+
+<h3>LEXUS ES</h3>
+
+<p>
+Berline premium élégante destinée aux
+déplacements professionnels et personnels.
+</p>
+
+<div class="specs">
+<span class="spec">Berline</span>
+<span class="spec">Premium</span>
+<span class="spec">Confort</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- TOYOTA -->
+
+<div class="product-card car-item"
+data-brand="Toyota"
+data-category="suv family">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Toyota Land Cruiser"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Toyota</div>
+
+<h3>LAND CRUISER</h3>
+
+<p>
+SUV robuste et polyvalent destiné aux
+trajets urbains comme aux longues distances.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Robuste</span>
+<span class="spec">Familiale</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Toyota"
+data-category="suv family">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1000&q=85"
+alt="Toyota RAV4"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Toyota</div>
+
+<h3>TOYOTA RAV4</h3>
+
+<p>
+SUV polyvalent adapté aux déplacements
+quotidiens et aux voyages.
+</p>
+
+<div class="specs">
+<span class="spec">SUV</span>
+<span class="spec">Famille</span>
+<span class="spec">Polyvalent</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- RANGE ROVER -->
+
+<div class="product-card car-item"
+data-brand="Range Rover"
+data-category="luxury suv">
+
+<div class="product-image">
+
+<span class="badge dark">PRESTIGE</span>
+
+<img
+src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=85"
+alt="Range Rover"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Range Rover</div>
+
+<h3>RANGE ROVER</h3>
+
+<p>
+SUV de prestige associant luxe,
+confort et capacités tout-terrain.
+</p>
+
+<div class="specs">
+<span class="spec">Luxe</span>
+<span class="spec">SUV</span>
+<span class="spec">Prestige</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<div class="product-card car-item"
+data-brand="Range Rover"
+data-category="luxury suv">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=85"
+alt="Range Rover Sport"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Range Rover</div>
+
+<h3>RANGE ROVER SPORT</h3>
+
+<p>
+SUV sportif premium à la silhouette
+dynamique et élégante.
+</p>
+
+<div class="specs">
+<span class="spec">Sport</span>
+<span class="spec">Luxe</span>
+<span class="spec">SUV</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
 </div>
 
 
@@ -1007,1083 +1683,497 @@ afin de vous orienter vers la solution adaptée.
 </section>
 
 
+<!-- =========================================================
+     ELECTROMENAGER
+     ========================================================= -->
 
-<!-- =====================================================
-     CATALOGUE
-===================================================== -->
-
-<section class="products" id="produits">
+<section id="electromenager">
 
 <div class="section-title">
 
-<h2>Catalogue NEXORAS</h2>
+<h2>Électroménager & Maison</h2>
 
 <p>
-Explorez nos catégories. Les tarifs et disponibilités
-sont communiqués sur demande.
+Des équipements pour rendre votre quotidien plus confortable.
 </p>
 
 </div>
 
 
-<!-- OUTILS -->
-
-<div class="catalogue-tools">
-
-<div class="search-box">
+<div class="catalog-tools">
 
 <input
 type="text"
-id="searchInput"
-placeholder="🔎 Rechercher un modèle, une marque..."
-onkeyup="searchProducts()">
+id="searchHome"
+placeholder="🔎 Rechercher un appareil..."
+>
 
 </div>
 
 
-<div class="filters">
-
-<button
-class="filter-btn active"
-onclick="filterProducts('all',this)">
-Tout
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('byd',this)">
-BYD
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('chery',this)">
-Chery
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('geely',this)">
-Geely
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('deepal',this)">
-Deepal
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('electromenager',this)">
-Électroménager
-</button>
-
-<button
-class="filter-btn"
-onclick="filterProducts('maison',this)">
-Maison
-</button>
-
-</div>
-
-</div>
+<div class="product-grid" id="homeGrid">
 
 
+<!-- TV -->
 
-<div class="product-grid" id="productGrid">
-
-
-<!-- =====================================================
-     BYD SEALION 7
-===================================================== -->
-
-<div
-class="product"
-data-category="byd"
-data-name="byd sealion 7 suv électrique">
+<div class="product-card home-item">
 
 <div class="product-image">
 
-<img
-src="https://dubaiwheels.ae/images/20250802-063424-2025-byd-sealion7-exterior-front-3by4-left.jpg"
-alt="BYD Sealion 7"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-PREMIUM
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-BYD
-</span>
-
-<h3>
-BYD Sealion 7
-</h3>
-
-<p>
-SUV électrique au design sportif et élégant,
-associant technologie, confort et mobilité moderne.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     BYD ATTO 2
-===================================================== -->
-
-<div
-class="product"
-data-category="byd"
-data-name="byd atto 2 suv électrique">
-
-<div class="product-image">
+<span class="badge">NOUVEAU</span>
 
 <img
-src="https://images.carexpert.com.au/cms/v1/media/2025-11-2026-byd-atto-2-2.png"
-alt="BYD Atto 2"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-NOUVEAUTÉ
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-BYD
-</span>
-
-<h3>
-BYD Atto 2
-</h3>
-
-<p>
-SUV compact moderne combinant design contemporain,
-technologie électrique et praticité.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     BYD SONG PLUS
-===================================================== -->
-
-<div
-class="product"
-data-category="byd"
-data-name="byd song plus dm-i hybride suv">
-
-<div class="product-image">
-
-<img
-src="https://www.byd.com/content/dam/byd-site/africa/benin/song-plus-dmi/song-plus-dmi-exterior.jpg"
-alt="BYD Song Plus DM-i"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-HYBRIDE
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-BYD
-</span>
-
-<h3>
-BYD Song Plus DM-i
-</h3>
-
-<p>
-SUV hybride rechargeable de nouvelle génération,
-avec un design inspiré de l'esthétique Ocean.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     BYD SEAL
-===================================================== -->
-
-<div
-class="product"
-data-category="byd"
-data-name="byd seal berline électrique">
-
-<div class="product-image">
-
-<img
-src="https://www.bydauto.be/content/dam/byd-site/eu/product/seal/gallery/exterior.jpg"
-alt="BYD Seal"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-ÉLECTRIQUE
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-BYD
-</span>
-
-<h3>
-BYD Seal
-</h3>
-
-<p>
-Berline électrique sportive combinant design
-aérodynamique, performances et technologie.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CHERY TIGGO 8
-===================================================== -->
-
-<div
-class="product"
-data-category="chery"
-data-name="chery tiggo 8 pro max suv premium">
-
-<div class="product-image">
-
-<img
-src="https://www.chery.my/wp-content/uploads/2026/01/tiggo8pro-featured-1080x630.png"
-alt="Chery Tiggo 8 Pro Max"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-PREMIUM
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-CHERY
-</span>
-
-<h3>
-Tiggo 8 Pro Max
-</h3>
-
-<p>
-SUV spacieux et élégant pensé pour le confort,
-la technologie et les déplacements familiaux.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CHERY TIGGO 7
-===================================================== -->
-
-<div
-class="product"
-data-category="chery"
-data-name="chery tiggo 7 pro max suv">
-
-<div class="product-image">
-
-<img
-src="https://www.cheryinternational.com/pc/models/tiggo/tiggo7promax/images/vehicle.png"
-alt="Chery Tiggo 7 Pro Max"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-NOUVEAUTÉ
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-CHERY
-</span>
-
-<h3>
-Tiggo 7 Pro Max
-</h3>
-
-<p>
-SUV moderne au style dynamique avec une présentation
-élégante et des équipements technologiques.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     GEELY MONJARO
-===================================================== -->
-
-<div
-class="product"
-data-category="geely"
-data-name="geely monjaro suv premium">
-
-<div class="product-image">
-
-<img
-src="https://geelysakartvelo.com/storage/1070/Monjaro-exterior.jpg"
-alt="Geely Monjaro"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-LUXE
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-GEELY
-</span>
-
-<h3>
-Geely Monjaro
-</h3>
-
-<p>
-SUV premium au style sophistiqué, combinant
-élégance, confort et technologies modernes.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     GEELY COOLRAY
-===================================================== -->
-
-<div
-class="product"
-data-category="geely"
-data-name="geely coolray crossover sport">
-
-<div class="product-image">
-
-<img
-src="https://global.geely.com/-/media/project/web-portal/2025/news/january/coolray-road-angle.jpg"
-alt="Geely Coolray"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-SPORT
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-GEELY
-</span>
-
-<h3>
-Geely Coolray
-</h3>
-
-<p>
-Crossover dynamique au style sportif, adapté
-aux déplacements urbains et quotidiens.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     GEELY EMGRAND
-===================================================== -->
-
-<div
-class="product"
-data-category="geely"
-data-name="geely emgrand berline">
-
-<div class="product-image">
-
-<img
-src="https://global.geely.com/-/media/project/web-portal/2024/products/emgrand/emgrand-exterior.jpg"
-alt="Geely Emgrand"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-BERLINE
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-GEELY
-</span>
-
-<h3>
-Geely Emgrand
-</h3>
-
-<p>
-Berline élégante destinée aux déplacements quotidiens,
-avec un style moderne et une présentation soignée.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     DEEPAL S05
-===================================================== -->
-
-<div
-class="product"
-data-category="deepal"
-data-name="deepal s05 suv électrique">
-
-<div class="product-image">
-
-<img
-src="https://resizer.mail.ru/p/b121c1e5-2b71-5d71-b8d3-61296ae93b9e/AQABjvGlrpH50GZ5GrobKXsGonrI-7dMWAJwn_mDpJPSHBa68iJzYSIgawjeEzptGBybAQSKGgGvdeHWrHim25HTjBs.jpg"
-alt="Deepal S05"
-loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85';">
-
-<div class="product-badge">
-NOUVELLE GÉNÉRATION
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-DEEPAL
-</span>
-
-<h3>
-Deepal S05
-</h3>
-
-<p>
-SUV nouvelle génération au design futuriste,
-orienté vers la technologie et la mobilité moderne.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     DEEPAL S07
-===================================================== -->
-
-<div
-class="product"
-data-category="deepal"
-data-name="deepal s07 suv">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85"
-alt="Deepal S07"
-loading="lazy">
-
-<div class="product-badge">
-PREMIUM
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-DEEPAL
-</span>
-
-<h3>
-Deepal S07
-</h3>
-
-<p>
-SUV moderne à l'identité futuriste, conçu autour
-de la technologie, du confort et de l'innovation.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     ELECTROMENAGER
-===================================================== -->
-
-<div
-class="product"
-data-category="electromenager"
-data-name="réfrigérateur">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1200&q=85"
-alt="Réfrigérateur"
-loading="lazy">
-
-<div class="product-badge">
-MAISON
-</div>
-
-</div>
-
-<div class="product-content">
-
-<span class="category">
-ÉLECTROMÉNAGER
-</span>
-
-<h3>
-Réfrigérateur
-</h3>
-
-<p>
-Solutions de conservation pratiques pour
-la cuisine et le quotidien.
-</p>
-
-<div class="product-contact">
-📞 +233 53 983 4824
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- TELEVISION -->
-
-<div
-class="product"
-data-category="electromenager"
-data-name="téléviseur télévision smart tv">
-
-<div class="product-image">
-
-<img
-src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85"
+src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1000&q=85"
 alt="Téléviseur"
-loading="lazy">
-
-<div class="product-badge">
-ÉLECTRONIQUE
-</div>
+>
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="category">
-ÉLECTRONIQUE
-</span>
+<div class="brand">Multimédia</div>
 
-<h3>
-Téléviseur
-</h3>
+<h3>TÉLÉVISEURS SMART TV</h3>
 
 <p>
-Téléviseurs modernes pour films, séries,
-sport et divertissement.
+Téléviseurs modernes pour profiter
+de vos films, séries et programmes préférés.
 </p>
 
-<div class="product-contact">
-📞 +233 53 983 4824
+<div class="specs">
+<span class="spec">Smart TV</span>
+<span class="spec">4K</span>
 </div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- REFRIGERATEUR -->
+
+<div class="product-card home-item">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=1000&q=85"
+alt="Réfrigérateur"
+>
 
 </div>
 
+<div class="product-info">
+
+<div class="brand">Cuisine</div>
+
+<h3>RÉFRIGÉRATEURS</h3>
+
+<p>
+Solutions de conservation adaptées
+aux différents besoins de votre foyer.
+</p>
+
+<div class="specs">
+<span class="spec">Grande capacité</span>
+<span class="spec">Cuisine</span>
 </div>
 
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
 
 
 <!-- CLIMATISEUR -->
 
-<div
-class="product"
-data-category="electromenager"
-data-name="climatiseur">
+<div class="product-card home-item">
 
 <div class="product-image">
 
+<span class="badge dark">POPULAIRE</span>
+
 <img
-src="https://images.unsplash.com/photo-1631549281260-3e7d9d5b6b11?auto=format&fit=crop&w=1200&q=85"
+src="https://images.unsplash.com/photo-1631545806609-1c8f1f6f9e4b?auto=format&fit=crop&w=1000&q=85"
 alt="Climatiseur"
-loading="lazy">
-
-<div class="product-badge">
-CONFORT
-</div>
+>
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="category">
-CONFORT
-</span>
+<div class="brand">Confort</div>
 
-<h3>
-Climatiseur
-</h3>
+<h3>CLIMATISEURS</h3>
 
 <p>
-Solutions de climatisation pour améliorer
-le confort de votre intérieur.
+Des solutions de climatisation pour
+votre maison, bureau ou commerce.
 </p>
 
-<div class="product-contact">
-📞 +233 53 983 4824
+<div class="specs">
+<span class="spec">Climatisation</span>
+<span class="spec">Confort</span>
 </div>
 
+<div class="price">
+Prix : <span>Sur demande</span>
 </div>
 
-</div>
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
 
+</div>
+</div>
 
 
 <!-- MACHINE A LAVER -->
 
-<div
-class="product"
-data-category="electromenager"
-data-name="machine à laver lave linge">
+<div class="product-card home-item">
 
 <div class="product-image">
 
 <img
-src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=85"
+src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1000&q=85"
 alt="Machine à laver"
-loading="lazy">
-
-<div class="product-badge">
-MAISON
-</div>
+>
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="category">
-ÉLECTROMÉNAGER
-</span>
+<div class="brand">Buanderie</div>
 
-<h3>
-Machine à laver
-</h3>
+<h3>MACHINES À LAVER</h3>
 
 <p>
-Des équipements pratiques pour faciliter
-l'entretien du linge.
+Équipements modernes pour faciliter
+l'entretien quotidien du linge.
 </p>
 
-<div class="product-contact">
-📞 +233 53 983 4824
+<div class="specs">
+<span class="spec">Automatique</span>
+<span class="spec">Maison</span>
 </div>
 
+<div class="price">
+Prix : <span>Sur demande</span>
 </div>
 
-</div>
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
 
+</div>
+</div>
 
 
 <!-- CUISINIERE -->
 
-<div
-class="product"
-data-category="electromenager"
-data-name="cuisinière cuisine">
+<div class="product-card home-item">
 
 <div class="product-image">
 
 <img
-src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85"
+src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=85"
 alt="Cuisinière"
-loading="lazy">
-
-<div class="product-badge">
-CUISINE
-</div>
+>
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="category">
-CUISINE
-</span>
+<div class="brand">Cuisine</div>
 
-<h3>
-Cuisinière
-</h3>
+<h3>CUISINIÈRES</h3>
 
 <p>
-Équipements de cuisine adaptés aux besoins
-de votre foyer.
+Équipements de cuisine modernes
+pour préparer vos repas au quotidien.
 </p>
 
-<div class="product-contact">
-📞 +233 53 983 4824
+<div class="specs">
+<span class="spec">Cuisine</span>
+<span class="spec">Moderne</span>
 </div>
 
+<div class="price">
+Prix : <span>Sur demande</span>
 </div>
 
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
 </div>
 
 
+<!-- MICRO ONDE -->
 
-<!-- =====================================================
-     MAISON
-===================================================== -->
-
-<div
-class="product"
-data-category="maison"
-data-name="mobilier salon maison">
+<div class="product-card home-item">
 
 <div class="product-image">
 
 <img
-src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85"
-alt="Mobilier maison"
-loading="lazy">
-
-<div class="product-badge">
-MAISON
-</div>
+src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&w=1000&q=85"
+alt="Four micro-ondes"
+>
 
 </div>
 
-<div class="product-content">
+<div class="product-info">
 
-<span class="category">
-MAISON
-</span>
+<div class="brand">Cuisine</div>
 
-<h3>
-Mobilier & équipements
-</h3>
+<h3>MICRO-ONDES</h3>
 
 <p>
-Des solutions pour aménager votre intérieur
-avec confort et élégance.
+Appareils pratiques pour réchauffer
+et préparer rapidement vos repas.
 </p>
 
-<div class="product-contact">
-📞 +233 53 983 4824
+<div class="specs">
+<span class="spec">Cuisine</span>
+<span class="spec">Pratique</span>
 </div>
 
+<div class="price">
+Prix : <span>Sur demande</span>
 </div>
 
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
 </div>
 
 
+<!-- ASPIRATEUR -->
+
+<div class="product-card home-item">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=85"
+alt="Aspirateur"
+>
+
 </div>
 
+<div class="product-info">
 
+<div class="brand">Entretien</div>
 
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<div class="catalogue-cta">
-
-<h3>
-Vous recherchez un modèle particulier ?
-</h3>
+<h3>ASPIRATEURS</h3>
 
 <p>
-Notre catalogue évolue régulièrement.
-Si vous ne trouvez pas le modèle ou le produit
-que vous recherchez, contactez directement
-NEXORAS GROUPE.
+Des solutions pratiques pour maintenir
+votre intérieur propre.
 </p>
 
-<div class="contact-number">
-📱 +233 53 983 4824
+<div class="specs">
+<span class="spec">Nettoyage</span>
+<span class="spec">Maison</span>
 </div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- VENTILATEUR -->
+
+<div class="product-card home-item">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1618942451888-5f5d7d2d2b6f?auto=format&fit=crop&w=1000&q=85"
+alt="Ventilateur"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Confort</div>
+
+<h3>VENTILATEURS</h3>
+
+<p>
+Des appareils adaptés au rafraîchissement
+de vos espaces de vie.
+</p>
+
+<div class="specs">
+<span class="spec">Maison</span>
+<span class="spec">Confort</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
+
+<!-- CHAUFFE EAU -->
+
+<div class="product-card home-item">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=85"
+alt="Équipement maison"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="brand">Maison</div>
+
+<h3>ÉQUIPEMENTS SANITAIRES</h3>
+
+<p>
+Différents équipements destinés au confort
+et à l'aménagement de votre maison.
+</p>
+
+<div class="specs">
+<span class="spec">Maison</span>
+<span class="spec">Confort</span>
+</div>
+
+<div class="price">
+Prix : <span>Sur demande</span>
+</div>
+
+<a href="#contact" class="product-btn">
+Demander une offre
+</a>
+
+</div>
+</div>
+
 
 </div>
 
 </section>
 
 
+<!-- =========================================================
+     PUBLICITE
+     ========================================================= -->
 
-<!-- =====================================================
-     AVANTAGES
-===================================================== -->
+<section>
 
-<section class="advantages">
+<div class="promo-grid">
 
-<div class="section-title">
+<div class="promo gold">
 
-<h2>
-Pourquoi choisir NEXORAS ?
-</h2>
-
-<p>
-Une approche professionnelle orientée vers le client.
-</p>
-
-</div>
-
-
-<div class="advantage-grid">
-
-
-<div class="advantage">
-
-<h3>
-🔎 Recherche sur demande
-</h3>
+<h3>🚘 VOTRE PROCHAINE VOITURE</h3>
 
 <p>
-Vous recherchez un véhicule ou un équipement
-qui n'apparaît pas dans notre catalogue ?
+Vous avez un modèle précis en tête ?
 Nous pouvons étudier votre demande.
 </p>
 
 </div>
 
+<div class="promo dark">
 
-<div class="advantage">
-
-<h3>
-🚘 Diversité des véhicules
-</h3>
+<h3>🏠 ÉQUIPEZ VOTRE MAISON</h3>
 
 <p>
-Notre sélection s'intéresse notamment aux
-nouvelles générations de véhicules asiatiques
-et aux modèles modernes.
+Réfrigérateur, TV, climatiseur, machine à laver
+et bien plus encore.
 </p>
 
 </div>
 
+<div class="promo gold">
 
-<div class="advantage">
-
-<h3>
-📦 Produits sur commande
-</h3>
+<h3>⭐ SUR COMMANDE</h3>
 
 <p>
-Certains produits peuvent être proposés
-sur demande selon les disponibilités.
+Vous recherchez un modèle ou un appareil
+qui n'apparaît pas encore au catalogue ?
+Faites-nous part de votre besoin.
 </p>
 
 </div>
-
-
-<div class="advantage">
-
-<h3>
-🤝 Accompagnement
-</h3>
-
-<p>
-Nous vous accompagnons dans votre recherche
-et vous communiquons les informations nécessaires.
-</p>
-
-</div>
-
-
-<div class="advantage">
-
-<h3>
-⭐ Qualité
-</h3>
-
-<p>
-Nous privilégions une présentation claire
-des produits et des informations utiles.
-</p>
-
-</div>
-
-
-<div class="advantage">
-
-<h3>
-💼 Professionnalisme
-</h3>
-
-<p>
-Une approche sérieuse et organisée pour
-chaque demande client.
-</p>
-
-</div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      A PROPOS
-===================================================== -->
+     ========================================================= -->
 
 <section class="about" id="apropos">
 
 <div class="section-title">
 
-<h2>
-À propos de NEXORAS GROUPE
-</h2>
+<h2>À propos de NEXORAS GROUPE</h2>
+
+<p>
+Une vision moderne du commerce.
+</p>
 
 </div>
 
 <div class="about-content">
 
 <p>
-
-NEXORAS GROUPE est une structure spécialisée
-dans la commercialisation de véhicules,
-d'appareils électroménagers et d'équipements
-pour la maison.
-
+NEXORAS GROUPE est une structure commerciale
+orientée vers la distribution et la mise à disposition
+de véhicules et d'équipements pour la maison.
 </p>
 
-<br>
-
 <p>
-
-Notre ambition est de faciliter l'accès de nos
-clients à des produits modernes et adaptés
-à leurs besoins, avec une approche fondée
-sur la confiance, la qualité et le professionnalisme.
-
+Notre catalogue met en avant des véhicules modernes,
+des modèles premium et une sélection de marques
+internationales, ainsi qu'une gamme d'appareils
+électroménagers destinés aux particuliers et aux professionnels.
 </p>
 
-<br>
-
 <p>
-
-Les produits présentés sur notre catalogue
-peuvent être soumis à disponibilité.
-Les tarifs sont communiqués directement
-aux clients après prise de contact.
-
+Notre ambition est de construire une relation durable
+avec nos clients grâce à une approche basée sur
+la confiance, la transparence, la qualité et le professionnalisme.
 </p>
 
 </div>
@@ -2091,78 +2181,119 @@ aux clients après prise de contact.
 </section>
 
 
+<!-- =========================================================
+     VALEURS
+     ========================================================= -->
 
-<!-- =====================================================
+<section class="values">
+
+<div class="section-title">
+
+<h2>Pourquoi choisir NEXORAS ?</h2>
+
+<p>
+Une expérience commerciale pensée pour le client.
+</p>
+
+</div>
+
+<div class="values-grid">
+
+<div class="value-card">
+
+<div class="value-icon">🛡️</div>
+
+<h3>Confiance</h3>
+
+<p>
+Une relation commerciale claire et professionnelle.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<div class="value-icon">⭐</div>
+
+<h3>Qualité</h3>
+
+<p>
+Une attention particulière portée aux produits proposés.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<div class="value-icon">🤝</div>
+
+<h3>Accompagnement</h3>
+
+<p>
+Nous vous aidons à identifier la solution adaptée.
+</p>
+
+</div>
+
+<div class="value-card">
+
+<div class="value-icon">💼</div>
+
+<h3>Professionnalisme</h3>
+
+<p>
+Une approche sérieuse et orientée satisfaction.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
      CONTACT
-===================================================== -->
+     ========================================================= -->
 
 <section class="contact" id="contact">
 
-<h2>
-Vous recherchez un véhicule ou un appareil ?
-</h2>
+<div class="contact-box">
+
+<h2>Contactez NEXORAS GROUPE</h2>
 
 <p>
-
-Contactez NEXORAS GROUPE pour connaître
-les modèles disponibles, les arrivages
-et les tarifs.
-
+Vous recherchez un véhicule, un appareil électroménager
+ou un produit particulier ? Contactez-nous pour obtenir
+les informations et le prix correspondant à votre demande.
 </p>
-
 
 <div class="contact-number">
-📱 +233 53 983 4824
++233 53 983 4824
 </div>
 
-
-<div class="contact-actions">
-
-<button
-class="copy-btn"
-onclick="copyNumber()">
-
-📋 Copier le numéro
-
-</button>
-
-
-<button
-class="share-btn"
-onclick="shareSite()">
-
-📤 Partager le site
-
-</button>
-
-</div>
-
-
-<p
-id="copyMessage"
-style="margin-top:15px;color:#d4af37;font-size:14px;">
+<p class="contact-note">
+Disponible pour vos demandes de renseignements,
+offres et commandes.
 </p>
+
+</div>
 
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+     ========================================================= -->
 
 <footer>
 
-<strong>
+<div class="footer-logo">
 NEXORAS GROUPE
-</strong>
+</div>
 
 <p>
-Véhicules • Électroménager • Équipements maison
-</p>
-
-<p>
-📞 +233 53 983 4824
+Véhicules • Électroménager • Équipements • Solutions sur demande
 </p>
 
 <p>
@@ -2172,166 +2303,159 @@ Véhicules • Électroménager • Équipements maison
 </footer>
 
 
-
-<!-- =====================================================
+<!-- =========================================================
      JAVASCRIPT
-===================================================== -->
+     ========================================================= -->
 
 <script>
 
+/* =========================================================
+   FILTRE AUTOMOBILE
+   ========================================================= */
 
-/* =====================================================
-   FILTRAGE
-===================================================== */
+const carButtons = document.querySelectorAll(".filter-btn");
+const carItems = document.querySelectorAll(".car-item");
+const searchCar = document.getElementById("searchCar");
+const carCategory = document.getElementById("carCategory");
 
-function filterProducts(category,button){
+let selectedBrand = "all";
 
-    const products =
-    document.querySelectorAll(".product");
+function filterCars(){
 
-    const buttons =
-    document.querySelectorAll(".filter-btn");
+    const searchValue = searchCar.value.toLowerCase().trim();
+    const categoryValue = carCategory.value;
 
-    buttons.forEach(btn=>{
-        btn.classList.remove("active");
-    });
+    carItems.forEach(item => {
 
-    button.classList.add("active");
+        const brand = item.dataset.brand;
+        const category = item.dataset.category;
 
-    products.forEach(product=>{
+        const text = item.innerText.toLowerCase();
 
-        if(category === "all"){
+        const brandMatch =
+            selectedBrand === "all" ||
+            brand === selectedBrand;
 
-            product.classList.remove("hidden");
+        const categoryMatch =
+            categoryValue === "all" ||
+            category.includes(categoryValue);
 
-        }
+        const searchMatch =
+            text.includes(searchValue);
 
-        else if(
-            product.dataset.category === category
+        if(
+            brandMatch &&
+            categoryMatch &&
+            searchMatch
         ){
-
-            product.classList.remove("hidden");
-
-        }
-
-        else{
-
-            product.classList.add("hidden");
-
+            item.classList.remove("hidden");
+        }else{
+            item.classList.add("hidden");
         }
 
     });
 
 }
 
+carButtons.forEach(button => {
 
-/* =====================================================
-   RECHERCHE
-===================================================== */
+    button.addEventListener("click", () => {
 
-function searchProducts(){
+        carButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
 
-    const search =
-    document
-    .getElementById("searchInput")
-    .value
-    .toLowerCase();
+        button.classList.add("active");
 
-    const products =
-    document.querySelectorAll(".product");
+        selectedBrand =
+            button.dataset.brand;
 
-    products.forEach(product=>{
-
-        const name =
-        product.dataset.name.toLowerCase();
-
-        if(name.includes(search)){
-
-            product.classList.remove("hidden");
-
-        }
-
-        else{
-
-            product.classList.add("hidden");
-
-        }
+        filterCars();
 
     });
 
-}
+});
+
+searchCar.addEventListener(
+    "input",
+    filterCars
+);
+
+carCategory.addEventListener(
+    "change",
+    filterCars
+);
 
 
-/* =====================================================
-   COPIER NUMERO
-===================================================== */
+/* =========================================================
+   RECHERCHE ELECTROMENAGER
+   ========================================================= */
 
-function copyNumber(){
+const searchHome =
+    document.getElementById("searchHome");
 
-    const number =
-    "+233 53 983 4824";
+const homeItems =
+    document.querySelectorAll(".home-item");
 
-    navigator.clipboard.writeText(number)
-    .then(()=>{
+searchHome.addEventListener(
+    "input",
+    () => {
 
-        document
-        .getElementById("copyMessage")
-        .innerText =
-        "✓ Numéro copié avec succès.";
+        const value =
+            searchHome.value.toLowerCase().trim();
 
-    })
-    .catch(()=>{
+        homeItems.forEach(item => {
 
-        document
-        .getElementById("copyMessage")
-        .innerText =
-        "Numéro : +233 53 983 4824";
+            const text =
+                item.innerText.toLowerCase();
 
-    });
-
-}
-
-
-/* =====================================================
-   PARTAGER LE SITE
-===================================================== */
-
-function shareSite(){
-
-    if(navigator.share){
-
-        navigator.share({
-
-            title:
-            "NEXORAS GROUPE",
-
-            text:
-            "Découvrez NEXORAS GROUPE : véhicules, électroménager et équipements maison.",
-
-            url:
-            window.location.href
+            if(text.includes(value)){
+                item.classList.remove("hidden");
+            }else{
+                item.classList.add("hidden");
+            }
 
         });
 
     }
+);
 
-    else{
 
-        navigator.clipboard.writeText(
-            window.location.href
-        );
+/* =========================================================
+   ANNEE DYNAMIQUE DU FOOTER
+   ========================================================= */
 
-        alert(
-            "Le lien du site a été copié."
-        );
+const footerYear =
+    new Date().getFullYear();
 
-    }
+document.querySelector(
+    "footer p:last-child"
+).innerHTML =
+    "© " + footerYear +
+    " NEXORAS GROUPE — Tous droits réservés.";
 
-}
+
+/* =========================================================
+   FALLBACK IMAGES
+   ========================================================= */
+
+document.querySelectorAll("img").forEach(img => {
+
+    img.addEventListener(
+        "error",
+        function(){
+
+            this.style.display = "none";
+
+            this.parentElement.style.background =
+                "linear-gradient(135deg,#1a1a1a,#080808)";
+
+        }
+    );
+
+});
 
 </script>
 
-
 </body>
-
 </html>
