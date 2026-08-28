@@ -4,60 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NEXORAS GROUPE | Automobile • Maison • Solutions</title>
+<title>NEXORAS GROUPE — Automobile • Maison • Solutions</title>
 
-<meta name="description" content="NEXORAS GROUPE — Automobile premium, électroménager, équipements et solutions sur demande.">
+<meta name="description" content="NEXORAS GROUPE — Showroom automobile premium, électroménager et solutions sur commande. Mercedes-Benz, Toyota, BYD, Lexus, Geely, Chery, Range Rover et plus.">
 <meta name="theme-color" content="#07111f">
 
-<!-- Google Translate -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'fr,en,es,pt,de,it,ar,zh-CN,hi,tr,ru,ja,ko,nl',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
-}
-</script>
-
-<script
-src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
     --navy:#07111f;
-    --navy2:#0d1b2a;
-    --navy3:#10243a;
-
-    --gold:#c9a227;
-    --gold2:#e5c45c;
-
-    --blue:#1479ff;
-    --blue2:#0b5ed7;
-
-    --green:#16a34a;
-    --red:#dc2626;
-
-    --white:#f8fafc;
-
-    --text:#182230;
-    --muted:#687386;
-
-    --line:#e7ebf0;
-    --card:#ffffff;
-
-    --shadow:0 18px 50px rgba(7,17,31,.10);
-
+    --navy2:#0c1b2d;
+    --blue:#1261a0;
+    --blue2:#1c8bd1;
+    --gold:#d4af37;
+    --gold2:#f0d477;
+    --white:#ffffff;
+    --cream:#f7f4ed;
+    --light:#eef3f7;
+    --text:#18212b;
+    --muted:#6c7885;
+    --green:#16834a;
+    --red:#c83d3d;
+    --border:rgba(7,17,31,.10);
+    --shadow:0 18px 50px rgba(7,17,31,.12);
     --radius:20px;
 }
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -65,11 +44,16 @@ html{
 }
 
 body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:#f6f8fb;
+    font-family:Inter,Arial,sans-serif;
+    background:#fff;
     color:var(--text);
     line-height:1.6;
-    overflow-x:hidden;
+    padding-bottom:78px;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 button,
@@ -83,103 +67,64 @@ button{
     cursor:pointer;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
+img{
+    max-width:100%;
+    display:block;
 }
 
-/* =========================================================
-   TRANSLATION BAR
-========================================================= */
-
-.translation-bar{
-    background:#02070d;
-    padding:7px 5%;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    gap:10px;
-    color:#cbd5e1;
-    font-size:12px;
-}
-
-.translation-label{
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
-
-#google_translate_element{
-    min-width:160px;
-}
-
-.goog-te-gadget{
-    font-family:Arial,sans-serif!important;
-    font-size:0!important;
-}
-
-.goog-te-gadget .goog-te-combo{
-    margin:0!important;
-    background:#fff!important;
-    color:#111827!important;
-    border:0!important;
-    border-radius:8px!important;
-    padding:7px 9px!important;
-    font-size:12px!important;
-    outline:none!important;
-}
-
-.goog-logo-link,
-.goog-te-gadget span{
-    display:none!important;
-}
-
-body .goog-te-banner-frame{
-    display:none!important;
-}
-
-body{
-    top:0!important;
-}
-
-/* =========================================================
+/* =========================
    TOP BAR
-========================================================= */
+========================= */
 
 .topbar{
-    background:#030a12;
-    color:#cbd5e1;
-    font-size:13px;
-    padding:8px 5%;
+    background:var(--navy);
+    color:#fff;
+    padding:9px 5%;
     display:flex;
     justify-content:space-between;
-    gap:15px;
+    align-items:center;
+    gap:20px;
+    font-size:13px;
+}
+
+.topbar-left{
+    display:flex;
+    gap:20px;
     align-items:center;
 }
 
-.topbar span{
+.topbar-right{
     display:flex;
     align-items:center;
-    gap:7px;
+    gap:12px;
 }
 
-/* =========================================================
+.lang-btn{
+    background:rgba(255,255,255,.08);
+    color:white;
+    border:1px solid rgba(255,255,255,.15);
+    padding:6px 12px;
+    border-radius:30px;
+}
+
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,17,31,.97);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
 }
 
-.nav{
-    max-width:1400px;
+.navbar{
+    max-width:1450px;
     margin:auto;
-    padding:15px 5%;
+    min-height:78px;
+    padding:0 5%;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -196,28 +141,29 @@ header{
 .logo-mark{
     width:45px;
     height:45px;
-    border:1px solid var(--gold);
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    border-radius:13px;
+    background:linear-gradient(135deg,var(--navy),#183b5c);
     color:var(--gold2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
     font-weight:900;
-    font-size:20px;
-    box-shadow:inset 0 0 20px rgba(201,162,39,.08);
+    font-size:22px;
+    box-shadow:0 8px 25px rgba(7,17,31,.18);
 }
 
 .logo-text strong{
     display:block;
-    color:#fff;
-    font-size:18px;
+    font-size:19px;
     letter-spacing:2px;
 }
 
-.logo-text small{
-    color:var(--gold2);
+.logo-text span{
+    display:block;
+    color:var(--muted);
     font-size:9px;
-    letter-spacing:3px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
 .nav-links{
@@ -226,163 +172,126 @@ header{
     gap:5px;
 }
 
-.nav-item{
-    position:relative;
-}
-
-.nav-link{
-    color:#e5e7eb;
-    padding:10px 13px;
-    border-radius:10px;
-    font-size:14px;
-    transition:.25s;
-    display:flex;
-    align-items:center;
-    gap:5px;
-}
-
-.nav-link:hover{
-    color:var(--gold2);
-    background:rgba(255,255,255,.05);
-}
-
-.mega{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%) translateY(10px);
-    top:48px;
-    width:800px;
-    max-width:90vw;
-    background:#fff;
+.nav-links>a,
+.nav-dropdown>button{
+    border:0;
+    background:none;
+    padding:11px 13px;
     color:var(--text);
-    border-radius:18px;
-    box-shadow:0 30px 80px rgba(0,0,0,.25);
-    padding:25px;
-    opacity:0;
-    visibility:hidden;
-    transition:.25s;
+    font-weight:700;
+    border-radius:10px;
 }
 
-.nav-item:hover .mega{
-    opacity:1;
-    visibility:visible;
-    transform:translateX(-50%) translateY(0);
-}
-
-.mega-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.mega h4{
-    color:var(--navy);
-    margin-bottom:10px;
-    font-size:14px;
-}
-
-.mega h4 span{
-    color:var(--gold);
-}
-
-.mega a{
-    display:block;
-    color:#64748b;
-    padding:5px 0;
-    font-size:13px;
-}
-
-.mega a:hover{
+.nav-links>a:hover,
+.nav-dropdown>button:hover{
+    background:var(--light);
     color:var(--blue);
 }
 
-.nav-actions{
-    display:flex;
-    align-items:center;
-    gap:9px;
+.nav-dropdown{
+    position:relative;
 }
 
-.nav-contact{
-    background:var(--gold);
-    color:#111827;
-    padding:10px 15px;
-    border-radius:10px;
-    font-weight:800;
+.dropdown-menu{
+    position:absolute;
+    top:calc(100% + 10px);
+    left:0;
+    min-width:280px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:12px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:.2s;
+    max-height:75vh;
+    overflow:auto;
+}
+
+.nav-dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.dropdown-section{
+    padding:9px;
+}
+
+.dropdown-section strong{
+    display:block;
+    font-size:12px;
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:5px;
+}
+
+.dropdown-section a{
+    display:block;
+    padding:7px 8px;
+    border-radius:8px;
     font-size:13px;
+}
+
+.dropdown-section a:hover{
+    background:var(--light);
 }
 
 .mobile-menu{
     display:none;
-    background:none;
     border:0;
+    background:var(--navy);
     color:white;
-    font-size:27px;
-}
-
-/* =========================================================
-   BRAND LOGOS
-========================================================= */
-
-.brand-logo{
-    width:34px;
-    height:34px;
-    object-fit:contain;
-    background:white;
-    border-radius:8px;
-    padding:5px;
-    vertical-align:middle;
-}
-
-.brand-logo-large{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    background:white;
+    width:45px;
+    height:45px;
     border-radius:12px;
-    padding:7px;
+    font-size:22px;
 }
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
     min-height:650px;
     background:
-        linear-gradient(90deg,rgba(3,10,18,.97),rgba(7,17,31,.74),rgba(7,17,31,.25)),
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20GLE%20Coupe.jpg")
+        linear-gradient(90deg,rgba(7,17,31,.96) 0%,rgba(7,17,31,.76) 43%,rgba(7,17,31,.15) 100%),
+        url("https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=2200&q=90")
         center/cover;
+    color:#fff;
     display:flex;
     align-items:center;
-    color:white;
+}
+
+.hero-inner{
+    width:min(1450px,90%);
+    margin:auto;
+    padding:80px 0;
 }
 
 .hero-content{
-    width:100%;
-    max-width:1400px;
-    margin:auto;
-    padding:80px 5%;
+    max-width:760px;
 }
 
-.hero-badge{
+.eyebrow{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    border:1px solid rgba(201,162,39,.55);
-    background:rgba(201,162,39,.08);
     color:var(--gold2);
-    padding:8px 13px;
-    border-radius:30px;
+    font-weight:800;
+    letter-spacing:2px;
     font-size:12px;
-    letter-spacing:1px;
+    text-transform:uppercase;
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,82px);
+    font-family:"Playfair Display",serif;
+    font-size:clamp(48px,7vw,88px);
     line-height:1;
-    max-width:800px;
-    letter-spacing:-3px;
     margin-bottom:25px;
 }
 
@@ -391,13 +300,13 @@ header{
 }
 
 .hero p{
-    max-width:650px;
-    color:#cbd5e1;
     font-size:18px;
+    max-width:680px;
+    color:rgba(255,255,255,.84);
     margin-bottom:32px;
 }
 
-.hero-buttons{
+.hero-actions{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
@@ -405,14 +314,14 @@ header{
 
 .btn{
     border:0;
-    border-radius:12px;
     padding:14px 21px;
+    border-radius:12px;
     font-weight:800;
+    transition:.2s;
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-    transition:.25s;
 }
 
 .btn:hover{
@@ -421,184 +330,218 @@ header{
 
 .btn-gold{
     background:var(--gold);
-    color:#111827;
+    color:#111;
+}
+
+.btn-white{
+    background:#fff;
+    color:var(--navy);
 }
 
 .btn-blue{
     background:var(--blue);
-    color:white;
+    color:#fff;
+}
+
+.btn-dark{
+    background:var(--navy);
+    color:#fff;
 }
 
 .btn-outline{
+    background:transparent;
     border:1px solid rgba(255,255,255,.25);
     color:white;
-    background:rgba(255,255,255,.05);
 }
 
 .stats{
-    max-width:850px;
-    margin-top:55px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.stat{
-    border-left:2px solid var(--gold);
-    padding-left:14px;
+    margin-top:45px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
 }
 
 .stat strong{
     display:block;
-    font-size:25px;
-    color:white;
+    font-size:28px;
 }
 
 .stat span{
-    color:#94a3b8;
+    color:rgba(255,255,255,.65);
     font-size:12px;
 }
 
-/* =========================================================
+/* =========================
    GENERAL
-========================================================= */
+========================= */
+
+section{
+    padding:90px 5%;
+}
 
 .container{
-    max-width:1400px;
+    width:min(1400px,100%);
     margin:auto;
-    padding:80px 5%;
 }
 
 .section-head{
     display:flex;
     align-items:end;
     justify-content:space-between;
-    gap:25px;
-    margin-bottom:30px;
+    gap:30px;
+    margin-bottom:35px;
 }
 
-.eyebrow{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.section-head .eyebrow{
+    color:var(--blue);
     margin-bottom:8px;
 }
 
-.section-head h2{
-    color:var(--navy);
-    font-size:clamp(28px,4vw,44px);
-    line-height:1.1;
+.section-title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(34px,4vw,52px);
+    line-height:1.05;
 }
 
-.section-head p{
-    max-width:600px;
+.section-description{
     color:var(--muted);
+    max-width:650px;
 }
 
-/* =========================================================
-   CATEGORY BOXES
-========================================================= */
+/* =========================
+   UNIVERS
+========================= */
 
-.category-grid{
+.univers-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
-.category-box{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:24px;
-    transition:.25s;
-    cursor:pointer;
-}
-
-.category-box:hover{
-    transform:translateY(-5px);
-    border-color:var(--gold);
-    box-shadow:var(--shadow);
-}
-
-.category-icon{
-    width:48px;
-    height:48px;
-    border-radius:13px;
-    background:#eef5ff;
-    color:var(--blue);
+.univers-card{
+    min-height:300px;
+    border-radius:25px;
+    padding:35px;
+    color:white;
+    position:relative;
+    overflow:hidden;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:23px;
-    margin-bottom:18px;
-}
-
-/* =========================================================
-   FILTER
-========================================================= */
-
-.catalog-section{
-    background:#fff;
-}
-
-.filter-panel{
-    background:var(--navy);
-    border-radius:22px;
-    padding:20px;
-    margin-bottom:30px;
+    flex-direction:column;
+    justify-content:flex-end;
     box-shadow:var(--shadow);
 }
 
-.filter-top{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:12px;
-    margin-bottom:14px;
+.univers-card:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 70%);
 }
 
-.search-box,
-.filter-select{
+.univers-card>*{
+    position:relative;
+    z-index:1;
+}
+
+.univers-card.auto{
+    background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+
+.univers-card.home{
+    background:url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+
+.univers-card .icon{
+    font-size:38px;
+    margin-bottom:auto;
+}
+
+.univers-card h3{
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.catalogue{
+    background:var(--cream);
+}
+
+.filter-box{
     background:#fff;
-    border:0;
-    border-radius:11px;
-    padding:14px 15px;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 10px 35px rgba(7,17,31,.06);
+    margin-bottom:30px;
+}
+
+.filter-row{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr auto;
+    gap:12px;
+}
+
+.field{
+    position:relative;
+}
+
+.field input,
+.field select{
     width:100%;
+    height:52px;
+    border:1px solid #dce3e9;
+    background:#fff;
+    border-radius:12px;
+    padding:0 15px;
+    color:var(--text);
     outline:none;
 }
 
-.brand-buttons{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+.field input:focus,
+.field select:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(18,97,160,.1);
 }
 
-.brand-btn{
-    border:1px solid rgba(255,255,255,.14);
-    background:rgba(255,255,255,.05);
-    color:#dbe4ee;
-    padding:8px 11px;
-    border-radius:30px;
-    font-size:12px;
-    transition:.2s;
+.brand-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.brand-filter{
     display:flex;
     align-items:center;
     gap:7px;
+    border:1px solid #dfe5e9;
+    background:white;
+    border-radius:30px;
+    padding:8px 13px;
+    font-weight:700;
+    font-size:12px;
 }
 
-.brand-btn:hover,
-.brand-btn.active{
-    background:var(--gold);
-    color:#111827;
-    border-color:var(--gold);
+.brand-filter img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
 }
 
-/* =========================================================
-   PRODUCTS
-========================================================= */
+.brand-filter.active{
+    background:var(--navy);
+    color:white;
+    border-color:var(--navy);
+}
 
-.product-grid{
+/* =========================
+   CATALOGUE CARDS
+========================= */
+
+.catalogue-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
@@ -606,23 +549,23 @@ header{
 
 .product-card{
     background:#fff;
-    border:1px solid var(--line);
+    border:1px solid var(--border);
     border-radius:20px;
     overflow:hidden;
-    transition:.3s;
-    position:relative;
+    transition:.25s;
+    box-shadow:0 8px 25px rgba(7,17,31,.05);
 }
 
 .product-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-7px);
     box-shadow:var(--shadow);
 }
 
 .product-image{
-    height:225px;
+    height:230px;
+    background:#edf1f4;
     position:relative;
     overflow:hidden;
-    background:#e9eef5;
 }
 
 .product-image img{
@@ -632,172 +575,173 @@ header{
     transition:.5s;
 }
 
-.product-card:hover img{
+.product-card:hover .product-image img{
     transform:scale(1.05);
 }
 
-.badge{
+.product-badge{
     position:absolute;
-    top:13px;
-    left:13px;
+    top:12px;
+    left:12px;
     background:var(--gold);
-    color:#111827;
-    padding:5px 9px;
-    border-radius:6px;
+    color:#111;
+    padding:6px 10px;
+    border-radius:20px;
     font-size:10px;
     font-weight:900;
-    z-index:2;
-}
-
-.product-info{
-    padding:19px;
-}
-
-.product-brand{
-    color:var(--gold);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1px;
     text-transform:uppercase;
-    display:flex;
-    align-items:center;
-    gap:7px;
 }
 
-.product-title{
-    color:var(--navy);
-    font-size:19px;
-    margin:7px 0;
+.product-brand-logo{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:rgba(255,255,255,.94);
+    padding:7px;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
 }
 
-.product-description{
+.product-content{
+    padding:18px;
+}
+
+.product-content small{
+    color:var(--blue);
+    font-weight:800;
+}
+
+.product-content h3{
+    font-size:20px;
+    margin:3px 0;
+}
+
+.product-content p{
     color:var(--muted);
-    font-size:12px;
-    min-height:40px;
+    font-size:13px;
+    min-height:42px;
 }
 
-.tags{
+.product-meta{
     display:flex;
-    gap:6px;
-    flex-wrap:wrap;
-    margin:13px 0;
+    justify-content:space-between;
+    gap:10px;
+    padding-top:12px;
+    margin-top:12px;
+    border-top:1px solid var(--border);
+    font-size:11px;
+    color:var(--muted);
 }
 
-.tag{
-    background:#f1f5f9;
-    color:#475569;
-    padding:5px 8px;
-    border-radius:6px;
-    font-size:10px;
-}
-
-.price{
-    font-weight:900;
-    color:var(--navy);
-    margin-bottom:13px;
-}
-
-.product-buttons{
+.product-actions{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:8px;
+    margin-top:13px;
 }
 
-.btn-small{
-    border:0;
-    padding:10px;
+.product-actions button{
+    padding:10px 7px;
     border-radius:9px;
+    border:0;
     font-weight:800;
     font-size:11px;
 }
 
-.btn-detail{
-    background:#edf3fa;
-    color:var(--navy);
+/* =========================
+   BRAND SECTION
+========================= */
+
+.brand-showcase{
+    background:var(--navy);
+    color:#fff;
 }
 
-.btn-offer{
-    background:var(--blue);
-    color:white;
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:12px;
 }
 
-/* =========================================================
-   BRAND SECTIONS
-========================================================= */
-
-.brand-section{
-    margin-top:55px;
-}
-
-.brand-header{
+.brand-card{
+    min-height:125px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;
     display:flex;
+    flex-direction:column;
+    justify-content:center;
     align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid var(--line);
-    padding-bottom:13px;
-    margin-bottom:18px;
+    text-align:center;
+    gap:9px;
+    transition:.2s;
 }
 
-.brand-header h3{
-    color:var(--navy);
-    font-size:25px;
+.brand-card:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateY(-3px);
 }
 
-/* =========================================================
-   HOME
-========================================================= */
+.brand-card img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    filter:brightness(0) invert(1);
+}
+
+.brand-card span{
+    font-size:11px;
+    font-weight:800;
+}
+
+/* =========================
+   MAISON
+========================= */
 
 .home-section{
-    background:#f1f5f9;
+    background:#f7f8fa;
 }
 
-.home-category-grid{
+.home-categories{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    margin-bottom:30px;
 }
 
 .home-category{
-    min-height:260px;
-    border-radius:22px;
-    overflow:hidden;
-    position:relative;
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:end;
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:17px;
+    padding:22px;
+    transition:.2s;
 }
 
-.home-category:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent 20%,rgba(3,10,18,.92));
+.home-category:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
 }
 
-.home-category-content{
-    position:relative;
-    z-index:1;
-    padding:25px;
-    color:white;
+.home-category .cat-icon{
+    font-size:30px;
+    margin-bottom:15px;
 }
 
-/* =========================================================
+.home-category h3{
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.home-category p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* =========================
    WHY
-========================================================= */
-
-.why{
-    background:var(--navy);
-    color:white;
-}
-
-.why .section-head h2{
-    color:white;
-}
-
-.why .section-head p{
-    color:#94a3b8;
-}
+========================= */
 
 .why-grid{
     display:grid;
@@ -806,260 +750,261 @@ header{
 }
 
 .why-card{
-    border:1px solid rgba(255,255,255,.08);
-    background:rgba(255,255,255,.04);
-    padding:25px;
-    border-radius:18px;
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:20px;
+    background:#fff;
 }
 
-.why-card .icon{
-    font-size:27px;
-    margin-bottom:15px;
+.why-card .why-icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:var(--light);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    margin-bottom:7px;
 }
 
 .why-card p{
-    color:#94a3b8;
+    color:var(--muted);
     font-size:13px;
 }
 
-/* =========================================================
-   REQUEST
-========================================================= */
+/* =========================
+   DEMANDE
+========================= */
 
-.request{
-    background:linear-gradient(135deg,#0d1b2a,#07111f);
-    color:white;
+.request-section{
+    background:linear-gradient(135deg,#07111f,#102b43);
+    color:#fff;
 }
 
-.request-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    align-items:center;
-}
-
-.request h2{
-    font-size:clamp(30px,4vw,50px);
-    line-height:1.1;
-    margin-bottom:15px;
-}
-
-.request p{
-    color:#94a3b8;
-    max-width:560px;
-}
-
-.request-form{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    color:var(--text);
-}
-
-.form-group{
-    margin-bottom:12px;
-}
-
-.form-group label{
-    display:block;
-    font-size:11px;
-    font-weight:800;
-    margin-bottom:5px;
-}
-
-.form-control{
-    width:100%;
-    border:1px solid var(--line);
-    border-radius:9px;
-    padding:11px;
-    outline:none;
-}
-
-textarea.form-control{
-    min-height:90px;
-    resize:vertical;
-}
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-grid{
+.request-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:50px;
     align-items:center;
 }
 
-.about-image{
-    height:400px;
-    border-radius:25px;
-    background:
-        linear-gradient(rgba(7,17,31,.25),rgba(7,17,31,.55)),
-        url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1400&q=85")
-        center/cover;
+.request-copy p{
+    color:rgba(255,255,255,.7);
+    max-width:550px;
 }
 
-.about-text p{
-    color:var(--muted);
-    margin-bottom:14px;
+.request-form{
+    background:#fff;
+    color:var(--text);
+    padding:25px;
+    border-radius:22px;
 }
 
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-information{
+.form-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:35px;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
-.contact-card{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:22px;
-}
-
-.contact-card strong{
-    display:block;
-    color:var(--navy);
-    margin-bottom:5px;
-}
-
-.contact-card span{
-    color:var(--muted);
-    font-size:13px;
-    word-break:break-word;
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    background:#030a12;
-    color:#94a3b8;
-    padding:50px 5% 110px;
-}
-
-.footer-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:35px;
-}
-
-footer h3,
-footer h4{
-    color:white;
-    margin-bottom:12px;
-}
-
-footer a{
-    display:block;
-    margin:6px 0;
-    font-size:13px;
-}
-
-footer a:hover{
-    color:var(--gold2);
-}
-
-.footer-email{
-    color:var(--gold2)!important;
-    font-weight:700;
-}
-
-/* =========================================================
-   FIXED CONTACT BAR
-========================================================= */
-
-.contact-bar{
-    position:fixed;
-    left:50%;
-    bottom:15px;
-    transform:translateX(-50%);
-    z-index:1200;
-    width:min(780px,calc(100% - 24px));
-    background:rgba(3,10,18,.96);
-    border:1px solid rgba(201,162,39,.35);
-    box-shadow:0 15px 45px rgba(0,0,0,.35);
-    backdrop-filter:blur(15px);
-    border-radius:18px;
-    padding:8px;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
+.form-group{
+    display:flex;
+    flex-direction:column;
     gap:6px;
 }
 
-.contact-btn{
-    border:0;
-    border-radius:12px;
-    padding:10px 7px;
-    background:transparent;
-    color:white;
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
     font-size:11px;
     font-weight:800;
+    color:var(--muted);
 }
 
-.contact-btn:hover{
-    background:rgba(255,255,255,.07);
+.form-group input,
+.form-group select,
+.form-group textarea{
+    border:1px solid #dce3e9;
+    border-radius:10px;
+    padding:12px;
+    outline:none;
 }
 
-.contact-btn.whatsapp{
-    color:#4ade80;
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
 }
 
-.contact-btn.call{
-    color:#60a5fa;
+/* =========================
+   ABOUT / CONTACT
+========================= */
+
+.about{
+    background:#fff;
 }
 
-.contact-btn.quote{
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+}
+
+.contact-card{
+    background:var(--navy);
+    color:#fff;
+    border-radius:25px;
+    padding:35px;
+}
+
+.contact-line{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.contact-line strong{
+    display:block;
+}
+
+.contact-line span{
+    color:rgba(255,255,255,.65);
+    font-size:12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#040a12;
+    color:white;
+    padding:55px 5% 110px;
+}
+
+.footer-grid{
+    width:min(1400px,100%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-title{
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer-links a{
+    display:block;
+    color:rgba(255,255,255,.62);
+    font-size:13px;
+    padding:4px 0;
+}
+
+.footer-links a:hover{
     color:var(--gold2);
 }
 
-.contact-btn.chat{
-    color:#c4b5fd;
+.copyright{
+    width:min(1400px,100%);
+    margin:40px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:rgba(255,255,255,.45);
+    font-size:11px;
 }
 
-.contact-btn.email{
-    color:#f472b6;
+/* =========================
+   BOTTOM CONTACT BAR
+========================= */
+
+.bottom-contact{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:2000;
+    background:rgba(4,10,18,.97);
+    border-top:1px solid rgba(255,255,255,.1);
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    padding:9px;
 }
 
-/* =========================================================
+.bottom-contact a,
+.bottom-contact button{
+    border:0;
+    padding:10px 15px;
+    border-radius:9px;
+    font-size:11px;
+    font-weight:900;
+}
+
+.bottom-phone{
+    background:white;
+    color:var(--navy);
+}
+
+.bottom-whatsapp{
+    background:#1fa855;
+    color:white;
+}
+
+.bottom-mail{
+    background:var(--gold);
+    color:#111;
+}
+
+.bottom-chat{
+    background:var(--blue);
+    color:white;
+}
+
+.bottom-quote{
+    background:#fff;
+    color:#111;
+}
+
+/* =========================
    CHATBOT
-========================================================= */
+========================= */
 
 .chat-launcher{
     position:fixed;
-    right:22px;
-    bottom:95px;
-    width:60px;
-    height:60px;
-    border:0;
+    right:25px;
+    bottom:90px;
+    z-index:2100;
+    width:62px;
+    height:62px;
     border-radius:50%;
+    border:0;
     background:var(--gold);
-    color:#111827;
-    font-size:25px;
+    color:#111;
+    font-size:26px;
     box-shadow:0 12px 35px rgba(0,0,0,.25);
-    z-index:1190;
 }
 
 .chat-window{
     position:fixed;
-    right:22px;
+    right:25px;
     bottom:165px;
-    width:360px;
-    max-width:calc(100% - 30px);
-    height:510px;
+    width:370px;
+    max-width:calc(100vw - 30px);
+    height:540px;
     background:white;
     border-radius:22px;
-    box-shadow:0 25px 80px rgba(0,0,0,.3);
-    z-index:1300;
+    z-index:2101;
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
+    border:1px solid var(--border);
     overflow:hidden;
     display:none;
     flex-direction:column;
@@ -1069,26 +1014,26 @@ footer a:hover{
     display:flex;
 }
 
-.chat-head{
+.chat-header{
     background:var(--navy);
     color:white;
-    padding:16px;
+    padding:17px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.chat-head strong{
+.chat-header strong{
     display:block;
 }
 
-.chat-head small{
-    color:#94a3b8;
+.chat-header small{
+    color:rgba(255,255,255,.6);
 }
 
 .chat-close{
-    background:none;
     border:0;
+    background:transparent;
     color:white;
     font-size:20px;
 }
@@ -1097,183 +1042,176 @@ footer a:hover{
     flex:1;
     padding:15px;
     overflow:auto;
-    background:#f6f8fb;
+    background:#f5f7f9;
 }
 
 .message{
     max-width:85%;
-    padding:10px 12px;
-    border-radius:13px;
-    margin-bottom:9px;
-    font-size:12px;
+    padding:11px 13px;
+    border-radius:14px;
+    margin-bottom:10px;
+    font-size:13px;
 }
 
 .message.bot{
     background:white;
-    border:1px solid var(--line);
-    color:#334155;
+    border:1px solid var(--border);
 }
 
 .message.user{
-    background:var(--blue);
-    color:white;
     margin-left:auto;
+    background:var(--navy);
+    color:white;
 }
 
-.quick-actions{
+.chat-quick{
     display:flex;
     flex-wrap:wrap;
     gap:6px;
-    margin-top:9px;
+    padding:10px;
+    border-top:1px solid var(--border);
 }
 
-.quick-action{
-    border:1px solid #dbe3ec;
-    background:white;
-    color:#334155;
-    padding:7px 9px;
+.chat-quick button{
+    border:1px solid #dce3e9;
+    background:#fff;
     border-radius:20px;
+    padding:7px 10px;
     font-size:10px;
+    font-weight:800;
 }
 
 .chat-input{
-    padding:10px;
     display:flex;
-    gap:7px;
-    border-top:1px solid var(--line);
+    border-top:1px solid var(--border);
 }
 
 .chat-input input{
     flex:1;
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:10px;
+    border:0;
+    padding:15px;
     outline:none;
 }
 
-.chat-send{
+.chat-input button{
+    width:55px;
     border:0;
     background:var(--blue);
     color:white;
-    border-radius:10px;
-    width:45px;
 }
 
-/* =========================================================
-   MODAL
-========================================================= */
+/* =========================
+   TRANSLATOR
+========================= */
 
-.modal{
+.translate-box{
     position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.72);
-    z-index:2000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal.open{
-    display:flex;
-}
-
-.modal-box{
+    top:100px;
+    right:20px;
+    z-index:1500;
     background:white;
-    width:min(900px,100%);
-    max-height:90vh;
-    overflow:auto;
-    border-radius:22px;
-    position:relative;
+    padding:8px 12px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
 }
 
-.modal-close{
-    position:absolute;
-    right:15px;
-    top:15px;
-    width:40px;
-    height:40px;
-    border:0;
-    border-radius:50%;
-    background:rgba(0,0,0,.6);
-    color:white;
-    z-index:3;
+#google_translate_element{
+    font-size:11px;
 }
 
-.modal-image{
-    height:360px;
+.goog-te-gadget{
+    font-family:Inter,Arial,sans-serif!important;
 }
 
-.modal-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.goog-te-gadget .goog-te-combo{
+    margin:0!important;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:6px;
 }
 
-.modal-content{
-    padding:25px;
-}
+/* =========================
+   EMPTY
+========================= */
 
-.modal-content h2{
-    color:var(--navy);
-    margin-bottom:8px;
-}
-
-.modal-content p{
+.no-results{
+    grid-column:1/-1;
+    padding:50px;
+    background:#fff;
+    border-radius:20px;
+    text-align:center;
     color:var(--muted);
 }
 
-/* =========================================================
-   TOAST
-========================================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
-.toast{
-    position:fixed;
-    left:50%;
-    top:25px;
-    transform:translate(-50%,-20px);
-    background:var(--navy);
-    color:white;
-    padding:13px 18px;
-    border-radius:12px;
-    box-shadow:var(--shadow);
-    opacity:0;
-    pointer-events:none;
-    transition:.3s;
-    z-index:3000;
-    font-size:13px;
+@media(max-width:1200px){
+    .catalogue-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .home-categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .filter-row{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
-.toast.show{
-    opacity:1;
-    transform:translate(-50%,0);
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:1100px){
-
+@media(max-width:900px){
     .nav-links{
         display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:white;
+        padding:15px 5%;
+        flex-direction:column;
+        align-items:stretch;
+        border-bottom:1px solid var(--border);
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.open{
+        display:flex;
     }
 
     .mobile-menu{
         display:block;
     }
 
-    .nav-contact{
+    .dropdown-menu{
+        position:static;
         display:none;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        box-shadow:none;
+        border:0;
+        max-height:none;
     }
 
-    .category-grid,
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
+    .nav-dropdown.open .dropdown-menu{
+        display:block;
     }
 
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
+    .univers-grid,
+    .request-grid,
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
     .footer-grid{
@@ -1281,3306 +1219,2441 @@ footer a:hover{
     }
 }
 
-@media(max-width:700px){
-
-    .translation-bar{
-        justify-content:center;
-    }
-
-    .translation-label{
-        display:none;
-    }
-
+@media(max-width:650px){
     .topbar{
-        justify-content:center;
+        display:none;
     }
 
-    .topbar span:first-child{
-        display:none;
+    .navbar{
+        min-height:68px;
     }
 
     .hero{
         min-height:620px;
     }
 
-    .hero-content{
-        padding-top:100px;
-    }
-
     .hero h1{
-        letter-spacing:-1.5px;
+        font-size:48px;
     }
 
-    .stats{
-        grid-template-columns:repeat(2,1fr);
+    .hero p{
+        font-size:15px;
     }
 
-    .category-grid,
-    .product-grid,
-    .home-category-grid,
-    .why-grid,
-    .about-grid,
-    .request-box,
-    .contact-information{
-        grid-template-columns:1fr;
-    }
-
-    .filter-top{
-        grid-template-columns:1fr;
+    section{
+        padding:65px 5%;
     }
 
     .section-head{
         display:block;
     }
 
-    .section-head p{
-        margin-top:10px;
+    .catalogue-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .home-categories,
+    .brand-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .filter-row{
+        grid-template-columns:1fr;
     }
 
     .product-image{
-        height:220px;
+        height:170px;
+    }
+
+    .product-content h3{
+        font-size:16px;
+    }
+
+    .product-content p{
+        display:none;
+    }
+
+    .bottom-contact{
+        justify-content:stretch;
+    }
+
+    .bottom-contact a,
+    .bottom-contact button{
+        flex:1;
+        padding:9px 5px;
+        font-size:9px;
+    }
+
+    .bottom-mail,
+    .bottom-quote{
+        display:none;
+    }
+
+    .chat-window{
+        right:15px;
+        bottom:125px;
+        width:calc(100vw - 30px);
+        height:500px;
+    }
+
+    .chat-launcher{
+        right:15px;
+        bottom:70px;
+    }
+
+    .translate-box{
+        top:80px;
+        right:10px;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
-
-    .contact-bar{
-        bottom:8px;
-        width:calc(100% - 10px);
-    }
-
-    .contact-btn{
-        font-size:8px;
-        padding:8px 2px;
-    }
-
-    .chat-launcher{
-        right:15px;
-        bottom:78px;
-    }
-
-    .chat-window{
-        right:10px;
-        bottom:145px;
-        width:calc(100% - 20px);
-        height:500px;
-    }
-
-    .mega{
-        display:none;
-    }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =========================================================
-     LANGUAGE
-========================================================= -->
-
-<div class="translation-bar">
-
-    <div class="translation-label">
-        🌍 <span>Language / Langue</span>
-    </div>
-
-    <div id="google_translate_element"></div>
-
-</div>
-
-
-<!-- =========================================================
+<!-- =====================================================
      TOP BAR
-========================================================= -->
+===================================================== -->
 
 <div class="topbar">
+    <div class="topbar-left">
+        <span>✦ SHOWROOM PREMIUM</span>
+        <span>🚘 AUTOMOBILE</span>
+        <span>🏠 MAISON</span>
+    </div>
 
-    <span>
-        ✦ SHOWROOM PREMIUM • AUTOMOBILE & MAISON
-    </span>
-
-    <span>
-        📞 +233 53 983 4824
-    </span>
-
+    <div class="topbar-right">
+        <span>📞 +233 53 983 4824</span>
+        <button class="lang-btn" onclick="openTranslator()">🌍 Langue</button>
+    </div>
 </div>
 
+<!-- =====================================================
+     TRANSLATOR
+===================================================== -->
 
-<!-- =========================================================
+<div class="translate-box">
+    <div id="google_translate_element"></div>
+</div>
+
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
 <header>
+<nav class="navbar">
 
-<nav class="nav">
+    <a href="#accueil" class="logo">
+        <div class="logo-mark">N</div>
+        <div class="logo-text">
+            <strong>NEXORAS</strong>
+            <span>Groupe • Excellence • Solutions</span>
+        </div>
+    </a>
 
-<a href="#accueil" class="logo">
+    <div class="nav-links" id="navLinks">
 
-    <div class="logo-mark">
-        N
+        <a href="#accueil">Accueil</a>
+
+        <div class="nav-dropdown">
+            <button onclick="toggleDropdown(this)">
+                🚘 Automobiles ▾
+            </button>
+
+            <div class="dropdown-menu" id="autoDropdown">
+
+                <div class="dropdown-section">
+                    <strong>Mercedes-Benz</strong>
+                    <a href="#catalogue" onclick="selectBrand('Mercedes-Benz')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('GLE')">GLE</a>
+                    <a href="#catalogue" onclick="selectModel('GLC')">GLC</a>
+                    <a href="#catalogue" onclick="selectModel('GLS')">GLS</a>
+                    <a href="#catalogue" onclick="selectModel('Classe S')">Classe S</a>
+                    <a href="#catalogue" onclick="selectModel('AMG')">AMG</a>
+                    <a href="#catalogue" onclick="selectModel('Maybach')">Maybach</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>BMW</strong>
+                    <a href="#catalogue" onclick="selectBrand('BMW')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('Série 3')">Série 3</a>
+                    <a href="#catalogue" onclick="selectModel('Série 5')">Série 5</a>
+                    <a href="#catalogue" onclick="selectModel('X3')">X3</a>
+                    <a href="#catalogue" onclick="selectModel('X5')">X5</a>
+                    <a href="#catalogue" onclick="selectModel('X6')">X6</a>
+                    <a href="#catalogue" onclick="selectModel('M')">M</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>Toyota</strong>
+                    <a href="#catalogue" onclick="selectBrand('Toyota')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('Land Cruiser')">Land Cruiser</a>
+                    <a href="#catalogue" onclick="selectModel('Prado')">Prado</a>
+                    <a href="#catalogue" onclick="selectModel('RAV4')">RAV4</a>
+                    <a href="#catalogue" onclick="selectModel('Hilux')">Hilux</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>BYD</strong>
+                    <a href="#catalogue" onclick="selectBrand('BYD')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('ATTO 3')">ATTO 3</a>
+                    <a href="#catalogue" onclick="selectModel('SEAL')">SEAL</a>
+                    <a href="#catalogue" onclick="selectModel('DOLPHIN')">DOLPHIN</a>
+                    <a href="#catalogue" onclick="selectModel('TANG')">TANG</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>Lexus</strong>
+                    <a href="#catalogue" onclick="selectBrand('Lexus')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('RX')">RX</a>
+                    <a href="#catalogue" onclick="selectModel('LX')">LX</a>
+                    <a href="#catalogue" onclick="selectModel('GX')">GX</a>
+                    <a href="#catalogue" onclick="selectModel('ES')">ES</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>Geely</strong>
+                    <a href="#catalogue" onclick="selectBrand('Geely')">Tous</a>
+                    <a href="#catalogue" onclick="selectModel('Coolray')">Coolray</a>
+                    <a href="#catalogue" onclick="selectModel('Monjaro')">Monjaro</a>
+                    <a href="#catalogue" onclick="selectModel('Starray')">Starray</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>Autres marques</strong>
+                    <a href="#catalogue" onclick="selectBrand('Chery')">Chery</a>
+                    <a href="#catalogue" onclick="selectBrand('Deepal')">Deepal</a>
+                    <a href="#catalogue" onclick="selectBrand('Land Rover')">Range Rover</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nav-dropdown">
+            <button onclick="toggleDropdown(this)">
+                🏠 Maison ▾
+            </button>
+
+            <div class="dropdown-menu">
+
+                <div class="dropdown-section">
+                    <strong>🍳 Cuisine</strong>
+                    <a href="#maison">Réfrigérateurs</a>
+                    <a href="#maison">Cuisinières</a>
+                    <a href="#maison">Fours</a>
+                    <a href="#maison">Micro-ondes</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>❄️ Confort</strong>
+                    <a href="#maison">Climatiseurs</a>
+                    <a href="#maison">Ventilateurs</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>🧺 Buanderie</strong>
+                    <a href="#maison">Machines à laver</a>
+                    <a href="#maison">Sèche-linge</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>📺 Multimédia</strong>
+                    <a href="#maison">Smart TV</a>
+                    <a href="#maison">Audio</a>
+                </div>
+
+                <div class="dropdown-section">
+                    <strong>🧹 Entretien</strong>
+                    <a href="#maison">Aspirateurs</a>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="#premium">⭐ Premium</a>
+        <a href="#demande">📋 Devis</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+
     </div>
 
-    <div class="logo-text">
-
-        <strong>NEXORAS</strong>
-
-        <small>
-            GROUPE
-        </small>
-
-    </div>
-
-</a>
-
-
-<div class="nav-links">
-
-<a class="nav-link" href="#accueil">
-    Accueil
-</a>
-
-
-<div class="nav-item">
-
-<a class="nav-link" href="#automobiles">
-    🚘 Automobiles ▾
-</a>
-
-
-<div class="mega">
-
-<div class="mega-grid">
-
-
-<div>
-
-<h4>
-    🚘 <span>Mercedes-Benz</span>
-</h4>
-
-<a href="#" onclick="filterBrand('Mercedes-Benz');return false;">
-    Tous les Mercedes-Benz
-</a>
-
-<a href="#" onclick="filterModel('GLE');return false;">
-    GLE
-</a>
-
-<a href="#" onclick="filterModel('GLC');return false;">
-    GLC
-</a>
-
-<a href="#" onclick="filterModel('GLS');return false;">
-    GLS
-</a>
-
-<a href="#" onclick="filterModel('Classe S');return false;">
-    Classe S
-</a>
-
-<a href="#" onclick="filterModel('AMG');return false;">
-    AMG
-</a>
-
-<a href="#" onclick="filterModel('Maybach');return false;">
-    Maybach
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🚙 <span>Toyota</span>
-</h4>
-
-<a href="#" onclick="filterBrand('Toyota');return false;">
-    Tous les Toyota
-</a>
-
-<a href="#" onclick="filterModel('Land Cruiser');return false;">
-    Land Cruiser
-</a>
-
-<a href="#" onclick="filterModel('Prado');return false;">
-    Prado
-</a>
-
-<a href="#" onclick="filterModel('RAV4');return false;">
-    RAV4
-</a>
-
-<a href="#" onclick="filterModel('Hilux');return false;">
-    Hilux
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    ⚡ <span>BYD</span>
-</h4>
-
-<a href="#" onclick="filterBrand('BYD');return false;">
-    Tous les BYD
-</a>
-
-<a href="#" onclick="filterModel('ATTO');return false;">
-    ATTO
-</a>
-
-<a href="#" onclick="filterModel('SEAL');return false;">
-    SEAL
-</a>
-
-<a href="#" onclick="filterModel('DOLPHIN');return false;">
-    DOLPHIN
-</a>
-
-<a href="#" onclick="filterModel('TANG');return false;">
-    TANG
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    ✨ <span>Lexus</span>
-</h4>
-
-<a href="#" onclick="filterBrand('Lexus');return false;">
-    Tous les Lexus
-</a>
-
-<a href="#" onclick="filterModel('RX');return false;">
-    RX
-</a>
-
-<a href="#" onclick="filterModel('LX');return false;">
-    LX
-</a>
-
-<a href="#" onclick="filterModel('GX');return false;">
-    GX
-</a>
-
-<a href="#" onclick="filterModel('ES');return false;">
-    ES
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🇨🇳 <span>Geely</span>
-</h4>
-
-<a href="#" onclick="filterBrand('Geely');return false;">
-    Tous les Geely
-</a>
-
-<a href="#" onclick="filterModel('Coolray');return false;">
-    Coolray
-</a>
-
-<a href="#" onclick="filterModel('Monjaro');return false;">
-    Monjaro
-</a>
-
-<a href="#" onclick="filterModel('Starray');return false;">
-    Starray
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🌍 <span>Autres marques</span>
-</h4>
-
-<a href="#" onclick="filterBrand('Chery');return false;">
-    Chery
-</a>
-
-<a href="#" onclick="filterBrand('Deepal');return false;">
-    Deepal
-</a>
-
-<a href="#" onclick="filterBrand('Range Rover');return false;">
-    Range Rover
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="nav-item">
-
-<a class="nav-link" href="#maison">
-    🏠 Maison ▾
-</a>
-
-
-<div class="mega">
-
-<div class="mega-grid">
-
-
-<div>
-
-<h4>
-    🍳 <span>Cuisine</span>
-</h4>
-
-<a href="#" onclick="filterHome('Cuisine');return false;">
-    Tous
-</a>
-
-<a href="#" onclick="filterHome('Réfrigérateur');return false;">
-    Réfrigérateurs
-</a>
-
-<a href="#" onclick="filterHome('Cuisinière');return false;">
-    Cuisinières
-</a>
-
-<a href="#" onclick="filterHome('Micro-ondes');return false;">
-    Micro-ondes
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    ❄️ <span>Climatisation</span>
-</h4>
-
-<a href="#" onclick="filterHome('Climatiseur');return false;">
-    Climatiseurs
-</a>
-
-<a href="#" onclick="filterHome('Ventilateur');return false;">
-    Ventilateurs
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🧺 <span>Buanderie</span>
-</h4>
-
-<a href="#" onclick="filterHome('Machine');return false;">
-    Machines à laver
-</a>
-
-<a href="#" onclick="filterHome('Sèche');return false;">
-    Sèche-linge
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    📺 <span>Multimédia</span>
-</h4>
-
-<a href="#" onclick="filterHome('TV');return false;">
-    Smart TV
-</a>
-
-<a href="#" onclick="filterHome('Audio');return false;">
-    Audio
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🧹 <span>Entretien</span>
-</h4>
-
-<a href="#" onclick="filterHome('Aspirateur');return false;">
-    Aspirateurs
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    🚿 <span>Sanitaire</span>
-</h4>
-
-<a href="#" onclick="filterHome('Sanitaire');return false;">
-    Équipements sanitaires
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-<a class="nav-link" href="#premium">
-    ⭐ Premium
-</a>
-
-<a class="nav-link" href="#demande">
-    📋 Devis
-</a>
-
-<a class="nav-link" href="#apropos">
-    À propos
-</a>
-
-</div>
-
-
-<div class="nav-actions">
-
-<a class="nav-contact" href="#contact">
-    Contact
-</a>
-
-<button class="mobile-menu" onclick="toggleMobileMenu()">
-    ☰
-</button>
-
-</div>
+    <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
 
 </nav>
-
 </header>
 
-
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
+
+<main>
 
 <section class="hero" id="accueil">
 
-<div class="hero-content">
+    <div class="hero-inner">
 
-<div class="hero-badge">
-    ✦ NEXORAS GROUPE • SHOWROOM PREMIUM
-</div>
+        <div class="hero-content">
 
-<h1>
-    L'excellence
-    <br>
-    <span>en mouvement.</span>
-</h1>
+            <div class="eyebrow">
+                ✦ NEXORAS GROUPE • SHOWROOM PREMIUM
+            </div>
 
-<p>
-    Automobiles premium, véhicules modernes,
-    électroménager et équipements pour la maison.
-    NEXORAS vous accompagne dans la recherche
-    de solutions adaptées à vos besoins.
-</p>
+            <h1>
+                L'excellence<br>
+                <span>en mouvement.</span>
+            </h1>
 
-<div class="hero-buttons">
+            <p>
+                Découvrez une sélection de véhicules premium,
+                automobiles modernes, électroménager et équipements
+                pour la maison. NEXORAS vous accompagne dans votre recherche.
+            </p>
 
-<a href="#automobiles" class="btn btn-gold">
-    🚘 Explorer les automobiles
-</a>
+            <div class="hero-actions">
 
-<a href="#maison" class="btn btn-outline">
-    🏠 Découvrir la maison
-</a>
+                <a href="#catalogue" class="btn btn-gold">
+                    🚘 Explorer les automobiles
+                </a>
 
-</div>
+                <a href="#maison" class="btn btn-white">
+                    🏠 Découvrir la maison
+                </a>
 
+                <button class="btn btn-outline" onclick="openChat()">
+                    🤖 Parler à NEXORAS
+                </button>
 
-<div class="stats">
+            </div>
 
-<div class="stat">
-    <strong>50+</strong>
-    <span>Modèles</span>
-</div>
+            <div class="stats">
 
-<div class="stat">
-    <strong>15+</strong>
-    <span>Marques</span>
-</div>
+                <div class="stat">
+                    <strong>50+</strong>
+                    <span>Modèles</span>
+                </div>
 
-<div class="stat">
-    <strong>2</strong>
-    <span>Univers</span>
-</div>
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span>Marques</span>
+                </div>
 
-<div class="stat">
-    <strong>24/7</strong>
-    <span>Catalogue</span>
-</div>
+                <div class="stat">
+                    <strong>2</strong>
+                    <span>Univers</span>
+                </div>
 
-</div>
+                <div class="stat">
+                    <strong>24/7</strong>
+                    <span>Catalogue</span>
+                </div>
 
-</div>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-
-<!-- =========================================================
+<!-- =====================================================
      UNIVERS
-========================================================= -->
+===================================================== -->
 
-<section class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-    Nos univers
-</div>
-
-<h2>
-    Choisissez votre univers
-</h2>
-
-</div>
-
-<p>
-    Une expérience NEXORAS pensée autour
-    de la mobilité et de l'équipement de la maison.
-</p>
-
-</div>
-
-
-<div class="category-grid">
-
-
-<div class="category-box"
-onclick="document.querySelector('#automobiles').scrollIntoView()">
-
-<div class="category-icon">
-    🚘
-</div>
-
-<h3>
-    Automobiles
-</h3>
-
-<p>
-    SUV, berlines, sportives,
-    luxe, hybrides et électriques.
-</p>
-
-</div>
-
-
-<div class="category-box"
-onclick="document.querySelector('#maison').scrollIntoView()">
-
-<div class="category-icon">
-    🏠
-</div>
-
-<h3>
-    Maison
-</h3>
-
-<p>
-    Électroménager, multimédia,
-    cuisine et confort.
-</p>
-
-</div>
-
-
-<div class="category-box"
-onclick="document.querySelector('#premium').scrollIntoView()">
-
-<div class="category-icon">
-    ⭐
-</div>
-
-<h3>
-    Premium
-</h3>
-
-<p>
-    Une sélection de produits
-    haut de gamme.
-</p>
-
-</div>
-
-
-<div class="category-box"
-onclick="document.querySelector('#demande').scrollIntoView()">
-
-<div class="category-icon">
-    📋
-</div>
-
-<h3>
-    Sur commande
-</h3>
-
-<p>
-    Nous recherchons aussi
-    les produits absents du catalogue.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     AUTOMOBILES
-========================================================= -->
-
-<section class="catalog-section" id="automobiles">
+<section>
 
 <div class="container">
 
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-    NEXORAS Mobility
-</div>
-
-<h2>
-    Automobiles
-</h2>
-
-</div>
-
-<p>
-    Explorez les véhicules par marque,
-    gamme et modèle.
-</p>
-
-</div>
-
-
-<div class="filter-panel">
-
-
-<div class="filter-top">
-
-<input
-id="carSearch"
-class="search-box"
-type="search"
-placeholder="🔎 Rechercher une marque, un modèle..."
-oninput="renderCars()"
->
-
-
-<select
-id="carType"
-class="filter-select"
-onchange="renderCars()">
-
-<option value="">
-    Toutes catégories
-</option>
-
-<option value="SUV">
-    SUV
-</option>
-
-<option value="Berline">
-    Berlines
-</option>
-
-<option value="Luxe">
-    Luxe
-</option>
-
-<option value="Sport">
-    Sport
-</option>
-
-<option value="Électrique">
-    Électrique
-</option>
-
-</select>
-
-
-<select
-id="carFuel"
-class="filter-select"
-onchange="renderCars()">
-
-<option value="">
-    Toutes motorisations
-</option>
-
-<option value="Électrique">
-    Électrique
-</option>
-
-<option value="Hybride">
-    Hybride
-</option>
-
-<option value="Essence">
-    Essence
-</option>
-
-<option value="Diesel">
-    Diesel
-</option>
-
-</select>
-
-</div>
-
-
-<div class="brand-buttons">
-
-<button class="brand-btn active"
-onclick="filterBrand('')">
-    Toutes
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('BYD')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/byd"
-alt="BYD">
-
-BYD
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Geely')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/geely"
-alt="Geely">
-
-Geely
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Chery')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/chery"
-alt="Chery">
-
-Chery
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Deepal')">
-
-<span>DEEPAL</span>
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Mercedes-Benz')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/mercedes"
-alt="Mercedes-Benz">
-
-Mercedes-Benz
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Lexus')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/lexus"
-alt="Lexus">
-
-Lexus
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Toyota')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/toyota"
-alt="Toyota">
-
-Toyota
-
-</button>
-
-
-<button class="brand-btn"
-onclick="filterBrand('Range Rover')">
-
-<img
-class="brand-logo"
-src="https://cdn.simpleicons.org/landrover"
-alt="Land Rover">
-
-Range Rover
-
-</button>
-
-</div>
-
-</div>
-
-
-<div id="carGrid" class="product-grid"></div>
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">NEXORAS EXPERIENCE</div>
+            <h2 class="section-title">Choisissez votre univers</h2>
+        </div>
+
+        <p class="section-description">
+            Une expérience commerciale pensée autour de la mobilité,
+            de l'équipement et des solutions pour la maison.
+        </p>
+
+    </div>
+
+    <div class="univers-grid">
+
+        <a href="#catalogue" class="univers-card auto">
+            <div class="icon">🚘</div>
+            <h3>Automobiles</h3>
+            <p>SUV, berlines, sportives, luxe, hybrides et électriques.</p>
+        </a>
+
+        <a href="#maison" class="univers-card home">
+            <div class="icon">🏠</div>
+            <h3>Maison & Électroménager</h3>
+            <p>Cuisine, confort, multimédia, buanderie et équipements.</p>
+        </a>
+
+    </div>
 
 </div>
 
 </section>
 
+<!-- =====================================================
+     AUTOMOBILES
+===================================================== -->
 
-<!-- =========================================================
-     PREMIUM
-========================================================= -->
+<section class="catalogue" id="catalogue">
 
-<section class="container" id="premium">
+<div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div>
+        <div>
+            <div class="eyebrow">NEXORAS MOBILITY</div>
+            <h2 class="section-title">Automobiles</h2>
+        </div>
 
-<div class="eyebrow">
-    Sélection NEXORAS
+        <p class="section-description">
+            Explorez les véhicules par marque, gamme et modèle.
+            Les images sont recherchées automatiquement selon le modèle.
+        </p>
+
+    </div>
+
+    <!-- FILTER -->
+
+    <div class="filter-box">
+
+        <div class="filter-row">
+
+            <div class="field">
+                <input
+                    type="search"
+                    id="carSearch"
+                    placeholder="🔎 Rechercher une marque ou un modèle..."
+                    oninput="filterCars()"
+                >
+            </div>
+
+            <div class="field">
+                <select id="brandSelect" onchange="filterCars()">
+                    <option value="">Toutes les marques</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <select id="modelSelect" onchange="filterCars()">
+                    <option value="">Tous les modèles</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <select id="typeSelect" onchange="filterCars()">
+                    <option value="">Tous les types</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Berline">Berline</option>
+                    <option value="Sportive">Sportive</option>
+                    <option value="Électrique">Électrique</option>
+                    <option value="Pick-up">Pick-up</option>
+                    <option value="Luxe">Luxe</option>
+                </select>
+            </div>
+
+            <button class="btn btn-dark" onclick="resetFilters()">
+                Réinitialiser
+            </button>
+
+        </div>
+
+        <div class="brand-strip" id="brandStrip"></div>
+
+    </div>
+
+    <div class="catalogue-grid" id="carGrid"></div>
+
 </div>
-
-<h2>
-    Premium Collection
-</h2>
-
-</div>
-
-<p>
-    Des véhicules sélectionnés pour leur
-    élégance, leurs performances et leur niveau d'équipement.
-</p>
-
-</div>
-
-
-<div class="product-grid" id="premiumGrid"></div>
 
 </section>
 
+<!-- =====================================================
+     BRANDS
+===================================================== -->
 
-<!-- =========================================================
+<section class="brand-showcase" id="premium">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div>
+            <div class="eyebrow">NOS MARQUES</div>
+            <h2 class="section-title">Les grandes signatures</h2>
+        </div>
+
+        <p class="section-description" style="color:rgba(255,255,255,.6)">
+            Une sélection de marques automobiles internationales,
+            premium et asiatiques.
+        </p>
+
+    </div>
+
+    <div class="brand-grid" id="brandGrid"></div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
      MAISON
-========================================================= -->
+===================================================== -->
 
 <section class="home-section" id="maison">
 
 <div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div>
+        <div>
+            <div class="eyebrow">NEXORAS HOME</div>
+            <h2 class="section-title">Maison & Électroménager</h2>
+        </div>
 
-<div class="eyebrow">
-    NEXORAS Home
-</div>
+        <p class="section-description">
+            Des équipements pour la maison, le bureau et le commerce.
+            Les catégories sont organisées pour faciliter la recherche.
+        </p>
 
-<h2>
-    Maison & Électroménager
-</h2>
+    </div>
 
-</div>
+    <div class="home-categories">
 
-<p>
-    Tout ce qu'il faut pour équiper votre maison,
-    votre bureau ou votre commerce.
-</p>
+        <div class="home-category" onclick="filterHome('Réfrigérateur')">
+            <div class="cat-icon">🧊</div>
+            <h3>Réfrigérateurs</h3>
+            <p>Samsung, LG, Hisense, Midea...</p>
+        </div>
 
-</div>
+        <div class="home-category" onclick="filterHome('Climatiseur')">
+            <div class="cat-icon">❄️</div>
+            <h3>Climatisation</h3>
+            <p>Split, inverter, confort.</p>
+        </div>
 
+        <div class="home-category" onclick="filterHome('Lave-linge')">
+            <div class="cat-icon">🧺</div>
+            <h3>Buanderie</h3>
+            <p>Machines à laver et sèche-linge.</p>
+        </div>
 
-<div class="home-category-grid">
+        <div class="home-category" onclick="filterHome('TV')">
+            <div class="cat-icon">📺</div>
+            <h3>Multimédia</h3>
+            <p>Smart TV et audio.</p>
+        </div>
 
+        <div class="home-category" onclick="filterHome('Cuisine')">
+            <div class="cat-icon">🍳</div>
+            <h3>Cuisine</h3>
+            <p>Fours, cuisinières et micro-ondes.</p>
+        </div>
 
-<div class="home-category"
-style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80')">
+    </div>
 
-<div class="home-category-content">
+    <div class="filter-box">
 
-<h3>
-    🍳 Cuisine
-</h3>
+        <div class="filter-row">
 
-<p>
-    Réfrigérateurs, cuisinières,
-    fours, micro-ondes...
-</p>
+            <div class="field">
+                <input
+                    id="homeSearch"
+                    type="search"
+                    placeholder="🔎 Rechercher un appareil..."
+                    oninput="filterHomeProducts()"
+                >
+            </div>
 
-</div>
+            <div class="field">
+                <select id="homeBrand" onchange="filterHomeProducts()">
+                    <option value="">Toutes les marques</option>
+                    <option>Samsung</option>
+                    <option>LG</option>
+                    <option>Hisense</option>
+                    <option>Midea</option>
+                    <option>Haier</option>
+                    <option>TCL</option>
+                    <option>Bosch</option>
+                </select>
+            </div>
 
-</div>
+            <div class="field">
+                <select id="homeType" onchange="filterHomeProducts()">
+                    <option value="">Toutes les catégories</option>
+                    <option>Réfrigérateur</option>
+                    <option>Climatiseur</option>
+                    <option>Lave-linge</option>
+                    <option>TV</option>
+                    <option>Four</option>
+                    <option>Micro-ondes</option>
+                    <option>Aspirateur</option>
+                </select>
+            </div>
 
+        </div>
 
-<div class="home-category"
-style="background-image:url('https://images.unsplash.com/photo-1631545806609-2e4b2f6f8b8b?auto=format&fit=crop&w=1000&q=80')">
+    </div>
 
-<div class="home-category-content">
-
-<h3>
-    ❄️ Confort
-</h3>
-
-<p>
-    Climatiseurs, ventilateurs
-    et solutions de confort.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="home-category"
-style="background-image:url('https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1000&q=80')">
-
-<div class="home-category-content">
-
-<h3>
-    📺 Multimédia
-</h3>
-
-<p>
-    Smart TV, audio et équipements
-    multimédias.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-<br><br>
-
-
-<div class="filter-panel">
-
-<div class="filter-top">
-
-<input
-id="homeSearch"
-class="search-box"
-type="search"
-placeholder="🔎 Rechercher un appareil..."
-oninput="renderHome()"
->
-
-
-<select
-id="homeType"
-class="filter-select"
-onchange="renderHome()">
-
-<option value="">
-    Toutes catégories
-</option>
-
-<option value="Cuisine">
-    Cuisine
-</option>
-
-<option value="Confort">
-    Confort
-</option>
-
-<option value="Buanderie">
-    Buanderie
-</option>
-
-<option value="Multimédia">
-    Multimédia
-</option>
-
-<option value="Entretien">
-    Entretien
-</option>
-
-<option value="Sanitaire">
-    Sanitaire
-</option>
-
-</select>
-
-<div></div>
-
-</div>
-
-</div>
-
-
-<div id="homeGrid" class="product-grid"></div>
+    <div class="catalogue-grid" id="homeGrid"></div>
 
 </div>
 
 </section>
 
+<!-- =====================================================
+     POURQUOI NEXORAS
+===================================================== -->
 
-<!-- =========================================================
-     WHY
-========================================================= -->
-
-<section class="why" id="apropos">
+<section>
 
 <div class="container">
 
-<div class="section-head">
+    <div class="section-head">
 
-<div>
+        <div>
+            <div class="eyebrow">POURQUOI NEXORAS ?</div>
+            <h2 class="section-title">Une expérience pensée pour le client</h2>
+        </div>
 
-<div class="eyebrow">
-    Pourquoi NEXORAS ?
-</div>
+    </div>
 
-<h2>
-    Une expérience pensée pour le client
-</h2>
+    <div class="why-grid">
 
-</div>
+        <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <h3>Confiance</h3>
+            <p>Une approche commerciale claire et professionnelle.</p>
+        </div>
 
-<p>
-    Notre objectif est de construire une relation commerciale
-    fondée sur la confiance, la transparence et l'accompagnement.
-</p>
+        <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <h3>Qualité</h3>
+            <p>Une sélection orientée vers la qualité et la valeur.</p>
+        </div>
 
-</div>
+        <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3>Accompagnement</h3>
+            <p>Nous vous aidons à trouver la solution adaptée.</p>
+        </div>
 
+        <div class="why-card">
+            <div class="why-icon">🌍</div>
+            <h3>International</h3>
+            <p>Une interface pensée pour les clients de différents pays.</p>
+        </div>
 
-<div class="why-grid">
-
-
-<div class="why-card">
-
-<div class="icon">
-    🛡️
-</div>
-
-<h3>
-    Confiance
-</h3>
-
-<p>
-    Une approche commerciale claire
-    et professionnelle.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="icon">
-    ⭐
-</div>
-
-<h3>
-    Qualité
-</h3>
-
-<p>
-    Une sélection orientée vers
-    la qualité et la valeur.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="icon">
-    🤝
-</div>
-
-<h3>
-    Accompagnement
-</h3>
-
-<p>
-    Nous vous aidons à trouver
-    la solution adaptée.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="icon">
-    💼
-</div>
-
-<h3>
-    Professionnalisme
-</h3>
-
-<p>
-    Une expérience pensée pour les
-    particuliers et professionnels.
-</p>
-
-</div>
-
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
+<!-- =====================================================
+     DEMANDE
+===================================================== -->
 
-<!-- =========================================================
-     REQUEST
-========================================================= -->
-
-<section class="request" id="demande">
+<section class="request-section" id="demande">
 
 <div class="container">
 
-<div class="request-box">
+    <div class="request-grid">
 
+        <div class="request-copy">
 
-<div>
+            <div class="eyebrow">NEXORAS SUR COMMANDE</div>
 
-<div class="eyebrow">
-    NEXORAS SUR COMMANDE
-</div>
+            <h2 class="section-title">
+                Vous ne trouvez pas ce que vous cherchez ?
+            </h2>
 
-<h2>
-    Vous ne trouvez pas
-    ce que vous cherchez ?
-</h2>
+            <br>
 
-<p>
-    Envoyez-nous votre demande.
-    Nous pouvons rechercher un véhicule,
-    un appareil électroménager ou un équipement
-    particulier correspondant à votre besoin.
-</p>
+            <p>
+                Envoyez-nous votre demande. Nous pouvons rechercher
+                un véhicule, un appareil électroménager ou un équipement
+                particulier correspondant à votre besoin.
+            </p>
 
-<br>
+            <br>
 
-<button
-class="btn btn-gold"
-onclick="openChat()">
+            <button class="btn btn-gold" onclick="openChat()">
+                🤖 Parler à NEXORAS
+            </button>
 
-🤖 Parler à NEXORAS
+        </div>
 
-</button>
+        <form class="request-form" onsubmit="sendRequest(event)">
 
-</div>
+            <div class="form-grid">
 
+                <div class="form-group">
+                    <label>Votre nom</label>
+                    <input id="clientName" placeholder="Nom et prénom" required>
+                </div>
 
-<form
-class="request-form"
-onsubmit="submitRequest(event)">
+                <div class="form-group">
+                    <label>Téléphone / WhatsApp</label>
+                    <input id="clientPhone" placeholder="+229 / +233..." required>
+                </div>
 
+                <div class="form-group full">
+                    <label>Type de demande</label>
 
-<div class="form-group">
+                    <select id="requestType">
+                        <option>Automobile</option>
+                        <option>Électroménager</option>
+                        <option>Maison</option>
+                        <option>Commande spéciale</option>
+                    </select>
+                </div>
 
-<label>
-    Votre nom
-</label>
+                <div class="form-group full">
+                    <label>Votre besoin</label>
+                    <textarea id="clientNeed" placeholder="Décrivez le produit, la marque ou le modèle recherché..." required></textarea>
+                </div>
 
-<input
-id="requestName"
-class="form-control"
-required
-placeholder="Nom et prénom">
+                <div class="form-group full">
+                    <button class="btn btn-dark" type="submit">
+                        📋 Envoyer la demande
+                    </button>
+                </div>
 
-</div>
+            </div>
 
+        </form>
 
-<div class="form-group">
-
-<label>
-    Téléphone / WhatsApp
-</label>
-
-<input
-id="requestPhone"
-class="form-control"
-required
-placeholder="+229 / +233 ...">
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-    Type de demande
-</label>
-
-<select
-id="requestType"
-class="form-control">
-
-<option>
-    Automobile
-</option>
-
-<option>
-    Électroménager
-</option>
-
-<option>
-    Équipement maison
-</option>
-
-<option>
-    Autre
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-    Votre besoin
-</label>
-
-<textarea
-id="requestMessage"
-class="form-control"
-required
-placeholder="Ex : Je recherche une Mercedes GLE noire..."></textarea>
-
-</div>
-
-
-<button
-class="btn btn-blue"
-style="width:100%">
-
-📋 Envoyer la demande
-
-</button>
-
-</form>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
+<!-- =====================================================
+     ABOUT / CONTACT
+===================================================== -->
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+<section class="about" id="apropos">
 
-<section class="container">
+<div class="container">
 
-<div class="about-grid">
+    <div class="about-grid">
 
-<div class="about-image"></div>
+        <div>
 
+            <div class="eyebrow">À PROPOS</div>
 
-<div class="about-text">
+            <h2 class="section-title">
+                NEXORAS GROUPE
+            </h2>
 
-<div class="eyebrow">
-    À propos
-</div>
+            <br>
 
-<h2>
-    NEXORAS GROUPE
-</h2>
+            <p>
+                NEXORAS GROUPE est une structure commerciale orientée
+                vers la distribution et la mise à disposition de véhicules,
+                d'équipements et de solutions pour la maison.
+            </p>
 
-<br>
+            <br>
 
-<p>
-    NEXORAS GROUPE est une structure commerciale
-    orientée vers la distribution et la mise à disposition
-    de véhicules, d'équipements et de solutions pour la maison.
-</p>
+            <p>
+                Notre catalogue rassemble des marques internationales
+                et une sélection de produits destinés aux particuliers
+                comme aux professionnels.
+            </p>
 
-<p>
-    Notre catalogue rassemble des marques internationales
-    et une sélection de produits destinés aux particuliers
-    comme aux professionnels.
-</p>
+            <br>
 
-<p>
-    Notre ambition est de développer une relation durable
-    avec nos clients grâce à la confiance, la transparence,
-    la qualité et le professionnalisme.
-</p>
+            <p>
+                Notre ambition est de développer une relation durable
+                avec nos clients grâce à la confiance, la transparence,
+                la qualité et le professionnalisme.
+            </p>
 
-<a href="#contact" class="btn btn-blue">
-    Nous contacter
-</a>
+        </div>
 
-</div>
+        <div class="contact-card" id="contact">
 
-</div>
+            <div class="eyebrow">CONTACT</div>
 
-</section>
+            <h2>Parlons de votre projet.</h2>
 
+            <div class="contact-line">
+                <div>📞</div>
+                <div>
+                    <strong>Téléphone</strong>
+                    <span>+233 53 983 4824</span>
+                </div>
+            </div>
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
+            <div class="contact-line">
+                <div>💬</div>
+                <div>
+                    <strong>WhatsApp</strong>
+                    <span>+233 53 983 4824</span>
+                </div>
+            </div>
 
-<section class="container" id="contact">
+            <div class="contact-line">
+                <div>✉️</div>
+                <div>
+                    <strong>Email</strong>
+                    <span>nexorasgroup.ng@gmail.com</span>
+                </div>
+            </div>
 
-<div class="section-head">
+            <br>
 
-<div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
 
-<div class="eyebrow">
-    Contact
-</div>
+                <a
+                    href="https://wa.me/233539834824"
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+                    💬 WhatsApp
+                </a>
 
-<h2>
-    NEXORAS GROUPE
-</h2>
+                <a
+                    href="mailto:nexorasgroup.ng@gmail.com"
+                    class="btn btn-white"
+                >
+                    ✉️ Email
+                </a>
 
-</div>
+            </div>
 
-<p>
-    Une question, une demande de prix ou une recherche spécifique ?
-    Notre équipe est disponible.
-</p>
+        </div>
 
-</div>
-
-
-<div class="contact-information">
-
-
-<div class="contact-card">
-
-<strong>
-    📞 Téléphone
-</strong>
-
-<span>
-    +233 53 983 4824
-</span>
-
-</div>
-
-
-<div class="contact-card">
-
-<strong>
-    💬 WhatsApp
-</strong>
-
-<span>
-    +233 53 983 4824
-</span>
-
-</div>
-
-
-<div class="contact-card">
-
-<strong>
-    ✉️ Email
-</strong>
-
-<span>
-    nexorasgroup.ng@gmail.com
-</span>
-
-</div>
-
+    </div>
 
 </div>
 
 </section>
 
+</main>
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
 <div class="footer-grid">
 
+    <div>
 
-<div>
+        <div class="logo">
+            <div class="logo-mark">N</div>
 
-<h3>
-    NEXORAS GROUPE
-</h3>
+            <div class="logo-text">
+                <strong style="color:white">NEXORAS</strong>
+                <span style="color:rgba(255,255,255,.5)">
+                    Groupe • Excellence • Solutions
+                </span>
+            </div>
+        </div>
 
-<p>
-    Automobile • Maison • Équipements •
-    Solutions sur demande.
-</p>
+        <br>
 
-<br>
+        <p style="color:rgba(255,255,255,.55);font-size:13px;max-width:400px">
+            Automobile • Maison • Équipements • Solutions sur demande.
+        </p>
 
-<strong style="color:white">
-    📞 +233 53 983 4824
-</strong>
+    </div>
 
-<br><br>
+    <div class="footer-links">
 
-<a
-class="footer-email"
-href="mailto:nexorasgroup.ng@gmail.com">
+        <div class="footer-title">Automobiles</div>
 
-✉️ nexorasgroup.ng@gmail.com
+        <a href="#catalogue" onclick="selectBrand('Mercedes-Benz')">Mercedes-Benz</a>
+        <a href="#catalogue" onclick="selectBrand('BYD')">BYD</a>
+        <a href="#catalogue" onclick="selectBrand('Toyota')">Toyota</a>
+        <a href="#catalogue" onclick="selectBrand('Lexus')">Lexus</a>
+        <a href="#catalogue" onclick="selectBrand('Geely')">Geely</a>
 
-</a>
+    </div>
 
-</div>
+    <div class="footer-links">
 
+        <div class="footer-title">Maison</div>
 
-<div>
+        <a href="#maison">Cuisine</a>
+        <a href="#maison">Climatisation</a>
+        <a href="#maison">Multimédia</a>
+        <a href="#maison">Buanderie</a>
 
-<h4>
-    Automobiles
-</h4>
+    </div>
 
-<a href="#automobiles">
-    Mercedes-Benz
-</a>
+    <div class="footer-links">
 
-<a href="#automobiles">
-    BYD
-</a>
+        <div class="footer-title">Service</div>
 
-<a href="#automobiles">
-    Toyota
-</a>
+        <a href="#demande">Demander un devis</a>
+        <a href="#contact">Nous contacter</a>
+        <a href="mailto:nexorasgroup.ng@gmail.com">Envoyer un email</a>
+        <a href="#" onclick="openChat();return false">Assistant NEXORAS</a>
 
-<a href="#automobiles">
-    Lexus
-</a>
-
-<a href="#automobiles">
-    Geely
-</a>
+    </div>
 
 </div>
 
+<div class="copyright">
 
-<div>
-
-<h4>
-    Maison
-</h4>
-
-<a href="#maison">
-    Cuisine
-</a>
-
-<a href="#maison">
-    Climatisation
-</a>
-
-<a href="#maison">
-    Multimédia
-</a>
-
-<a href="#maison">
-    Buanderie
-</a>
-
-</div>
-
-
-<div>
-
-<h4>
-    Service
-</h4>
-
-<a href="#demande">
-    Demander un devis
-</a>
-
-<a href="mailto:nexorasgroup.ng@gmail.com">
-    Envoyer un email
-</a>
-
-<a href="#apropos">
-    À propos
-</a>
-
-<a href="#" onclick="openChat();return false;">
-    Assistant NEXORAS
-</a>
-
-</div>
-
-
-</div>
-
-
-<div style="
-max-width:1400px;
-margin:35px auto 0;
-border-top:1px solid rgba(255,255,255,.08);
-padding-top:20px;
-font-size:12px;
-display:flex;
-justify-content:space-between;
-gap:20px;
-">
-
-<span>
     © 2026 NEXORAS GROUPE — Tous droits réservés.
-</span>
-
-<span>
     Excellence • Confiance • Professionnalisme
-</span>
 
 </div>
 
 </footer>
 
+<!-- =====================================================
+     BOTTOM CONTACT
+===================================================== -->
 
-<!-- =========================================================
-     FIXED CONTACT BAR
-========================================================= -->
+<div class="bottom-contact">
 
-<div class="contact-bar">
+    <a
+        class="bottom-phone"
+        href="tel:+233539834824"
+    >
+        📞 Appeler
+    </a>
 
+    <a
+        class="bottom-whatsapp"
+        href="https://wa.me/233539834824"
+        target="_blank"
+    >
+        💬 WhatsApp
+    </a>
 
-<button
-class="contact-btn call"
-onclick="window.location.href='tel:+233539834824'">
+    <a
+        class="bottom-mail"
+        href="mailto:nexorasgroup.ng@gmail.com"
+    >
+        ✉️ Email
+    </a>
 
-📞 Appeler
+    <button
+        class="bottom-chat"
+        onclick="openChat()"
+    >
+        🤖 Assistant
+    </button>
 
-</button>
-
-
-<button
-class="contact-btn whatsapp"
-onclick="openWhatsApp()">
-
-💬 WhatsApp
-
-</button>
-
-
-<button
-class="contact-btn chat"
-onclick="openChat()">
-
-🤖 Assistant
-
-</button>
-
-
-<button
-class="contact-btn quote"
-onclick="document.querySelector('#demande').scrollIntoView()">
-
-📋 Devis
-
-</button>
-
-
-<button
-class="contact-btn email"
-onclick="window.location.href='mailto:nexorasgroup.ng@gmail.com'">
-
-✉️ Email
-
-</button>
-
+    <a
+        class="bottom-quote"
+        href="#demande"
+    >
+        📋 Devis
+    </a>
 
 </div>
 
-
-<!-- =========================================================
-     CHATBOT BUTTON
-========================================================= -->
-
-<button
-class="chat-launcher"
-onclick="openChat()"
-title="Assistant NEXORAS">
-
-🤖
-
-</button>
-
-
-<!-- =========================================================
+<!-- =====================================================
      CHATBOT
-========================================================= -->
-
-<div
-class="chat-window"
-id="chatWindow">
-
-
-<div class="chat-head">
-
-<div>
-
-<strong>
-    NEXORAS AI
-</strong>
-
-<small>
-    Assistant commercial
-</small>
-
-</div>
+===================================================== -->
 
 <button
-class="chat-close"
-onclick="closeChat()">
-
-×
-
+    class="chat-launcher"
+    onclick="openChat()"
+    aria-label="Ouvrir l'assistant NEXORAS"
+>
+    🤖
 </button>
 
-</div>
+<div class="chat-window" id="chatWindow">
 
+    <div class="chat-header">
 
-<div
-class="chat-messages"
-id="chatMessages">
+        <div>
+            <strong>NEXORAS AI Assistant</strong>
+            <small>Assistant commercial</small>
+        </div>
 
+        <button
+            class="chat-close"
+            onclick="closeChat()"
+        >
+            ×
+        </button>
 
-<div class="message bot">
+    </div>
 
-Bonjour 👋
+    <div class="chat-messages" id="chatMessages">
 
-<br><br>
+        <div class="message bot">
+            Bonjour 👋<br><br>
+            Je suis l'assistant NEXORAS.
+            Je peux vous aider à trouver une automobile,
+            un appareil électroménager ou préparer une demande.
+        </div>
 
-Je suis l'assistant NEXORAS.
+    </div>
 
-<br><br>
+    <div class="chat-quick">
 
-Je peux vous aider à trouver une automobile,
-un appareil électroménager ou préparer une demande.
+        <button onclick="quickChat('Je cherche une voiture')">
+            🚘 Voiture
+        </button>
 
-</div>
+        <button onclick="quickChat('Je cherche un appareil')">
+            🏠 Maison
+        </button>
 
+        <button onclick="quickChat('Je veux un devis')">
+            📋 Devis
+        </button>
 
-<div class="quick-actions">
+        <button onclick="quickChat('Je veux contacter un conseiller')">
+            👤 Conseiller
+        </button>
 
+    </div>
 
-<button
-class="quick-action"
-onclick="quickChat('Je cherche une voiture')">
+    <div class="chat-input">
 
-🚘 Je cherche une voiture
+        <input
+            id="chatInput"
+            placeholder="Écrivez votre demande..."
+            onkeydown="if(event.key==='Enter')sendChat()"
+        >
 
-</button>
+        <button onclick="sendChat()">
+            ➤
+        </button>
 
-
-<button
-class="quick-action"
-onclick="quickChat('Je cherche un appareil')">
-
-🏠 Je cherche un appareil
-
-</button>
-
-
-<button
-class="quick-action"
-onclick="quickChat('Je veux un devis')">
-
-📋 Je veux un devis
-
-</button>
-
-
-<button
-class="quick-action"
-onclick="quickChat('Je veux parler à un conseiller')">
-
-👤 Conseiller
-
-</button>
-
-
-</div>
+    </div>
 
 </div>
 
-
-<form
-class="chat-input"
-onsubmit="sendChat(event)">
-
-<input
-id="chatInput"
-placeholder="Écrivez votre demande..."
-autocomplete="off">
-
-<button
-class="chat-send">
-
-➤
-
-</button>
-
-</form>
-
-</div>
-
-
-<!-- =========================================================
-     PRODUCT MODAL
-========================================================= -->
-
-<div
-class="modal"
-id="productModal">
-
-
-<div class="modal-box">
-
-
-<button
-class="modal-close"
-onclick="closeModal()">
-
-×
-
-</button>
-
-
-<div class="modal-image">
-
-<img
-id="modalImage"
-src=""
-alt="">
-
-</div>
-
-
-<div class="modal-content">
-
-<div
-class="eyebrow"
-id="modalBrand">
-</div>
-
-<h2
-id="modalTitle">
-</h2>
-
-<p
-id="modalDescription">
-</p>
-
-<div
-class="tags"
-id="modalTags">
-</div>
-
-<h3 style="margin:15px 0;color:#07111f;">
-    Prix : Sur demande
-</h3>
-
-
-<div class="hero-buttons">
-
-
-<button
-class="btn btn-blue"
-onclick="openWhatsApp()">
-
-💬 Demander sur WhatsApp
-
-</button>
-
-
-<button
-class="btn btn-gold"
-onclick="document.querySelector('#demande').scrollIntoView();closeModal();">
-
-📋 Demander un devis
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     TOAST
-========================================================= -->
-
-<div
-class="toast"
-id="toast">
-</div>
-
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
-/* =========================================================
-   NEXORAS CONFIGURATION
-========================================================= */
-
-const NEXORAS_PHONE = "233539834824";
-
-const NEXORAS_EMAIL =
-    "nexorasgroup.ng@gmail.com";
-
-
-/* =========================================================
-   BRAND LOGOS
-========================================================= */
-
-const brandLogos = {
-
-    "BYD":
-    "https://cdn.simpleicons.org/byd",
-
-    "Geely":
-    "https://cdn.simpleicons.org/geely",
-
-    "Chery":
-    "https://cdn.simpleicons.org/chery",
-
-    "Mercedes-Benz":
-    "https://cdn.simpleicons.org/mercedes",
-
-    "Lexus":
-    "https://cdn.simpleicons.org/lexus",
-
-    "Toyota":
-    "https://cdn.simpleicons.org/toyota",
-
-    "Range Rover":
-    "https://cdn.simpleicons.org/landrover"
-
-};
-
-
-/* =========================================================
-   REAL MODEL IMAGE DATABASE
-========================================================= */
-
-const modelImages = {
-
-    "BYD ATTO 2":
-    "https://www.byd.com/content/dam/byd-site/eu/product/atto-2/atto-2.png",
-
-    "BYD SEAL":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/BYD%20Seal.jpg",
-
-    "BYD TANG":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/BYD%20Tang.jpg",
-
-    "Geely COOLRAY":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Geely%20Coolray.jpg",
-
-    "Geely MONJARO":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Geely%20Monjaro.jpg",
-
-    "Chery TIGGO 4":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Chery%20Tiggo%204.jpg",
-
-    "Chery TIGGO 8 PRO MAX":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Chery%20Tiggo%208.jpg",
-
-    "Deepal S05":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Deepal%20S05.jpg",
-
-    "Deepal S07":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Deepal%20S07.jpg",
-
-    "Mercedes-Benz GLC":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20GLC.jpg",
-
-    "Mercedes-Benz GLE":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20GLE.jpg",
-
-    "Mercedes-Benz GLS":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20GLS.jpg",
-
-    "Mercedes-Benz Classe S":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20S-Class.jpg",
-
-    "Mercedes-Benz AMG GT":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-AMG%20GT.jpg",
-
-    "Mercedes-Benz Maybach":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Maybach%20S-Class.jpg",
-
-    "Lexus RX":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20RX.jpg",
-
-    "Lexus LX":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20LX.jpg",
-
-    "Lexus ES":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20ES.jpg",
-
-    "Toyota LAND CRUISER":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Land%20Cruiser%20300.jpg",
-
-    "Toyota PRADO":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Land%20Cruiser%20Prado.jpg",
-
-    "Toyota RAV4":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20RAV4.jpg",
-
-    "Toyota HILUX":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Hilux.jpg",
-
-    "Range Rover RANGE ROVER":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Range%20Rover%20L460.jpg",
-
-    "Range Rover RANGE ROVER SPORT":
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Range%20Rover%20Sport.jpg"
-
-};
-
-
-/* =========================================================
-   FALLBACK IMAGES
-========================================================= */
-
-const fallbackImages = {
-
-    car:
-    "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=85",
-
-    home:
-    "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85"
-
-};
-
-
-/* =========================================================
-   CARS
-========================================================= */
+/* =====================================================
+   NEXORAS DATA
+===================================================== */
 
 const cars = [
 
+/* MERCEDES */
+
 {
-brand:"BYD",
-model:"ATTO 2",
-type:"SUV",
-fuel:"Électrique",
-badge:"NOUVEAU",
-description:"SUV compact moderne pensé pour la mobilité urbaine.",
-tags:["Électrique","SUV","Moderne"]
+    brand:"Mercedes-Benz",
+    model:"GLE",
+    type:"SUV",
+    category:"Luxe",
+    query:"Mercedes-Benz GLE",
+    badge:"Premium"
 },
 
 {
-brand:"BYD",
-model:"SEAL",
-type:"Berline",
-fuel:"Électrique",
-badge:"PREMIUM",
-description:"Berline électrique sportive au design moderne.",
-tags:["Électrique","Sport","Premium"]
+    brand:"Mercedes-Benz",
+    model:"GLC",
+    type:"SUV",
+    category:"Luxe",
+    query:"Mercedes-Benz GLC",
+    badge:"Premium"
 },
 
 {
-brand:"BYD",
-model:"TANG",
-type:"SUV",
-fuel:"Électrique",
-badge:"PREMIUM",
-description:"SUV familial électrique haut de gamme.",
-tags:["Électrique","SUV","7 places"]
+    brand:"Mercedes-Benz",
+    model:"GLS",
+    type:"SUV",
+    category:"Luxe",
+    query:"Mercedes-Benz GLS",
+    badge:"Luxury SUV"
 },
 
 {
-brand:"Geely",
-model:"COOLRAY",
-type:"SUV",
-fuel:"Essence",
-badge:"POPULAIRE",
-description:"SUV urbain sportif combinant confort et technologie.",
-tags:["SUV","Sportif","Technologie"]
+    brand:"Mercedes-Benz",
+    model:"Classe S",
+    type:"Berline",
+    category:"Luxe",
+    query:"Mercedes-Benz S-Class",
+    badge:"Executive"
 },
 
 {
-brand:"Geely",
-model:"MONJARO",
-type:"SUV",
-fuel:"Essence",
-badge:"PREMIUM",
-description:"Grand SUV élégant conçu pour le confort.",
-tags:["SUV","Premium","Confort"]
+    brand:"Mercedes-Benz",
+    model:"AMG",
+    type:"Sportive",
+    category:"Luxe",
+    query:"Mercedes-AMG GT",
+    badge:"Performance"
 },
 
 {
-brand:"Chery",
-model:"TIGGO 4",
-type:"SUV",
-fuel:"Essence",
-badge:"NOUVEAU",
-description:"SUV compact moderne pour la ville et la famille.",
-tags:["SUV","Famille","Moderne"]
+    brand:"Mercedes-Benz",
+    model:"Maybach",
+    type:"Luxe",
+    category:"Luxe",
+    query:"Mercedes-Maybach",
+    badge:"Ultra Luxury"
+},
+
+/* BMW */
+
+{
+    brand:"BMW",
+    model:"Série 3",
+    type:"Berline",
+    category:"Premium",
+    query:"BMW 3 Series",
+    badge:"Premium"
 },
 
 {
-brand:"Chery",
-model:"TIGGO 8 PRO MAX",
-type:"SUV",
-fuel:"Essence",
-badge:"PREMIUM",
-description:"Grand SUV familial offrant espace et confort.",
-tags:["SUV","7 places","Familiale"]
+    brand:"BMW",
+    model:"Série 5",
+    type:"Berline",
+    category:"Premium",
+    query:"BMW 5 Series",
+    badge:"Executive"
 },
 
 {
-brand:"Deepal",
-model:"S05",
-type:"SUV",
-fuel:"Électrique",
-badge:"NOUVEAU",
-description:"SUV nouvelle génération à l'orientation technologique.",
-tags:["Électrique","SUV","Technologie"]
+    brand:"BMW",
+    model:"X3",
+    type:"SUV",
+    category:"Premium",
+    query:"BMW X3",
+    badge:"SUV"
 },
 
 {
-brand:"Deepal",
-model:"S07",
-type:"SUV",
-fuel:"Électrique",
-badge:"PREMIUM",
-description:"SUV électrique premium au design futuriste.",
-tags:["Électrique","SUV","Premium"]
+    brand:"BMW",
+    model:"X5",
+    type:"SUV",
+    category:"Luxe",
+    query:"BMW X5",
+    badge:"Premium SUV"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"GLC",
-type:"SUV",
-fuel:"Essence",
-badge:"LUXURY",
-description:"SUV premium associant élégance, confort et technologie.",
-tags:["Premium","SUV","Confort"]
+    brand:"BMW",
+    model:"X6",
+    type:"SUV",
+    category:"Luxe",
+    query:"BMW X6",
+    badge:"Luxury SUV"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"GLE",
-type:"SUV",
-fuel:"Hybride",
-badge:"PREMIUM",
-description:"SUV premium polyvalent conçu pour le confort et la performance.",
-tags:["SUV","Hybride","Premium"]
+    brand:"BMW",
+    model:"M",
+    type:"Sportive",
+    category:"Luxe",
+    query:"BMW M4",
+    badge:"M Performance"
+},
+
+/* TOYOTA */
+
+{
+    brand:"Toyota",
+    model:"Land Cruiser",
+    type:"SUV",
+    category:"Luxe",
+    query:"Toyota Land Cruiser",
+    badge:"Legend"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"GLS",
-type:"Luxe",
-fuel:"Essence",
-badge:"PRESTIGE",
-description:"Grand SUV de luxe offrant espace, confort et technologie.",
-tags:["Luxe","SUV","Prestige"]
+    brand:"Toyota",
+    model:"Prado",
+    type:"SUV",
+    category:"Premium",
+    query:"Toyota Land Cruiser Prado",
+    badge:"SUV"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"Classe S",
-type:"Luxe",
-fuel:"Essence",
-badge:"PRESTIGE",
-description:"Une référence du luxe automobile.",
-tags:["Luxe","Berline","Prestige"]
+    brand:"Toyota",
+    model:"RAV4",
+    type:"SUV",
+    category:"Premium",
+    query:"Toyota RAV4",
+    badge:"SUV"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"AMG GT",
-type:"Sport",
-fuel:"Essence",
-badge:"AMG",
-description:"Performance et caractère sportif signés Mercedes-AMG.",
-tags:["AMG","Sport","Performance"]
+    brand:"Toyota",
+    model:"Hilux",
+    type:"Pick-up",
+    category:"Utilitaire",
+    query:"Toyota Hilux",
+    badge:"Pick-up"
+},
+
+/* BYD */
+
+{
+    brand:"BYD",
+    model:"ATTO 3",
+    type:"Électrique",
+    category:"Électrique",
+    query:"BYD Atto 3",
+    badge:"100% Electric"
 },
 
 {
-brand:"Mercedes-Benz",
-model:"Maybach",
-type:"Luxe",
-fuel:"Essence",
-badge:"MAYBACH",
-description:"L'expression ultime du luxe Mercedes-Benz.",
-tags:["Maybach","Luxe","Prestige"]
+    brand:"BYD",
+    model:"SEAL",
+    type:"Électrique",
+    category:"Électrique",
+    query:"BYD Seal",
+    badge:"Electric"
 },
 
 {
-brand:"Lexus",
-model:"RX",
-type:"SUV",
-fuel:"Hybride",
-badge:"PREMIUM",
-description:"SUV premium japonais combinant raffinement et confort.",
-tags:["SUV","Hybride","Japon"]
+    brand:"BYD",
+    model:"DOLPHIN",
+    type:"Électrique",
+    category:"Électrique",
+    query:"BYD Dolphin",
+    badge:"Electric"
 },
 
 {
-brand:"Lexus",
-model:"LX",
-type:"Luxe",
-fuel:"Essence",
-badge:"PRESTIGE",
-description:"SUV de luxe robuste et raffiné.",
-tags:["Luxe","SUV","Prestige"]
+    brand:"BYD",
+    model:"TANG",
+    type:"Électrique",
+    category:"Luxe",
+    query:"BYD Tang",
+    badge:"Electric SUV"
+},
+
+/* LEXUS */
+
+{
+    brand:"Lexus",
+    model:"RX",
+    type:"SUV",
+    category:"Luxe",
+    query:"Lexus RX",
+    badge:"Luxury"
 },
 
 {
-brand:"Lexus",
-model:"ES",
-type:"Berline",
-fuel:"Hybride",
-badge:"PREMIUM",
-description:"Berline élégante destinée aux déplacements professionnels.",
-tags:["Berline","Hybride","Confort"]
+    brand:"Lexus",
+    model:"LX",
+    type:"SUV",
+    category:"Luxe",
+    query:"Lexus LX",
+    badge:"Luxury SUV"
 },
 
 {
-brand:"Toyota",
-model:"LAND CRUISER",
-type:"SUV",
-fuel:"Diesel",
-badge:"PRESTIGE",
-description:"SUV robuste et polyvalent destiné aux longs trajets.",
-tags:["SUV","Robuste","Familiale"]
+    brand:"Lexus",
+    model:"GX",
+    type:"SUV",
+    category:"Luxe",
+    query:"Lexus GX",
+    badge:"Premium SUV"
 },
 
 {
-brand:"Toyota",
-model:"PRADO",
-type:"SUV",
-fuel:"Diesel",
-badge:"POPULAIRE",
-description:"4x4 familial reconnu pour sa robustesse.",
-tags:["4x4","SUV","Famille"]
+    brand:"Lexus",
+    model:"ES",
+    type:"Berline",
+    category:"Premium",
+    query:"Lexus ES",
+    badge:"Luxury Sedan"
+},
+
+/* GEELY */
+
+{
+    brand:"Geely",
+    model:"Coolray",
+    type:"SUV",
+    category:"Premium",
+    query:"Geely Coolray",
+    badge:"SUV"
 },
 
 {
-brand:"Toyota",
-model:"RAV4",
-type:"SUV",
-fuel:"Hybride",
-badge:"NOUVEAU",
-description:"SUV polyvalent adapté à la ville et aux voyages.",
-tags:["SUV","Hybride","Polyvalent"]
+    brand:"Geely",
+    model:"Monjaro",
+    type:"SUV",
+    category:"Luxe",
+    query:"Geely Monjaro",
+    badge:"Luxury SUV"
 },
 
 {
-brand:"Toyota",
-model:"HILUX",
-type:"SUV",
-fuel:"Diesel",
-badge:"ROBUSTE",
-description:"Pick-up conçu pour les usages professionnels et personnels.",
-tags:["Pick-up","Robuste","Diesel"]
+    brand:"Geely",
+    model:"Starray",
+    type:"SUV",
+    category:"Premium",
+    query:"Geely Starray",
+    badge:"SUV"
+},
+
+/* CHERY */
+
+{
+    brand:"Chery",
+    model:"Tiggo 7",
+    type:"SUV",
+    category:"Premium",
+    query:"Chery Tiggo 7",
+    badge:"SUV"
 },
 
 {
-brand:"Range Rover",
-model:"RANGE ROVER",
-type:"Luxe",
-fuel:"Hybride",
-badge:"PRESTIGE",
-description:"SUV de prestige associant luxe et capacités tout-terrain.",
-tags:["Luxe","SUV","Prestige"]
+    brand:"Chery",
+    model:"Tiggo 8",
+    type:"SUV",
+    category:"Premium",
+    query:"Chery Tiggo 8",
+    badge:"Family SUV"
+},
+
+/* DEEPAL */
+
+{
+    brand:"Deepal",
+    model:"S07",
+    type:"SUV",
+    category:"Électrique",
+    query:"Deepal S07",
+    badge:"New Energy"
 },
 
 {
-brand:"Range Rover",
-model:"RANGE ROVER SPORT",
-type:"Sport",
-fuel:"Essence",
-badge:"SPORT",
-description:"SUV sportif premium à la silhouette dynamique.",
-tags:["Sport","Luxe","SUV"]
+    brand:"Deepal",
+    model:"SL03",
+    type:"Berline",
+    category:"Électrique",
+    query:"Deepal SL03",
+    badge:"Electric"
+},
+
+/* RANGE ROVER */
+
+{
+    brand:"Land Rover",
+    model:"Range Rover",
+    type:"SUV",
+    category:"Luxe",
+    query:"Range Rover",
+    badge:"Luxury"
+},
+
+{
+    brand:"Land Rover",
+    model:"Range Rover Sport",
+    type:"SUV",
+    category:"Luxe",
+    query:"Range Rover Sport",
+    badge:"Sport Luxury"
 }
 
 ];
 
-
-/* =========================================================
+/* =====================================================
    HOME PRODUCTS
-========================================================= */
+===================================================== */
 
 const homeProducts = [
 
 {
-category:"Multimédia",
-model:"SMART TV 4K",
-badge:"NOUVEAU",
-description:"Téléviseurs modernes pour profiter de vos films et programmes.",
-tags:["Smart TV","4K"],
-image:"https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1000&q=85"
+    brand:"Samsung",
+    model:"Réfrigérateur Samsung",
+    type:"Réfrigérateur",
+    query:"Samsung refrigerator",
+    icon:"🧊"
 },
 
 {
-category:"Cuisine",
-model:"RÉFRIGÉRATEURS",
-badge:"POPULAIRE",
-description:"Solutions de conservation adaptées aux différents besoins.",
-tags:["Cuisine","Grande capacité"],
-image:"https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=1000&q=85"
+    brand:"LG",
+    model:"Réfrigérateur LG",
+    type:"Réfrigérateur",
+    query:"LG refrigerator",
+    icon:"🧊"
 },
 
 {
-category:"Confort",
-model:"CLIMATISEURS",
-badge:"POPULAIRE",
-description:"Solutions de climatisation pour maison, bureau ou commerce.",
-tags:["Climatisation","Confort"],
-image:"https://images.unsplash.com/photo-1631545806609-2e4b2f6f8b8b?auto=format&fit=crop&w=1000&q=85"
+    brand:"Hisense",
+    model:"Réfrigérateur Hisense",
+    type:"Réfrigérateur",
+    query:"Hisense refrigerator",
+    icon:"🧊"
 },
 
 {
-category:"Buanderie",
-model:"MACHINES À LAVER",
-badge:"NOUVEAU",
-description:"Équipements modernes pour faciliter l'entretien du linge.",
-tags:["Automatique","Maison"],
-image:"https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1000&q=85"
+    brand:"Midea",
+    model:"Climatiseur Midea",
+    type:"Climatiseur",
+    query:"Midea air conditioner",
+    icon:"❄️"
 },
 
 {
-category:"Cuisine",
-model:"CUISINIÈRES",
-badge:"PREMIUM",
-description:"Équipements modernes pour préparer vos repas.",
-tags:["Cuisine","Moderne"],
-image:"https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85"
+    brand:"LG",
+    model:"Climatiseur LG Dual Inverter",
+    type:"Climatiseur",
+    query:"LG Dual Inverter air conditioner",
+    icon:"❄️"
 },
 
 {
-category:"Cuisine",
-model:"MICRO-ONDES",
-badge:"PRATIQUE",
-description:"Appareils pratiques pour réchauffer et préparer rapidement.",
-tags:["Cuisine","Pratique"],
-image:"https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&w=1000&q=85"
+    brand:"Samsung",
+    model:"Machine à laver Samsung",
+    type:"Lave-linge",
+    query:"Samsung washing machine",
+    icon:"🧺"
 },
 
 {
-category:"Entretien",
-model:"ASPIRATEURS",
-badge:"NOUVEAU",
-description:"Solutions pratiques pour maintenir votre intérieur propre.",
-tags:["Nettoyage","Maison"],
-image:"https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=85"
+    brand:"LG",
+    model:"Machine à laver LG",
+    type:"Lave-linge",
+    query:"LG washing machine",
+    icon:"🧺"
 },
 
 {
-category:"Confort",
-model:"VENTILATEURS",
-badge:"CONFORT",
-description:"Appareils adaptés au rafraîchissement de vos espaces.",
-tags:["Maison","Confort"],
-image:"https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1000&q=85"
+    brand:"Samsung",
+    model:"Samsung Smart TV",
+    type:"TV",
+    query:"Samsung Smart TV",
+    icon:"📺"
 },
 
 {
-category:"Sanitaire",
-model:"ÉQUIPEMENTS SANITAIRES",
-badge:"MAISON",
-description:"Équipements destinés au confort et à l'aménagement.",
-tags:["Maison","Sanitaire"],
-image:"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=85"
+    brand:"LG",
+    model:"LG OLED TV",
+    type:"TV",
+    query:"LG OLED television",
+    icon:"📺"
+},
+
+{
+    brand:"TCL",
+    model:"TCL Smart TV",
+    type:"TV",
+    query:"TCL Smart TV",
+    icon:"📺"
+},
+
+{
+    brand:"Bosch",
+    model:"Four Bosch",
+    type:"Four",
+    query:"Bosch built in oven",
+    icon:"🍳"
+},
+
+{
+    brand:"Samsung",
+    model:"Micro-ondes Samsung",
+    type:"Micro-ondes",
+    query:"Samsung microwave oven",
+    icon:"🍳"
+},
+
+{
+    brand:"Midea",
+    model:"Micro-ondes Midea",
+    type:"Micro-ondes",
+    query:"Midea microwave",
+    icon:"🍳"
+},
+
+{
+    brand:"Bosch",
+    model:"Aspirateur Bosch",
+    type:"Aspirateur",
+    query:"Bosch vacuum cleaner",
+    icon:"🧹"
 }
 
 ];
 
+/* =====================================================
+   BRAND LOGOS
+   SIMPLE ICONS CDN
+===================================================== */
 
-/* =========================================================
-   STATE
-========================================================= */
+const brandSlugs = {
 
-let currentBrand = "";
-let currentModel = "";
-let currentHome = "";
+"Mercedes-Benz":"mercedes",
+"BMW":"bmw",
+"Toyota":"toyota",
+"BYD":"byd",
+"Lexus":"lexus",
+"Geely":"geely",
+"Chery":"chery",
+"Deepal":"deepal",
+"Land Rover":"landrover",
+"Samsung":"samsung",
+"LG":"lg",
+"Hisense":"hisense",
+"Midea":"midea",
+"Haier":"haier",
+"TCL":"tcl",
+"Bosch":"bosch"
 
+};
 
-/* =========================================================
-   IMAGE FUNCTION
-========================================================= */
+function brandLogo(brand){
 
-function getCarImage(car){
+    const slug = brandSlugs[brand];
 
-    const key =
-        car.brand + " " + car.model;
+    if(!slug){
+        return "";
+    }
 
-    return modelImages[key] ||
-        fallbackImages.car;
+    return `https://cdn.simpleicons.org/${slug}`;
+
 }
 
+/* =====================================================
+   WIKIMEDIA IMAGE SEARCH
+   REAL PHOTO BY MODEL
+===================================================== */
 
-/* =========================================================
-   CAR RENDER
-========================================================= */
+const imageCache = {};
 
-function renderCars(){
+async function getRealImage(query){
+
+    if(imageCache[query]){
+        return imageCache[query];
+    }
+
+    const api =
+        "https://commons.wikimedia.org/w/api.php" +
+        "?action=query" +
+        "&generator=search" +
+        "&gsrsearch=" + encodeURIComponent(query) +
+        "&gsrnamespace=6" +
+        "&gsrlimit=8" +
+        "&prop=imageinfo" +
+        "&iiprop=url" +
+        "&iiurlwidth=900" +
+        "&format=json" +
+        "&origin=*";
+
+    try{
+
+        const response = await fetch(api);
+
+        const data = await response.json();
+
+        const pages = data.query?.pages || {};
+
+        const page = Object.values(pages).find(p =>
+            p.imageinfo &&
+            p.imageinfo[0] &&
+            p.imageinfo[0].thumburl
+        );
+
+        if(page){
+
+            imageCache[query] = page.imageinfo[0].thumburl;
+
+            return page.imageinfo[0].thumburl;
+        }
+
+    }catch(error){
+
+        console.warn("Image Wikimedia indisponible",error);
+
+    }
+
+    return fallbackImage(query);
+}
+
+function fallbackImage(query){
+
+    const encoded = encodeURIComponent(query);
+
+    return `https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80`;
+
+}
+
+/* =====================================================
+   INITIALIZATION
+===================================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    populateBrandFilters();
+
+    renderCars(cars);
+
+    renderHomeProducts(homeProducts);
+
+    renderBrandShowcase();
+
+});
+
+/* =====================================================
+   BRAND FILTERS
+===================================================== */
+
+function populateBrandFilters(){
+
+    const brands = [...new Set(cars.map(c=>c.brand))].sort();
+
+    const brandSelect =
+        document.getElementById("brandSelect");
+
+    const modelSelect =
+        document.getElementById("modelSelect");
+
+    brands.forEach(brand=>{
+
+        const option =
+            document.createElement("option");
+
+        option.value = brand;
+        option.textContent = brand;
+
+        brandSelect.appendChild(option);
+
+    });
+
+    const models =
+        [...new Set(cars.map(c=>c.model))].sort();
+
+    models.forEach(model=>{
+
+        const option =
+            document.createElement("option");
+
+        option.value = model;
+        option.textContent = model;
+
+        modelSelect.appendChild(option);
+
+    });
+
+    const strip =
+        document.getElementById("brandStrip");
+
+    strip.innerHTML =
+        `<button class="brand-filter active" onclick="selectBrand('')">
+            Toutes
+        </button>`;
+
+    brands.forEach(brand=>{
+
+        const btn =
+            document.createElement("button");
+
+        btn.className="brand-filter";
+
+        btn.innerHTML = `
+            <img src="${brandLogo(brand)}" alt="${brand}">
+            ${brand}
+        `;
+
+        btn.onclick=()=>{
+            selectBrand(brand);
+        };
+
+        strip.appendChild(btn);
+
+    });
+
+}
+
+/* =====================================================
+   RENDER CARS
+===================================================== */
+
+function renderCars(list){
 
     const grid =
         document.getElementById("carGrid");
 
-    const search =
-        document.getElementById("carSearch")
-        .value.toLowerCase();
-
-    const type =
-        document.getElementById("carType").value;
-
-    const fuel =
-        document.getElementById("carFuel").value;
-
-
-    const filtered =
-        cars.filter(car=>{
-
-            const matchesSearch =
-                !search ||
-                car.brand.toLowerCase().includes(search) ||
-                car.model.toLowerCase().includes(search) ||
-                car.tags.join(" ").toLowerCase().includes(search);
-
-            const matchesBrand =
-                !currentBrand ||
-                car.brand === currentBrand;
-
-            const matchesModel =
-                !currentModel ||
-                car.model.toLowerCase()
-                .includes(currentModel.toLowerCase());
-
-            const matchesType =
-                !type ||
-                car.type === type;
-
-            const matchesFuel =
-                !fuel ||
-                car.fuel === fuel;
-
-            return
-                matchesSearch &&
-                matchesBrand &&
-                matchesModel &&
-                matchesType &&
-                matchesFuel;
-
-        });
-
-
-    if(!filtered.length){
+    if(!list.length){
 
         grid.innerHTML = `
-
-        <div style="
-        grid-column:1/-1;
-        text-align:center;
-        padding:50px;
-        color:#64748b;">
-
-            <div style="
-            font-size:40px;
-            margin-bottom:10px;">
-                🔎
+            <div class="no-results">
+                <h3>Aucun véhicule trouvé</h3>
+                <p>
+                    Essayez une autre marque, un autre modèle
+                    ou réinitialisez les filtres.
+                </p>
             </div>
-
-            <strong>
-                Aucun véhicule trouvé.
-            </strong>
-
-            <p>
-                Essayez une autre marque
-                ou un autre modèle.
-            </p>
-
-        </div>
-
         `;
 
         return;
     }
 
+    grid.innerHTML = "";
 
-    grid.innerHTML =
-        filtered
-        .map((car,index)=>
-            productCard(car,index,"car"))
-        .join("");
+    list.forEach((car,index)=>{
+
+        const card =
+            document.createElement("article");
+
+        card.className="product-card";
+
+        card.innerHTML = `
+
+            <div class="product-image">
+
+                <img
+                    id="car-image-${index}"
+                    src="${fallbackImage(car.query)}"
+                    alt="${car.brand} ${car.model}"
+                    loading="lazy"
+                >
+
+                <span class="product-badge">
+                    ${car.badge}
+                </span>
+
+                <img
+                    class="product-brand-logo"
+                    src="${brandLogo(car.brand)}"
+                    alt="${car.brand}"
+                >
+
+            </div>
+
+            <div class="product-content">
+
+                <small>${car.brand}</small>
+
+                <h3>${car.model}</h3>
+
+                <p>
+                    ${car.type} • ${car.category}
+                    • Catalogue NEXORAS
+                </p>
+
+                <div class="product-meta">
+                    <span>🌍 International</span>
+                    <span>💰 Sur demande</span>
+                </div>
+
+                <div class="product-actions">
+
+                    <button
+                        style="background:#1fa855;color:white"
+                        onclick="whatsappProduct('${car.brand}','${car.model}')"
+                    >
+                        💬 WhatsApp
+                    </button>
+
+                    <button
+                        style="background:var(--navy);color:white"
+                        onclick="requestProduct('${car.brand}','${car.model}')"
+                    >
+                        📋 Demander
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+        grid.appendChild(card);
+
+        getRealImage(car.query)
+            .then(url=>{
+
+                const img =
+                    document.getElementById(`car-image-${index}`);
+
+                if(img && url){
+                    img.src=url;
+                }
+
+            });
+
+    });
+
 }
 
+/* =====================================================
+   FILTER CARS
+===================================================== */
 
-/* =========================================================
-   HOME RENDER
-========================================================= */
+function filterCars(){
 
-function renderHome(){
+    const search =
+        document.getElementById("carSearch")
+            .value
+            .toLowerCase()
+            .trim();
+
+    const brand =
+        document.getElementById("brandSelect").value;
+
+    const model =
+        document.getElementById("modelSelect").value;
+
+    const type =
+        document.getElementById("typeSelect").value;
+
+    const result =
+        cars.filter(car=>{
+
+            const text =
+                `${car.brand} ${car.model} ${car.type} ${car.category}`
+                .toLowerCase();
+
+            return (
+                (!search || text.includes(search)) &&
+                (!brand || car.brand===brand) &&
+                (!model || car.model===model) &&
+                (!type || car.type===type)
+            );
+
+        });
+
+    renderCars(result);
+
+}
+
+function resetFilters(){
+
+    document.getElementById("carSearch").value="";
+    document.getElementById("brandSelect").value="";
+    document.getElementById("modelSelect").value="";
+    document.getElementById("typeSelect").value="";
+
+    document.querySelectorAll(".brand-filter")
+        .forEach((btn,index)=>{
+            btn.classList.toggle("active",index===0);
+        });
+
+    renderCars(cars);
+
+}
+
+function selectBrand(brand){
+
+    document.getElementById("brandSelect").value=brand;
+
+    document.getElementById("modelSelect").value="";
+
+    document.getElementById("typeSelect").value="";
+
+    document.getElementById("carSearch").value="";
+
+    document.querySelectorAll(".brand-filter")
+        .forEach(btn=>{
+            btn.classList.remove("active");
+        });
+
+    const buttons =
+        document.querySelectorAll(".brand-filter");
+
+    if(!brand){
+
+        buttons[0]?.classList.add("active");
+
+    }else{
+
+        buttons.forEach(btn=>{
+
+            if(btn.textContent.trim().includes(brand)){
+                btn.classList.add("active");
+            }
+
+        });
+
+    }
+
+    filterCars();
+
+}
+
+function selectModel(model){
+
+    document.getElementById("modelSelect").value=model;
+
+    document.getElementById("carSearch").value="";
+
+    document.getElementById("brandSelect").value="";
+
+    document.getElementById("typeSelect").value="";
+
+    filterCars();
+
+    document.getElementById("catalogue")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+/* =====================================================
+   BRAND SHOWCASE
+===================================================== */
+
+function renderBrandShowcase(){
+
+    const grid =
+        document.getElementById("brandGrid");
+
+    const brands =
+        [...new Set(cars.map(c=>c.brand))];
+
+    grid.innerHTML="";
+
+    brands.forEach(brand=>{
+
+        const div =
+            document.createElement("div");
+
+        div.className="brand-card";
+
+        div.innerHTML=`
+
+            <img
+                src="${brandLogo(brand)}"
+                alt="${brand}"
+            >
+
+            <span>${brand}</span>
+
+        `;
+
+        div.onclick=()=>{
+            selectBrand(brand);
+            document.getElementById("catalogue")
+                .scrollIntoView({behavior:"smooth"});
+        };
+
+        grid.appendChild(div);
+
+    });
+
+}
+
+/* =====================================================
+   HOME PRODUCTS
+===================================================== */
+
+function renderHomeProducts(list){
 
     const grid =
         document.getElementById("homeGrid");
 
+    if(!list.length){
+
+        grid.innerHTML=`
+            <div class="no-results">
+                <h3>Aucun appareil trouvé</h3>
+                <p>Essayez une autre recherche.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    grid.innerHTML="";
+
+    list.forEach((product,index)=>{
+
+        const card =
+            document.createElement("article");
+
+        card.className="product-card";
+
+        card.innerHTML=`
+
+            <div class="product-image">
+
+                <img
+                    id="home-image-${index}"
+                    src="${fallbackImage(product.query)}"
+                    alt="${product.model}"
+                    loading="lazy"
+                >
+
+                <span class="product-badge">
+                    Maison
+                </span>
+
+                <img
+                    class="product-brand-logo"
+                    src="${brandLogo(product.brand)}"
+                    alt="${product.brand}"
+                >
+
+            </div>
+
+            <div class="product-content">
+
+                <small>
+                    ${product.brand}
+                </small>
+
+                <h3>
+                    ${product.model}
+                </h3>
+
+                <p>
+                    ${product.type} •
+                    Disponible sur demande
+                </p>
+
+                <div class="product-meta">
+
+                    <span>
+                        ${product.icon} ${product.type}
+                    </span>
+
+                    <span>
+                        💰 Sur demande
+                    </span>
+
+                </div>
+
+                <div class="product-actions">
+
+                    <button
+                        style="background:#1fa855;color:white"
+                        onclick="whatsappProduct('${product.brand}','${product.model}')"
+                    >
+                        💬 WhatsApp
+                    </button>
+
+                    <button
+                        style="background:var(--navy);color:white"
+                        onclick="requestProduct('${product.brand}','${product.model}')"
+                    >
+                        📋 Demander
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+        grid.appendChild(card);
+
+        getRealImage(product.query)
+            .then(url=>{
+
+                const img =
+                    document.getElementById(`home-image-${index}`);
+
+                if(img && url){
+                    img.src=url;
+                }
+
+            });
+
+    });
+
+}
+
+function filterHomeProducts(){
+
     const search =
         document.getElementById("homeSearch")
-        .value.toLowerCase();
+            .value
+            .toLowerCase()
+            .trim();
 
-    const category =
-        document.getElementById("homeType")
-        .value;
+    const brand =
+        document.getElementById("homeBrand").value;
 
+    const type =
+        document.getElementById("homeType").value;
 
-    const filtered =
+    const result =
         homeProducts.filter(product=>{
 
-            const matchesSearch =
-                !search ||
-                product.model.toLowerCase()
-                .includes(search) ||
-                product.category.toLowerCase()
-                .includes(search) ||
-                product.tags.join(" ")
-                .toLowerCase()
-                .includes(search);
+            const text =
+                `${product.brand} ${product.model} ${product.type}`
+                .toLowerCase();
 
-            const matchesCategory =
-                !category ||
-                product.category === category;
-
-            return
-                matchesSearch &&
-                matchesCategory;
+            return (
+                (!search || text.includes(search)) &&
+                (!brand || product.brand===brand) &&
+                (!type || product.type===type)
+            );
 
         });
 
+    renderHomeProducts(result);
 
-    grid.innerHTML =
-        filtered
-        .map((product,index)=>
-            productCard(product,index,"home"))
-        .join("");
 }
 
+function filterHome(type){
 
-/* =========================================================
-   PRODUCT CARD
-========================================================= */
+    document.getElementById("homeType").value=type;
 
-function productCard(product,index,type){
+    filterHomeProducts();
 
-    const brand =
-        type === "car"
-        ? product.brand
-        : product.category;
+    document.getElementById("maison")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
-
-    const image =
-        type === "car"
-        ? getCarImage(product)
-        : product.image;
-
-
-    const logo =
-        type === "car" &&
-        brandLogos[product.brand]
-        ? `
-        <img
-        class="brand-logo"
-        src="${brandLogos[product.brand]}"
-        alt="${product.brand}">
-        `
-        : "";
-
-
-    return `
-
-    <article class="product-card">
-
-        <div class="product-image">
-
-            <span class="badge">
-                ${product.badge || "NEXORAS"}
-            </span>
-
-            <img
-            src="${image}"
-            alt="${brand} ${product.model}"
-            loading="lazy"
-            onerror="this.src='${fallbackImages.car}'">
-
-        </div>
-
-
-        <div class="product-info">
-
-            <div class="product-brand">
-
-                ${logo}
-
-                ${brand}
-
-            </div>
-
-
-            <h3 class="product-title">
-                ${product.model}
-            </h3>
-
-
-            <p class="product-description">
-                ${product.description}
-            </p>
-
-
-            <div class="tags">
-
-                ${product.tags
-                .map(tag=>
-                    `<span class="tag">${tag}</span>`
-                )
-                .join("")}
-
-            </div>
-
-
-            <div class="price">
-                Prix : Sur demande
-            </div>
-
-
-            <div class="product-buttons">
-
-                <button
-                class="btn-small btn-detail"
-                onclick='openProduct(${JSON.stringify(product).replace(/'/g,"&#39;")})'>
-
-                    Voir détails
-
-                </button>
-
-
-                <button
-                class="btn-small btn-offer"
-                onclick="requestProduct('${brand} ${product.model}')">
-
-                    Demander
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </article>
-
-    `;
 }
 
+/* =====================================================
+   PRODUCT REQUEST
+===================================================== */
 
-/* =========================================================
-   FILTER BRAND
-========================================================= */
+function requestProduct(brand,model){
 
-function filterBrand(brand){
+    document.getElementById("requestType").value =
+        cars.some(c=>c.brand===brand)
+        ? "Automobile"
+        : "Électroménager";
 
-    currentBrand = brand;
-    currentModel = "";
+    document.getElementById("clientNeed").value =
+        `Je souhaite obtenir des informations et un devis pour : ${brand} ${model}.`;
 
+    document.getElementById("demande")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
-    document.querySelectorAll(".brand-btn")
-    .forEach(btn=>{
-        btn.classList.remove("active");
-    });
-
-
-    renderCars();
-
-
-    document
-    .querySelector("#automobiles")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
 }
 
-
-/* =========================================================
-   FILTER MODEL
-========================================================= */
-
-function filterModel(model){
-
-    currentModel = model;
-
-    document
-    .getElementById("carSearch")
-    .value = model;
-
-    renderCars();
-
-
-    document
-    .querySelector("#automobiles")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-
-/* =========================================================
-   HOME FILTER
-========================================================= */
-
-function filterHome(category){
-
-    currentHome = category;
-
-    document
-    .getElementById("homeSearch")
-    .value = "";
-
-    document
-    .getElementById("homeType")
-    .value =
-        ["Cuisine",
-         "Confort",
-         "Buanderie",
-         "Multimédia",
-         "Entretien",
-         "Sanitaire"]
-        .includes(category)
-        ? category
-        : "";
-
-    renderHome();
-
-
-    document
-    .querySelector("#maison")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-
-/* =========================================================
-   PREMIUM
-========================================================= */
-
-function renderPremium(){
-
-    const premium =
-        cars.filter(car=>
-            [
-                "PREMIUM",
-                "PRESTIGE",
-                "LUXURY",
-                "MAYBACH",
-                "AMG"
-            ]
-            .includes(car.badge)
-        );
-
-
-    document
-    .getElementById("premiumGrid")
-    .innerHTML =
-        premium
-        .slice(0,8)
-        .map((car,index)=>
-            productCard(car,index,"car"))
-        .join("");
-}
-
-
-/* =========================================================
-   PRODUCT MODAL
-========================================================= */
-
-function openProduct(product){
-
-    const image =
-        product.brand
-        ? getCarImage(product)
-        : product.image;
-
-
-    document
-    .getElementById("modalImage")
-    .src = image;
-
-
-    document
-    .getElementById("modalBrand")
-    .textContent =
-        product.brand ||
-        product.category;
-
-
-    document
-    .getElementById("modalTitle")
-    .textContent =
-        product.model;
-
-
-    document
-    .getElementById("modalDescription")
-    .textContent =
-        product.description;
-
-
-    document
-    .getElementById("modalTags")
-    .innerHTML =
-        product.tags
-        .map(tag=>
-            `<span class="tag">${tag}</span>`
-        )
-        .join("");
-
-
-    document
-    .getElementById("productModal")
-    .classList
-    .add("open");
-}
-
-
-function closeModal(){
-
-    document
-    .getElementById("productModal")
-    .classList
-    .remove("open");
-}
-
-
-/* =========================================================
-   REQUEST PRODUCT
-========================================================= */
-
-function requestProduct(product){
-
-    document
-    .getElementById("requestMessage")
-    .value =
-        "Bonjour NEXORAS, je souhaite obtenir des informations et le prix concernant : "
-        + product;
-
-
-    document
-    .querySelector("#demande")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-
-    showToast(
-        "Produit ajouté à votre demande."
-    );
-}
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-function openWhatsApp(){
+function whatsappProduct(brand,model){
 
     const message =
-        "Bonjour NEXORAS GROUPE, je souhaite obtenir des informations sur vos produits.";
+        `Bonjour NEXORAS GROUPE, je suis intéressé(e) par le ${brand} ${model}. Je souhaiterais obtenir les informations, le prix et les conditions de disponibilité.`;
 
+    const url =
+        `https://wa.me/233539834824?text=${encodeURIComponent(message)}`;
 
-    window.open(
-        "https://wa.me/" +
-        NEXORAS_PHONE +
-        "?text=" +
-        encodeURIComponent(message),
-        "_blank"
-    );
+    window.open(url,"_blank");
+
 }
 
-
-/* =========================================================
-   EMAIL
-========================================================= */
-
-function openEmail(){
-
-    window.location.href =
-        "mailto:" +
-        NEXORAS_EMAIL +
-        "?subject=" +
-        encodeURIComponent(
-            "Demande d'information - NEXORAS GROUPE"
-        );
-}
-
-
-/* =========================================================
+/* =====================================================
    REQUEST FORM
-========================================================= */
+===================================================== */
 
-function submitRequest(event){
+function sendRequest(event){
 
     event.preventDefault();
 
-
     const name =
-        document
-        .getElementById("requestName")
-        .value;
-
+        document.getElementById("clientName").value;
 
     const phone =
-        document
-        .getElementById("requestPhone")
-        .value;
-
+        document.getElementById("clientPhone").value;
 
     const type =
-        document
-        .getElementById("requestType")
-        .value;
+        document.getElementById("requestType").value;
 
+    const need =
+        document.getElementById("clientNeed").value;
 
     const message =
-        document
-        .getElementById("requestMessage")
-        .value;
+        `Bonjour NEXORAS GROUPE.%0A%0A` +
+        `Nom : ${name}%0A` +
+        `Téléphone : ${phone}%0A` +
+        `Type : ${type}%0A` +
+        `Demande : ${need}`;
 
-
-    const subject =
-        "Demande NEXORAS - " +
-        type;
-
-
-    const body =
-        "Nom : " + name +
-        "\nTéléphone : " + phone +
-        "\nType : " + type +
-        "\n\nDemande :\n" +
-        message;
-
-
-    window.location.href =
-        "mailto:" +
-        NEXORAS_EMAIL +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-
-    showToast(
-        "Votre demande a été préparée dans votre messagerie."
+    window.open(
+        `https://wa.me/233539834824?text=${message}`,
+        "_blank"
     );
+
 }
 
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-/* =========================================================
-   CHAT
-========================================================= */
+function toggleMobileMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("open");
+
+}
+
+function toggleDropdown(button){
+
+    if(window.innerWidth<=900){
+
+        button.parentElement
+            .classList.toggle("open");
+
+    }
+
+}
+
+/* =====================================================
+   CHATBOT
+===================================================== */
 
 function openChat(){
 
     document
-    .getElementById("chatWindow")
-    .classList
-    .add("open");
-
+        .getElementById("chatWindow")
+        .classList.add("open");
 
     setTimeout(()=>{
         document
-        .getElementById("chatInput")
-        .focus();
-    },200);
-}
+            .getElementById("chatInput")
+            ?.focus();
+    },100);
 
+}
 
 function closeChat(){
 
     document
-    .getElementById("chatWindow")
-    .classList
-    .remove("open");
-}
+        .getElementById("chatWindow")
+        .classList.remove("open");
 
+}
 
 function addMessage(text,type){
 
     const messages =
-        document
-        .getElementById("chatMessages");
-
+        document.getElementById("chatMessages");
 
     const div =
         document.createElement("div");
 
+    div.className=`message ${type}`;
 
-    div.className =
-        "message " + type;
-
-
-    div.innerHTML =
-        text;
-
+    div.innerHTML=text;
 
     messages.appendChild(div);
 
-
     messages.scrollTop =
         messages.scrollHeight;
-}
 
+}
 
 function quickChat(text){
 
     addMessage(text,"user");
 
-
     setTimeout(()=>{
-        botResponse(text);
-    },400);
+        botReply(text);
+    },350);
+
 }
 
-
-function sendChat(event){
-
-    event.preventDefault();
-
+function sendChat(){
 
     const input =
-        document
-        .getElementById("chatInput");
-
+        document.getElementById("chatInput");
 
     const text =
         input.value.trim();
 
-
-    if(!text)
-        return;
-
+    if(!text)return;
 
     addMessage(text,"user");
 
-
-    input.value = "";
-
+    input.value="";
 
     setTimeout(()=>{
-        botResponse(text);
-    },450);
+        botReply(text);
+    },350);
+
 }
 
+function botReply(text){
 
-function botResponse(text){
-
-    const q =
+    const lower =
         text.toLowerCase();
 
-
-    let response = "";
-
+    let reply="";
 
     if(
-        q.includes("mercedes") ||
-        q.includes("gle") ||
-        q.includes("glc") ||
-        q.includes("gls") ||
-        q.includes("amg") ||
-        q.includes("classe s")
+        lower.includes("mercedes") ||
+        lower.includes("gle") ||
+        lower.includes("glc") ||
+        lower.includes("gls") ||
+        lower.includes("amg")
     ){
 
-        response =
-        "Excellent choix. NEXORAS propose une sélection Mercedes-Benz comprenant notamment GLC, GLE, GLS, Classe S, AMG et Maybach.<br><br>" +
-        "Vous pouvez sélectionner un modèle dans le menu Automobile.";
+        reply =
+        `Mercedes-Benz est disponible dans notre catalogue avec plusieurs gammes : GLE, GLC, GLS, Classe S, AMG et Maybach.<br><br>
+        <button class="btn btn-dark" onclick="selectBrand('Mercedes-Benz');closeChat()">
+        Voir Mercedes-Benz
+        </button>`;
 
     }
 
     else if(
-        q.includes("toyota") ||
-        q.includes("land cruiser") ||
-        q.includes("prado") ||
-        q.includes("rav4") ||
-        q.includes("hilux")
+        lower.includes("toyota") ||
+        lower.includes("land cruiser") ||
+        lower.includes("prado") ||
+        lower.includes("hilux")
     ){
 
-        response =
-        "NEXORAS propose notamment Toyota Land Cruiser, Prado, RAV4 et Hilux.<br><br>" +
-        "Souhaitez-vous consulter le catalogue Toyota ?";
+        reply =
+        `Pour Toyota, nous avons notamment Land Cruiser, Prado, RAV4 et Hilux.<br><br>
+        <button class="btn btn-dark" onclick="selectBrand('Toyota');closeChat()">
+        Voir Toyota
+        </button>`;
 
     }
 
     else if(
-        q.includes("voiture") ||
-        q.includes("auto") ||
-        q.includes("suv") ||
-        q.includes("véhicule")
+        lower.includes("byd") ||
+        lower.includes("électrique") ||
+        lower.includes("electrique")
     ){
 
-        response =
-        "NEXORAS propose plusieurs catégories : SUV, berlines, luxe, sportives, hybrides et électriques.<br><br>" +
-        "Indiquez-moi simplement une marque ou un modèle.";
+        reply =
+        `NEXORAS propose également des véhicules électriques BYD comme ATTO 3, SEAL, DOLPHIN et TANG.<br><br>
+        <button class="btn btn-dark" onclick="selectBrand('BYD');closeChat()">
+        Voir BYD
+        </button>`;
 
     }
 
     else if(
-        q.includes("frigo") ||
-        q.includes("réfrigérateur") ||
-        q.includes("cuisine") ||
-        q.includes("micro")
+        lower.includes("maison") ||
+        lower.includes("appareil") ||
+        lower.includes("électroménager") ||
+        lower.includes("electromenager")
     ){
 
-        response =
-        "Pour la maison, NEXORAS propose notamment des réfrigérateurs, cuisinières, micro-ondes et autres équipements de cuisine.";
+        reply =
+        `Nous proposons des équipements pour la cuisine, la climatisation, la buanderie et le multimédia : Samsung, LG, Hisense, Midea, Bosch, TCL et autres marques.<br><br>
+        <button class="btn btn-dark" onclick="document.getElementById('maison').scrollIntoView({behavior:'smooth'});closeChat()">
+        Voir Maison
+        </button>`;
 
     }
 
     else if(
-        q.includes("climatiseur") ||
-        q.includes("clim") ||
-        q.includes("ventilateur")
+        lower.includes("prix") ||
+        lower.includes("tarif") ||
+        lower.includes("devis")
     ){
 
-        response =
-        "Nous proposons également des solutions de confort : climatiseurs et ventilateurs pour la maison, le bureau ou le commerce.";
+        reply =
+        `Les prix dépendent du modèle, de la disponibilité et des conditions d'importation. Le plus simple est de nous envoyer votre demande pour recevoir un devis.<br><br>
+        <a class="btn btn-dark" href="#demande" onclick="closeChat()">
+        Demander un devis
+        </a>`;
 
     }
 
     else if(
-        q.includes("prix") ||
-        q.includes("tarif") ||
-        q.includes("coût") ||
-        q.includes("combien")
+        lower.includes("conseiller") ||
+        lower.includes("contact") ||
+        lower.includes("whatsapp")
     ){
 
-        response =
-        "Les prix sont communiqués sur demande. Indiquez-moi le modèle ou produit qui vous intéresse.";
-
-    }
-
-    else if(
-        q.includes("conseiller") ||
-        q.includes("humain") ||
-        q.includes("contact")
-    ){
-
-        response =
-        "Vous pouvez contacter NEXORAS directement au <strong>+233 53 983 4824</strong>, sur WhatsApp ou par email à <strong>nexorasgroup.ng@gmail.com</strong>.";
-
-    }
-
-    else if(
-        q.includes("email") ||
-        q.includes("mail") ||
-        q.includes("courriel")
-    ){
-
-        response =
-        "Notre adresse email est : <strong>nexorasgroup.ng@gmail.com</strong>.";
-
-    }
-
-    else if(
-        q.includes("bonjour") ||
-        q.includes("salut") ||
-        q.includes("bonsoir")
-    ){
-
-        response =
-        "Bonjour 👋 Bienvenue chez NEXORAS GROUPE.<br><br>" +
-        "Que recherchez-vous : une automobile, un appareil ou une demande personnalisée ?";
+        reply =
+        `Vous pouvez contacter directement NEXORAS sur WhatsApp au <strong>+233 53 983 4824</strong> ou par email à <strong>nexorasgroup.ng@gmail.com</strong>.<br><br>
+        <a class="btn btn-dark" href="https://wa.me/233539834824" target="_blank">
+        Ouvrir WhatsApp
+        </a>`;
 
     }
 
     else{
 
-        response =
-        "Je peux vous aider à rechercher une automobile, un appareil électroménager ou préparer une demande personnalisée.<br><br>" +
-        "Essayez par exemple : « Mercedes GLE », « Toyota Prado », « réfrigérateur » ou « climatiseur ».";
+        reply =
+        `Je peux vous aider à rechercher une automobile ou un appareil.<br><br>
+        Essayez par exemple :<br>
+        • « Je cherche une Mercedes GLE »<br>
+        • « Je veux un Toyota Land Cruiser »<br>
+        • « Je cherche un climatiseur »<br>
+        • « Je veux un devis »<br><br>
+        Si vous préférez, vous pouvez aussi contacter directement notre équipe.`;
 
     }
 
+    addMessage(reply,"bot");
 
-    addMessage(
-        response,
-        "bot"
+}
+
+/* =====================================================
+   GOOGLE TRANSLATE
+===================================================== */
+
+function googleTranslateElementInit(){
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage:"fr",
+            includedLanguages:
+            "fr,en,es,pt,de,it,ar,zh-CN,zh-TW,ru,ja,ko,tr,nl,hi,sw",
+            layout:
+            google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        "google_translate_element"
     );
+
 }
 
+function openTranslator(){
 
-/* =========================================================
-   TOAST
-========================================================= */
+    document
+        .querySelector(".translate-box")
+        ?.scrollIntoView({
+            behavior:"smooth"
+        });
 
-function showToast(message){
-
-    const toast =
-        document
-        .getElementById("toast");
-
-
-    toast.textContent =
-        message;
-
-
-    toast.classList
-        .add("show");
-
-
-    setTimeout(()=>{
-        toast.classList
-            .remove("show");
-    },3000);
 }
 
+/* =====================================================
+   CLOSE CHAT WHEN CLICKING OUTSIDE
+===================================================== */
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+document.addEventListener("click",(event)=>{
 
-function toggleMobileMenu(){
+    const chat =
+        document.getElementById("chatWindow");
 
-    const links =
-        document
-        .querySelector(".nav-links");
-
+    const launcher =
+        document.querySelector(".chat-launcher");
 
     if(
-        links.style.display === "flex"
+        chat.classList.contains("open") &&
+        !chat.contains(event.target) &&
+        !launcher.contains(event.target)
     ){
 
-        links.style.display = "";
+        closeChat();
 
     }
-    else{
 
-        links.style.display = "flex";
+});
 
-        links.style.position = "absolute";
+</script>
 
-        links.style.top = "70px";
+<!-- GOOGLE TRANSLATE -->
 
-        links.style.left = "0";
-
-        links.style.right = "0";
-
-        links.style.background = "#07111f";
-
-        links.style.padding = "15px";
-
-        links.style.flexDirection = "column";
-
-        links.style.alignItems = "stretch";
-
-    }
-}
-
-
-/* =========================================================
-   MODAL OUTSIDE CLICK
-========================================================= */
-
-document
-.getElementById("productModal")
-.addEventListener(
-    "click",
-    function(e){
-
-        if(e.target === this){
-
-            closeModal();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   INITIALIZATION
-========================================================= */
-
-renderCars();
-
-renderHome();
-
-renderPremium();
-
+<script
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 
 </body>
