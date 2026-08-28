@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>NEXORAS — Administration</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+
+:root{
+    --navy:#07111f;
+    --navy2:#0e1d31;
+    --gold:#d7a83f;
+    --gold2:#f3cf72;
+    --white:#fff;
+    --light:#f4f6f9;
+    --text:#172033;
+    --muted:#6b7280;
+    --danger:#c62828;
+    --success:#15803d;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--text);
+}
+
+/* LOGIN */
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7,17,31,.98),
+            rgba(14,29,49,.94)
+        );
+}
+
+.login-box{
+    width:min(430px,100%);
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.brand{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.brand-logo{
+    width:60px;
+    height:60px;
+    border:2px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 12px;
+    color:var(--gold);
+    font-size:25px;
+    font-weight:900;
+}
+
+.brand h1{
+    color:var(--navy);
+    letter-spacing:3px;
+}
+
+.brand p{
+    color:var(--muted);
+    font-size:12px;
+    margin-top:5px;
+}
+
+.field{
+    margin-bottom:16px;
+}
+
+.field label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:700;
+    font-size:13px;
+}
+
+.field input{
+    width:100%;
+    padding:13px;
+    border:1px solid #dfe4eb;
+    border-radius:10px;
+    outline:none;
+}
+
+.field input:focus{
+    border-color:var(--gold);
+}
+
+.btn{
+    width:100%;
+    border:0;
+    padding:13px;
+    border-radius:10px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.btn-login{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.message{
+    margin-top:14px;
+    padding:11px;
+    border-radius:9px;
+    display:none;
+    font-size:13px;
+}
+
+.message.error{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.message.success{
+    background:#dcfce7;
+    color:#166534;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:none;
+    min-height:100vh;
+}
+
+.topbar{
+    height:70px;
+    background:var(--navy);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+}
+
+.topbar strong{
+    letter-spacing:2px;
+}
+
+.logout{
+    background:transparent;
+    color:white;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:8px;
+    padding:9px 13px;
+    cursor:pointer;
+}
+
+.layout{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    min-height:calc(100vh - 70px);
+}
+
+.sidebar{
+    background:#0b1829;
+    color:white;
+    padding:20px 12px;
+}
+
+.sidebar button{
+    width:100%;
+    text-align:left;
+    background:transparent;
+    color:#dbe3ee;
+    border:0;
+    padding:13px;
+    border-radius:9px;
+    cursor:pointer;
+    margin-bottom:5px;
+}
+
+.sidebar button:hover,
+.sidebar button.active{
+    background:rgba(215,168,63,.14);
+    color:var(--gold2);
+}
+
+.content{
+    padding:30px;
+}
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+.page h2{
+    margin-bottom:7px;
+}
+
+.subtitle{
+    color:var(--muted);
+    margin-bottom:25px;
+}
+
+/* CARDS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:25px;
+}
+
+.stat{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.stat span{
+    display:block;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.stat strong{
+    font-size:30px;
+    color:var(--navy);
+}
+
+/* TABLE */
+
+.table-box{
+    background:white;
+    border-radius:15px;
+    overflow:auto;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    text-align:left;
+    padding:14px;
+    border-bottom:1px solid #edf0f4;
+    font-size:13px;
+}
+
+th{
+    background:#f8fafc;
+}
+
+.badge{
+    padding:5px 8px;
+    border-radius:6px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.active-badge{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.inactive-badge{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+@media(max-width:800px){
+
+    .layout{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        display:flex;
+        overflow:auto;
+        gap:5px;
+    }
+
+    .sidebar button{
+        white-space:nowrap;
+        width:auto;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .content{
+        padding:18px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .login-box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<section id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="brand">
+
+            <div class="brand-logo">N</div>
+
+            <h1>NEXORAS</h1>
+
+            <p>ESPACE ADMINISTRATEUR</p>
+
+        </div>
+
+        <form id="loginForm">
+
+            <div class="field">
+
+                <label>Email administrateur</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    value="nexorasgroup.ng@gmail.com"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label>Mot de passe</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    required
+                >
+
+            </div>
+
+            <button class="btn btn-login">
+                SE CONNECTER
+            </button>
+
+            <div id="loginMessage"
+                 class="message error"></div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="dashboard">
+
+    <header class="topbar">
+
+        <strong>NEXORAS ADMIN</strong>
+
+        <button class="logout"
+                onclick="logout()">
+            Déconnexion
+        </button>
+
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <button class="active"
+                    onclick="showPage('dashboardPage',this)">
+                📊 Tableau de bord
+            </button>
+
+            <button onclick="showPage('productsPage',this)">
+                🚘 Produits
+            </button>
+
+            <button onclick="showPage('brandsPage',this)">
+                🏷️ Marques
+            </button>
+
+            <button onclick="showPage('messagesPage',this)">
+                💬 Messages
+            </button>
+
+            <button onclick="showPage('settingsPage',this)">
+                ⚙️ Paramètres
+            </button>
+
+        </aside>
+
+        <main class="content">
+
+            <!-- DASHBOARD -->
+
+            <div id="dashboardPage"
+                 class="page active">
+
+                <h2>Tableau de bord</h2>
+
+                <p class="subtitle">
+                    Bienvenue dans l'administration NEXORAS.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span>Produits</span>
+                        <strong id="statProducts">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Automobiles</span>
+                        <strong id="statCars">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Électroménager</span>
+                        <strong id="statHome">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Marques</span>
+                        <strong id="statBrands">—</strong>
+                    </div>
+
+                </div>
+
+                <div class="table-box">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Produit</th>
+                                <th>Marque</th>
+                                <th>Catégorie</th>
+                                <th>Statut</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recentProducts"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTS -->
+
+            <div id="productsPage"
+                 class="page">
+
+                <h2>Produits</h2>
+
+                <p class="subtitle">
+                    Gestion du catalogue NEXORAS.
+                </p>
+
+                <div class="table-box">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Produit</th>
+                                <th>Marque</th>
+                                <th>Modèle</th>
+                                <th>Catégorie</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="productsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!-- BRANDS -->
+
+            <div id="brandsPage"
+                 class="page">
+
+                <h2>Marques</h2>
+
+                <p class="subtitle">
+                    Marques présentes dans le catalogue.
+                </p>
+
+                <div id="brandsList"></div>
+
+            </div>
+
+            <!-- MESSAGES -->
+
+            <div id="messagesPage"
+                 class="page">
+
+                <h2>Messages</h2>
+
+                <p class="subtitle">
+                    Espace réservé aux futures demandes clients.
+                </p>
+
+                <div class="stat">
+
+                    <strong>💬</strong>
+
+                    <p style="margin-top:10px;color:#687386;">
+                        Le système de messagerie pourra être connecté
+                        à Supabase dans la prochaine étape.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div id="settingsPage"
+                 class="page">
+
+                <h2>Paramètres</h2>
+
+                <p class="subtitle">
+                    Configuration du compte administrateur.
+                </p>
+
+                <div class="stat">
+
+                    <span>Compte actuellement connecté</span>
+
+                    <strong style="font-size:18px;">
+                        nexorasgroup.ng@gmail.com
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+<script>
+
+/* ==========================================
+   SUPABASE
+========================================== */
+
+/*
+IMPORTANT :
+Remplace ces deux valeurs par celles de TON projet Supabase.
+Ne mets jamais ici la clé service_role.
+*/
+
+const SUPABASE_URL =
+    "TON_URL_SUPABASE";
+
+const SUPABASE_ANON_KEY =
+    "TA_CLE_PUBLIQUE_SUPABASE";
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+document
+.getElementById("loginForm")
+.addEventListener("submit",async function(event){
+
+    event.preventDefault();
+
+    const email=
+        document.getElementById("email").value.trim();
+
+    const password=
+        document.getElementById("password").value;
+
+    const message=
+        document.getElementById("loginMessage");
+
+    message.style.display="none";
+
+    const {data,error}=
+        await supabaseClient.auth.signInWithPassword({
+            email,
+            password
+        });
+
+    if(error){
+
+        message.textContent=
+            "Connexion refusée : "+error.message;
+
+        message.style.display="block";
+
+        return;
+    }
+
+    await checkAdmin(data.user);
+
+});
+
+/* ==========================================
+   CHECK ADMIN
+========================================== */
+
+async function checkAdmin(user){
+
+    if(!user){
+
+        showLogin();
+
+        return;
+    }
+
+    /*
+    La protection définitive doit être faite
+    avec RLS côté Supabase.
+
+    Ici nous vérifions également l'adresse
+    administrateur principale.
+    */
+
+    if(user.email!=="nexorasgroup.ng@gmail.com"){
+
+        await supabaseClient.auth.signOut();
+
+        const message=
+            document.getElementById("loginMessage");
+
+        message.textContent=
+            "Ce compte n'est pas autorisé à accéder à l'administration.";
+
+        message.style.display="block";
+
+        return;
+    }
+
+    document
+        .getElementById("loginPage")
+        .style.display="none";
+
+    document
+        .getElementById("dashboard")
+        .style.display="block";
+
+    loadDashboard();
+
+}
+
+/* ==========================================
+   SESSION
+========================================== */
+
+async function checkSession(){
+
+    const {data}=
+        await supabaseClient.auth.getSession();
+
+    if(data.session){
+
+        await checkAdmin(data.session.user);
+
+    }else{
+
+        showLogin();
+
+    }
+}
+
+function showLogin(){
+
+    document
+        .getElementById("loginPage")
+        .style.display="flex";
+
+    document
+        .getElementById("dashboard")
+        .style.display="none";
+}
+
+async function logout(){
+
+    await supabaseClient.auth.signOut();
+
+    showLogin();
+
+}
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+async function loadDashboard(){
+
+    const {data,error}=
+        await supabaseClient
+        .from("products")
+        .select("*")
+        .order("created_at",{ascending:false});
+
+    if(error){
+
+        console.error(error);
+
+        return;
+    }
+
+    const products=data || [];
+
+    document.getElementById("statProducts")
+        .textContent=products.length;
+
+    document.getElementById("statCars")
+        .textContent=
+        products.filter(p=>p.category==="auto").length;
+
+    document.getElementById("statHome")
+        .textContent=
+        products.filter(p=>p.category==="home").length;
+
+    const brands=
+        new Set(products.map(p=>p.brand));
+
+    document.getElementById("statBrands")
+        .textContent=brands.size;
+
+    renderRecent(products.slice(0,10));
+
+    renderProducts(products);
+
+    renderBrands(products);
+
+}
+
+/* ==========================================
+   TABLES
+========================================== */
+
+function renderRecent(products){
+
+    const tbody=
+        document.getElementById("recentProducts");
+
+    tbody.innerHTML="";
+
+    products.forEach(p=>{
+
+        tbody.innerHTML+=`
+
+            <tr>
+
+                <td>${safe(p.name || p.model || "")}</td>
+
+                <td>${safe(p.brand || "")}</td>
+
+                <td>
+                    ${p.category==="auto"
+                        ? "Automobile"
+                        : "Électroménager"}
+                </td>
+
+                <td>
+                    <span class="badge active-badge">
+                        Actif
+                    </span>
+                </td>
+
+            </tr>
+        `;
+
+    });
+
+}
+
+function renderProducts(products){
+
+    const tbody=
+        document.getElementById("productsTable");
+
+    tbody.innerHTML="";
+
+    products.forEach(p=>{
+
+        tbody.innerHTML+=`
+
+            <tr>
+
+                <td>${safe(p.name || "")}</td>
+
+                <td>${safe(p.brand || "")}</td>
+
+                <td>${safe(p.model || "")}</td>
+
+                <td>
+                    ${p.category==="auto"
+                        ? "Automobile"
+                        : "Électroménager"}
+                </td>
+
+            </tr>
+        `;
+
+    });
+
+}
+
+function renderBrands(products){
+
+    const container=
+        document.getElementById("brandsList");
+
+    const brands=
+        [...new Set(
+            products.map(p=>p.brand).filter(Boolean)
+        )].sort();
+
+    container.innerHTML="";
+
+    brands.forEach(brand=>{
+
+        const count=
+            products.filter(p=>p.brand===brand).length;
+
+        container.innerHTML+=`
+
+            <div class="stat"
+                 style="margin-bottom:12px;">
+
+                <strong style="font-size:20px;">
+                    ${safe(brand)}
+                </strong>
+
+                <p style="margin-top:6px;color:#687386;">
+                    ${count} produit(s)
+                </p>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+function showPage(id,button){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page=>{
+            page.classList.remove("active");
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+
+    document
+        .querySelectorAll(".sidebar button")
+        .forEach(btn=>{
+            btn.classList.remove("active");
+        });
+
+    button.classList.add("active");
+
+}
+
+/* ==========================================
+   SECURITY HELPER
+========================================== */
+
+function safe(value){
+
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+}
+
+/* START */
+
+checkSession();
+
+</script>
+
+</body>
+</html>
