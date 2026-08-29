@@ -4,1048 +4,1123 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NEXORAS GROUP — Véhicules & Électroménager</title>
+<title>NEXORAS GROUP — Automobiles & Électroménager</title>
 
-<meta name="description"
-content="NEXORAS GROUP — Vente et mise à disposition de véhicules, voitures de prestige, SUV, berlines, utilitaires et appareils électroménagers.">
-
+<meta name="description" content="NEXORAS GROUP — Catalogue automobile premium et appareils électroménagers. Véhicules et équipements sur demande.">
 <meta name="theme-color" content="#07111f">
 
 <style>
 :root{
-    --bg:#050b14;
-    --bg2:#081321;
-    --card:#0c1828;
-    --card2:#101f32;
-    --gold:#d9a441;
-    --gold2:#f1c76a;
-    --white:#ffffff;
-    --muted:#9caec4;
-    --line:rgba(255,255,255,.09);
-    --green:#19c37d;
-    --danger:#ff5757;
-    --shadow:0 18px 60px rgba(0,0,0,.35);
-    --radius:20px;
+  --bg:#050a12;
+  --bg2:#091321;
+  --card:#0c1726;
+  --card2:#101d2e;
+  --gold:#d8a84e;
+  --gold2:#f0cb78;
+  --white:#ffffff;
+  --muted:#9aa8b8;
+  --line:rgba(255,255,255,.09);
+  --green:#25d366;
+  --blue:#2878ff;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:
-        radial-gradient(circle at 20% 0%,rgba(217,164,65,.10),transparent 30%),
-        radial-gradient(circle at 90% 10%,rgba(26,115,232,.10),transparent 25%),
-        var(--bg);
-    color:var(--white);
-    line-height:1.6;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(216,168,78,.08),transparent 30%),
+    radial-gradient(circle at 90% 30%,rgba(40,120,255,.08),transparent 30%),
+    var(--bg);
+  color:var(--white);
+  line-height:1.6;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+  color:inherit;
+  text-decoration:none;
 }
 
 button,
-input,
-select{
-    font:inherit;
+select,
+input{
+  font:inherit;
 }
 
 img{
-    max-width:100%;
-    display:block;
+  max-width:100%;
 }
 
 /* ================= HEADER ================= */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(5,11,20,.92);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--line);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(5,10,18,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
 }
 
-.navbar{
-    max-width:1400px;
-    margin:auto;
-    height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 24px;
+.nav{
+  max-width:1450px;
+  margin:auto;
+  height:76px;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:900;
-    letter-spacing:1px;
-    font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-width:max-content;
 }
 
 .logo-mark{
-    width:42px;
-    height:42px;
-    border-radius:12px;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,var(--gold),#8d651c);
-    color:#07111f;
-    font-weight:1000;
-    box-shadow:0 8px 25px rgba(217,164,65,.25);
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:linear-gradient(145deg,var(--gold2),var(--gold));
+  color:#08111d;
+  display:grid;
+  place-items:center;
+  font-weight:950;
+  font-size:18px;
+  box-shadow:0 8px 30px rgba(216,168,78,.18);
 }
 
-.logo small{
-    display:block;
-    color:var(--gold2);
-    font-size:9px;
-    letter-spacing:3px;
+.logo-text{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:2px;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:6px;
+.logo-sub{
+  display:block;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:2.5px;
+  margin-top:-4px;
 }
 
-.nav-links a{
-    padding:10px 13px;
-    color:#d7e0eb;
-    border-radius:10px;
-    font-size:14px;
-    transition:.2s;
+nav{
+  display:flex;
+  align-items:center;
+  gap:5px;
 }
 
-.nav-links a:hover{
-    color:var(--gold2);
-    background:rgba(255,255,255,.05);
+nav a{
+  padding:10px 13px;
+  border-radius:10px;
+  color:#dbe4ee;
+  font-size:14px;
+  font-weight:700;
 }
 
-.nav-actions{
-    display:flex;
-    align-items:center;
-    gap:8px;
+nav a:hover{
+  background:rgba(255,255,255,.06);
+  color:var(--gold2);
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .lang-select{
-    background:#0d1b2d;
-    color:white;
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:9px 10px;
-    outline:none;
+  border:1px solid var(--line);
+  background:#0b1624;
+  color:white;
+  border-radius:10px;
+  padding:9px 11px;
+  outline:none;
 }
 
 .mobile-menu{
-    display:none;
-    width:42px;
-    height:42px;
-    border:1px solid var(--line);
-    background:#0d1b2d;
-    color:white;
-    border-radius:10px;
-    cursor:pointer;
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#0b1624;
+  color:white;
+  font-size:21px;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    min-height:680px;
-    display:grid;
-    place-items:center;
-    position:relative;
-    overflow:hidden;
-    background:
-        linear-gradient(90deg,rgba(5,11,20,.96),rgba(5,11,20,.65),rgba(5,11,20,.35)),
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/2024%20Mercedes-Benz%20G%20500%20AMG%20Line%20IMG%203581.jpg")
-        center/cover;
+  min-height:780px;
+  padding:150px 24px 90px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    inset:auto 0 0;
-    height:180px;
-    background:linear-gradient(transparent,var(--bg));
+.hero-watermark{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,10,18,.98) 5%,rgba(5,10,18,.88) 42%,rgba(5,10,18,.48) 100%),
+    url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+  opacity:.62;
+  filter:saturate(.85);
+}
+
+.hero-watermark:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 50%,transparent 0%,rgba(5,10,18,.38) 55%,rgba(5,10,18,.9) 100%);
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    width:min(1200px,92%);
-    padding:100px 0;
+  max-width:1450px;
+  width:100%;
+  margin:auto;
+  position:relative;
+  z-index:2;
 }
 
-.hero-kicker{
-    color:var(--gold2);
-    text-transform:uppercase;
-    letter-spacing:4px;
-    font-weight:800;
-    font-size:12px;
-    margin-bottom:18px;
+.hero-copy{
+  max-width:720px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border:1px solid rgba(216,168,78,.3);
+  background:rgba(216,168,78,.07);
+  color:var(--gold2);
+  border-radius:100px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
 }
 
 .hero h1{
-    max-width:850px;
-    font-size:clamp(42px,7vw,82px);
-    line-height:.98;
-    letter-spacing:-3px;
-    margin-bottom:25px;
+  font-size:clamp(46px,6vw,84px);
+  line-height:.98;
+  letter-spacing:-4px;
+  margin:25px 0 22px;
 }
 
 .hero h1 span{
-    color:var(--gold2);
+  color:var(--gold2);
 }
 
 .hero p{
-    max-width:680px;
-    color:#c2cfdd;
-    font-size:18px;
-    margin-bottom:32px;
+  color:#c4cfdb;
+  font-size:18px;
+  max-width:650px;
 }
 
 .hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
 }
 
 .btn{
-    border:none;
-    cursor:pointer;
-    border-radius:12px;
-    padding:13px 20px;
-    font-weight:800;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    transition:.2s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:14px 20px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:800;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn-gold{
-    background:linear-gradient(135deg,var(--gold2),var(--gold));
-    color:#07111f;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#07111d;
+  box-shadow:0 10px 30px rgba(216,168,78,.2);
 }
 
-.btn-gold:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 30px rgba(217,164,65,.25);
+.btn-dark{
+  background:rgba(255,255,255,.06);
+  color:white;
 }
 
-.btn-outline{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.15);
-    color:white;
+.btn-whatsapp{
+  background:var(--green);
+  color:#06120a;
 }
 
-.btn-outline:hover{
-    background:rgba(255,255,255,.08);
-}
-
-/* ================= GENERAL ================= */
-
-.container{
-    width:min(1400px,92%);
-    margin:auto;
-}
-
-.section{
-    padding:90px 0;
-}
-
-.section-head{
-    display:flex;
-    align-items:end;
-    justify-content:space-between;
-    gap:20px;
-    margin-bottom:35px;
-}
-
-.section-head h2{
-    font-size:clamp(30px,4vw,48px);
-    line-height:1;
-}
-
-.section-head p{
-    color:var(--muted);
-    max-width:650px;
-}
-
-.kicker{
-    color:var(--gold2);
-    text-transform:uppercase;
-    font-size:11px;
-    letter-spacing:3px;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-/* ================= STATS ================= */
-
-.stats{
-    margin-top:-50px;
-    position:relative;
-    z-index:5;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
-}
-
-.stat{
-    background:rgba(12,24,40,.92);
-    border:1px solid var(--line);
-    padding:24px;
-    border-radius:18px;
-    box-shadow:var(--shadow);
+.hero-stats{
+  margin-top:55px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
 }
 
 .stat strong{
-    display:block;
-    color:var(--gold2);
-    font-size:30px;
+  display:block;
+  font-size:28px;
 }
 
 .stat span{
-    color:var(--muted);
-    font-size:13px;
+  color:var(--muted);
+  font-size:12px;
 }
 
-/* ================= CATALOGUE ================= */
+/* ================= SECTIONS ================= */
 
-.catalog-toolbar{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:12px;
-    margin-bottom:30px;
+.section{
+  max-width:1450px;
+  margin:auto;
+  padding:90px 24px;
 }
 
-.field{
-    background:#0b1828;
-    border:1px solid var(--line);
-    color:white;
-    padding:14px 15px;
-    border-radius:12px;
-    outline:none;
-    width:100%;
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:30px;
 }
 
-.field::placeholder{
-    color:#71839a;
+.section-title{
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.05;
+  letter-spacing:-1.5px;
 }
 
-.catalog-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.section-title span{
+  color:var(--gold2);
 }
 
-.car-card{
-    background:linear-gradient(180deg,#0d1a2b,#091321);
-    border:1px solid var(--line);
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    transition:.25s;
+.section-subtitle{
+  color:var(--muted);
+  max-width:650px;
+  margin-top:10px;
 }
 
-.car-card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(217,164,65,.4);
-    box-shadow:var(--shadow);
+/* ================= CATEGORY CARDS ================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
 }
 
-.car-image{
-    position:relative;
-    height:260px;
-    background:#101b29;
-    overflow:hidden;
+.category-card{
+  min-height:180px;
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,#0d1928,#09121e);
+  transition:.25s;
+  cursor:pointer;
 }
 
-.car-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.35s;
+.category-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(216,168,78,.4);
 }
 
-.car-card:hover .car-image img{
-    transform:scale(1.04);
+.category-icon{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(216,168,78,.1);
+  color:var(--gold2);
+  font-size:25px;
+  margin-bottom:20px;
 }
 
-/* petit logo dans le coin */
+.category-card h3{
+  margin-bottom:6px;
+}
+
+.category-card p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ================= FILTER ================= */
+
+.catalog-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.search{
+  flex:1 1 280px;
+  min-width:220px;
+  background:#0b1624;
+  border:1px solid var(--line);
+  color:white;
+  border-radius:12px;
+  padding:13px 15px;
+  outline:none;
+}
+
+.search:focus{
+  border-color:rgba(216,168,78,.5);
+}
+
+.filter{
+  background:#0b1624;
+  border:1px solid var(--line);
+  color:white;
+  border-radius:12px;
+  padding:13px 15px;
+  outline:none;
+}
+
+.filter option{
+  background:#0b1624;
+}
+
+.brand-pills{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:8px;
+  scrollbar-width:none;
+}
+
+.brand-pills::-webkit-scrollbar{
+  display:none;
+}
+
+.brand-pill{
+  white-space:nowrap;
+  padding:9px 14px;
+  background:#0b1624;
+  color:#c9d3de;
+  border:1px solid var(--line);
+  border-radius:100px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:800;
+}
+
+.brand-pill.active,
+.brand-pill:hover{
+  color:#08111d;
+  background:var(--gold2);
+  border-color:var(--gold2);
+}
+
+/* ================= VEHICLES ================= */
+
+.vehicle-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.vehicle-card{
+  overflow:hidden;
+  background:linear-gradient(145deg,#0d1928,#09121e);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
+
+.vehicle-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(216,168,78,.35);
+}
+
+.vehicle-image{
+  position:relative;
+  height:235px;
+  background:#111b28;
+  overflow:hidden;
+}
+
+.vehicle-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s;
+}
+
+.vehicle-card:hover .vehicle-image img{
+  transform:scale(1.045);
+}
+
 .brand-badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    width:42px;
-    height:42px;
-    border-radius:10px;
-    padding:7px;
-    display:grid;
-    place-items:center;
-    background:rgba(4,10,18,.84);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.14);
-    z-index:3;
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  background:rgba(3,8,15,.83);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.12);
+  display:grid;
+  place-items:center;
+  color:white;
+  font-weight:950;
+  font-size:11px;
+  letter-spacing:.3px;
+  z-index:3;
 }
 
-.brand-badge img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+.type-badge{
+  position:absolute;
+  right:12px;
+  top:12px;
+  padding:6px 9px;
+  border-radius:100px;
+  background:rgba(3,8,15,.82);
+  border:1px solid rgba(255,255,255,.12);
+  font-size:10px;
+  color:#dbe4ee;
 }
 
-.vehicle-status{
-    position:absolute;
-    right:12px;
-    top:12px;
-    background:rgba(5,11,20,.82);
-    border:1px solid rgba(255,255,255,.12);
-    color:#dce5ef;
-    border-radius:20px;
-    padding:5px 9px;
-    font-size:10px;
-    font-weight:800;
+.vehicle-info{
+  padding:18px;
 }
 
-.car-body{
-    padding:19px;
+.vehicle-brand{
+  color:var(--gold2);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
 }
 
-.car-brand{
-    color:var(--gold2);
-    font-size:11px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
+.vehicle-name{
+  font-size:20px;
+  font-weight:900;
+  margin:3px 0 10px;
 }
 
-.car-name{
-    font-size:21px;
-    font-weight:900;
-    margin:3px 0 10px;
+.vehicle-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
 }
 
-.car-meta{
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-bottom:17px;
+.meta{
+  padding:5px 8px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  border-radius:7px;
+  color:#9eacbb;
+  font-size:10px;
 }
 
-.car-meta span{
-    background:rgba(255,255,255,.05);
-    color:#9fb0c4;
-    padding:5px 8px;
-    border-radius:7px;
-    font-size:10px;
+.vehicle-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:16px;
 }
 
-.price-request{
-    color:white;
-    font-weight:900;
-    margin-bottom:15px;
+.request-price{
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:900;
 }
 
-.price-request span{
-    display:block;
-    color:var(--muted);
-    font-size:11px;
-    font-weight:500;
+.small-btn{
+  padding:9px 12px;
+  border-radius:9px;
+  border:1px solid var(--line);
+  background:#101e2f;
+  color:white;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:800;
 }
 
-.card-actions{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-}
-
-.card-actions .btn{
-    padding:10px;
-    font-size:12px;
-}
-
-/* ================= BRANDS ================= */
-
-.brand-grid{
-    display:grid;
-    grid-template-columns:repeat(8,1fr);
-    gap:10px;
-}
-
-.brand-item{
-    background:#0b1727;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 10px;
-    min-height:90px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    gap:8px;
-    transition:.2s;
-}
-
-.brand-item:hover{
-    border-color:rgba(217,164,65,.4);
-    transform:translateY(-3px);
-}
-
-.brand-item img{
-    width:38px;
-    height:38px;
-    object-fit:contain;
-}
-
-.brand-item span{
-    font-size:10px;
-    color:#c0ccda;
-    text-align:center;
+.small-btn:hover{
+  background:var(--gold2);
+  color:#07111d;
 }
 
 /* ================= APPLIANCES ================= */
 
 .appliance-section{
-    background:
-        linear-gradient(180deg,transparent,rgba(217,164,65,.025),transparent);
+  background:
+    linear-gradient(180deg,transparent,rgba(255,255,255,.015),transparent);
 }
 
 .appliance-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
 
-.appliance{
-    min-height:300px;
-    position:relative;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid var(--line);
-    background:#0c1828;
+.appliance-card{
+  background:linear-gradient(145deg,#0e1a29,#09121d);
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
 }
 
-.appliance img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:.78;
-    transition:.3s;
+.appliance-image{
+  height:215px;
+  background:#101b29;
 }
 
-.appliance:hover img{
-    transform:scale(1.05);
-    opacity:.9;
+.appliance-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.appliance-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:end;
-    padding:22px;
-    background:linear-gradient(transparent 25%,rgba(3,8,15,.92));
+.appliance-info{
+  padding:18px;
 }
 
-.appliance-overlay h3{
-    font-size:22px;
+.appliance-info h3{
+  font-size:18px;
 }
 
-.appliance-overlay p{
-    color:#b7c5d5;
-    font-size:12px;
+.appliance-info p{
+  color:var(--muted);
+  font-size:12px;
+  margin:5px 0 15px;
 }
 
-/* ================= SERVICES ================= */
+/* ================= BRANDS ================= */
 
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.brands-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
 }
 
-.service{
-    background:#0b1727;
-    border:1px solid var(--line);
-    padding:28px;
-    border-radius:18px;
+.brand-item{
+  min-height:75px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:#0a1522;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:12px;
+  font-size:12px;
+  font-weight:900;
+  color:#c8d3df;
+  transition:.2s;
 }
 
-.service-icon{
-    width:48px;
-    height:48px;
-    border-radius:13px;
-    background:rgba(217,164,65,.12);
-    color:var(--gold2);
-    display:grid;
-    place-items:center;
-    font-size:22px;
-    margin-bottom:20px;
+.brand-item:hover{
+  border-color:rgba(216,168,78,.4);
+  color:var(--gold2);
 }
 
-.service h3{
-    margin-bottom:8px;
+/* ================= ABOUT ================= */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
 }
 
-.service p{
-    color:var(--muted);
-    font-size:14px;
+.about-box{
+  padding:35px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(145deg,#0d1928,#09121d);
+}
+
+.check-list{
+  display:grid;
+  gap:13px;
+  margin-top:25px;
+}
+
+.check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  color:#c6d1dc;
+}
+
+.check b{
+  color:var(--gold2);
 }
 
 /* ================= CONTACT ================= */
 
 .contact-box{
-    background:
-        radial-gradient(circle at 80% 20%,rgba(217,164,65,.12),transparent 30%),
-        #0b1727;
-    border:1px solid var(--line);
-    border-radius:25px;
-    padding:45px;
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:50px;
-}
-
-.contact-box h2{
-    font-size:clamp(32px,4vw,55px);
-    line-height:1;
-    margin-bottom:18px;
-}
-
-.contact-box p{
-    color:var(--muted);
+  border:1px solid rgba(216,168,78,.2);
+  border-radius:25px;
+  padding:45px;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(216,168,78,.1),transparent 35%),
+    #0a1421;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:35px;
 }
 
 .contact-list{
-    display:grid;
-    gap:12px;
+  display:grid;
+  gap:14px;
 }
 
 .contact-item{
-    padding:16px;
-    background:rgba(255,255,255,.035);
-    border:1px solid var(--line);
-    border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:15px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  border-radius:12px;
+}
+
+.contact-icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:rgba(216,168,78,.1);
+  color:var(--gold2);
+}
+
+.contact-item small{
+  color:var(--muted);
+  display:block;
+  font-size:10px;
 }
 
 .contact-item strong{
-    display:block;
-    font-size:11px;
-    color:var(--gold2);
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.contact-item a{
-    word-break:break-word;
+  font-size:14px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    border-top:1px solid var(--line);
-    padding:45px 0 25px;
-    background:#040a12;
+  border-top:1px solid var(--line);
+  background:#03070d;
+  padding:40px 24px;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.4fr;
-    gap:30px;
+.footer-inner{
+  max-width:1450px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
-.footer-col h4{
-    margin-bottom:15px;
+.footer-copy{
+  color:#778697;
+  font-size:12px;
 }
 
-.footer-col a{
-    display:block;
-    color:#9cadbf;
-    font-size:13px;
-    margin:8px 0;
-}
-
-.footer-col a:hover{
-    color:var(--gold2);
-}
-
-.footer-bottom{
-    border-top:1px solid var(--line);
-    margin-top:35px;
-    padding-top:20px;
-    color:#718096;
-    font-size:11px;
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
+.footer-links{
+  display:flex;
+  gap:18px;
+  color:#a9b5c2;
+  font-size:12px;
 }
 
 /* ================= WHATSAPP ================= */
 
 .whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    display:grid;
-    place-items:center;
-    z-index:1000;
-    box-shadow:0 12px 35px rgba(37,211,102,.3);
-    font-size:27px;
-    color:white;
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1200;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:var(--green);
+  color:#041109;
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  font-weight:900;
+  box-shadow:0 12px 35px rgba(37,211,102,.3);
+  transition:.2s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.08);
 }
 
 /* ================= CHATBOT ================= */
 
-.chat-button{
-    position:fixed;
-    right:22px;
-    bottom:95px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.15);
-    background:#0d1b2d;
-    color:var(--gold2);
-    z-index:999;
-    cursor:pointer;
-    font-size:22px;
+.chat-toggle{
+  position:fixed;
+  right:22px;
+  bottom:92px;
+  z-index:1200;
+  width:53px;
+  height:53px;
+  border-radius:50%;
+  background:linear-gradient(145deg,var(--gold2),var(--gold));
+  color:#07111d;
+  border:0;
+  cursor:pointer;
+  font-size:23px;
+  box-shadow:0 12px 35px rgba(216,168,78,.22);
 }
 
-.chat-box{
-    position:fixed;
-    right:22px;
-    bottom:160px;
-    width:350px;
-    max-width:calc(100vw - 30px);
-    background:#0b1727;
-    border:1px solid var(--line);
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    z-index:999;
-    display:none;
+.chatbot{
+  position:fixed;
+  right:22px;
+  bottom:155px;
+  width:350px;
+  max-width:calc(100vw - 30px);
+  background:#091421;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 25px 80px rgba(0,0,0,.55);
+  overflow:hidden;
+  z-index:1199;
+  display:none;
+}
+
+.chatbot.open{
+  display:block;
 }
 
 .chat-header{
-    padding:15px;
-    background:#101f32;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  padding:15px;
+  background:linear-gradient(135deg,#122238,#0c1726);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .chat-header strong{
-    color:var(--gold2);
+  font-size:13px;
 }
 
 .chat-close{
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
+  background:none;
+  border:0;
+  color:#aab6c4;
+  cursor:pointer;
 }
 
-.chat-messages{
-    height:280px;
-    padding:15px;
-    overflow-y:auto;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+.chat-body{
+  height:280px;
+  overflow:auto;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
-.msg{
-    padding:10px 12px;
-    border-radius:12px;
-    max-width:85%;
-    font-size:12px;
+.message{
+  max-width:85%;
+  padding:10px 12px;
+  border-radius:12px;
+  font-size:12px;
 }
 
 .bot{
-    background:#14253a;
-    color:#d7e2ee;
-    align-self:flex-start;
+  align-self:flex-start;
+  background:#111f30;
+  color:#d7e0ea;
 }
 
 .user{
-    background:#9d762a;
-    color:white;
-    align-self:flex-end;
+  align-self:flex-end;
+  background:var(--gold2);
+  color:#07111d;
 }
 
-.chat-input{
-    display:flex;
-    border-top:1px solid var(--line);
+.chat-form{
+  padding:10px;
+  display:flex;
+  gap:7px;
+  border-top:1px solid var(--line);
 }
 
-.chat-input input{
-    flex:1;
-    background:transparent;
-    border:0;
-    outline:0;
-    color:white;
-    padding:13px;
+.chat-form input{
+  flex:1;
+  min-width:0;
+  background:#0d1b2b;
+  color:white;
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:10px;
+  outline:none;
 }
 
-.chat-input button{
-    width:50px;
-    border:0;
-    background:var(--gold);
-    cursor:pointer;
+.chat-form button{
+  border:0;
+  border-radius:9px;
+  background:var(--gold2);
+  color:#07111d;
+  padding:0 13px;
+  cursor:pointer;
+  font-weight:900;
 }
 
 /* ================= MODAL ================= */
 
 .modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.78);
-    backdrop-filter:blur(8px);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:2000;
+  position:fixed;
+  inset:0;
+  z-index:1500;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(0,0,0,.75);
+  backdrop-filter:blur(8px);
 }
 
-.modal-content{
-    width:min(850px,100%);
-    max-height:90vh;
-    overflow:auto;
-    background:#0b1727;
-    border:1px solid var(--line);
-    border-radius:22px;
-    position:relative;
+.modal.open{
+  display:flex;
+}
+
+.modal-box{
+  width:680px;
+  max-width:100%;
+  max-height:90vh;
+  overflow:auto;
+  background:#091421;
+  border:1px solid var(--line);
+  border-radius:20px;
+  box-shadow:var(--shadow);
 }
 
 .modal-image{
-    height:400px;
+  height:310px;
+  background:#111b28;
 }
 
 .modal-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.modal-body{
-    padding:25px;
+.modal-content{
+  padding:25px;
 }
 
 .modal-close{
-    position:absolute;
-    right:15px;
-    top:15px;
-    width:40px;
-    height:40px;
-    border:0;
-    border-radius:50%;
-    background:rgba(0,0,0,.7);
-    color:white;
-    cursor:pointer;
-    z-index:4;
+  float:right;
+  width:35px;
+  height:35px;
+  border-radius:9px;
+  background:#142235;
+  border:1px solid var(--line);
+  color:white;
+  cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
+/* ================= EMPTY ================= */
+
+.empty{
+  padding:50px;
+  text-align:center;
+  border:1px dashed var(--line);
+  border-radius:16px;
+  color:var(--muted);
+  display:none;
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1100px){
-    .catalog-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+  .vehicle-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
 
-    .brand-grid{
-        grid-template-columns:repeat(6,1fr);
-    }
+  .category-grid,
+  .appliance-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .appliance-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .brands-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
 }
 
 @media(max-width:850px){
-    .nav-links{
-        position:absolute;
-        top:78px;
-        left:0;
-        right:0;
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        padding:15px;
-        background:#07111f;
-        border-bottom:1px solid var(--line);
-    }
+  nav{
+    display:none;
+    position:absolute;
+    top:76px;
+    left:10px;
+    right:10px;
+    padding:10px;
+    background:#08121f;
+    border:1px solid var(--line);
+    border-radius:14px;
+    flex-direction:column;
+    align-items:stretch;
+  }
 
-    .nav-links.open{
-        display:flex;
-    }
+  nav.open{
+    display:flex;
+  }
 
-    .nav-links a{
-        padding:14px;
-    }
+  nav a{
+    padding:13px;
+  }
 
-    .mobile-menu{
-        display:block;
-    }
+  .mobile-menu{
+    display:block;
+  }
 
-    .nav-actions .lang-select{
-        display:none;
-    }
+  .header-actions{
+    margin-left:auto;
+  }
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .hero{
+    min-height:720px;
+  }
 
-    .catalog-toolbar{
-        grid-template-columns:1fr 1fr;
-    }
+  .hero h1{
+    letter-spacing:-2px;
+  }
 
-    .catalog-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .about,
+  .contact-box{
+    grid-template-columns:1fr;
+  }
 
-    .brand-grid{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-box{
-        grid-template-columns:1fr;
-        padding:28px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .vehicle-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-@media(max-width:560px){
-    .navbar{
-        padding:0 15px;
-    }
+@media(max-width:600px){
+  .nav{
+    padding:0 15px;
+    height:68px;
+  }
 
-    .logo{
-        font-size:16px;
-    }
+  .logo-text{
+    font-size:17px;
+  }
 
-    .logo-mark{
-        width:37px;
-        height:37px;
-    }
+  .logo-mark{
+    width:37px;
+    height:37px;
+  }
 
-    .hero{
-        min-height:620px;
-    }
+  .logo-sub{
+    font-size:7px;
+  }
 
-    .hero h1{
-        font-size:46px;
-        letter-spacing:-2px;
-    }
+  .lang-select{
+    padding:8px;
+    font-size:12px;
+  }
 
-    .hero p{
-        font-size:15px;
-    }
+  .hero{
+    padding:120px 18px 65px;
+    min-height:680px;
+  }
 
-    .section{
-        padding:65px 0;
-    }
+  .hero-watermark{
+    background:
+      linear-gradient(90deg,rgba(5,10,18,.96),rgba(5,10,18,.74)),
+      url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1400&q=80")
+      center/cover no-repeat;
+  }
 
-    .section-head{
-        display:block;
-    }
+  .hero p{
+    font-size:15px;
+  }
 
-    .stats{
-        margin-top:-25px;
-    }
+  .hero-buttons{
+    display:grid;
+  }
 
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .btn{
+    width:100%;
+  }
 
-    .stat{
-        padding:17px;
-    }
+  .section{
+    padding:65px 18px;
+  }
 
-    .stat strong{
-        font-size:23px;
-    }
+  .section-head{
+    display:block;
+  }
 
-    .catalog-toolbar{
-        grid-template-columns:1fr;
-    }
+  .category-grid,
+  .appliance-grid{
+    grid-template-columns:1fr;
+  }
 
-    .catalog-grid{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
+  .vehicle-grid{
+    grid-template-columns:1fr;
+  }
 
-    .car-image{
-        height:250px;
-    }
+  .vehicle-image{
+    height:245px;
+  }
 
-    .brand-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+  .brands-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-    .appliance-grid{
-        grid-template-columns:1fr;
-    }
+  .about-box{
+    padding:25px;
+  }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
+  .contact-box{
+    padding:25px;
+  }
 
-    .footer-bottom{
-        display:block;
-    }
+  .whatsapp{
+    right:16px;
+    bottom:16px;
+  }
 
-    .footer-bottom span{
-        display:block;
-        margin-top:8px;
-    }
+  .chat-toggle{
+    right:16px;
+    bottom:84px;
+  }
 
-    .whatsapp{
-        right:16px;
-        bottom:16px;
-    }
-
-    .chat-button{
-        right:16px;
-        bottom:85px;
-    }
-
-    .chat-box{
-        right:15px;
-        bottom:150px;
-    }
-
-    .modal-image{
-        height:250px;
-    }
+  .chatbot{
+    right:15px;
+    bottom:145px;
+  }
 }
 </style>
 </head>
@@ -1055,1834 +1130,1939 @@ footer{
 <!-- ================= HEADER ================= -->
 
 <header>
-<nav class="navbar">
+  <div class="nav">
 
-<a href="#accueil" class="logo">
-    <span class="logo-mark">N</span>
-    <span>
-        NEXORAS
-        <small>GROUP</small>
-    </span>
-</a>
+    <a href="#accueil" class="logo">
+      <div class="logo-mark">N</div>
+      <div>
+        <div class="logo-text">NEXORAS</div>
+        <span class="logo-sub">GROUP • AUTOMOTIVE & HOME</span>
+      </div>
+    </a>
 
-<div class="nav-links" id="navLinks">
-    <a href="#accueil" data-i18n="home">Accueil</a>
-    <a href="#vehicules" data-i18n="vehicles">Véhicules</a>
-    <a href="#marques" data-i18n="brands">Marques</a>
-    <a href="#electromenager" data-i18n="appliances">Électroménager</a>
-    <a href="#services" data-i18n="services">Services</a>
-    <a href="#apropos" data-i18n="about">À propos</a>
-    <a href="#contact" data-i18n="contact">Contact</a>
-</div>
+    <nav id="mainNav">
+      <a href="#accueil" data-i18n="nav_home">Accueil</a>
+      <a href="#automobiles" data-i18n="nav_cars">Automobiles</a>
+      <a href="#electromenager" data-i18n="nav_homeappliance">Électroménager</a>
+      <a href="#marques" data-i18n="nav_brands">Marques</a>
+      <a href="#apropos" data-i18n="nav_about">À propos</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-<div class="nav-actions">
-    <select class="lang-select" id="language">
+    <div class="header-actions">
+      <select class="lang-select" id="language">
         <option value="fr">FR</option>
         <option value="en">EN</option>
         <option value="es">ES</option>
         <option value="pt">PT</option>
-    </select>
+      </select>
 
-    <button class="mobile-menu" id="mobileMenu">☰</button>
-</div>
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+    </div>
 
-</nav>
+  </div>
 </header>
-
 
 <!-- ================= HERO ================= -->
 
 <section class="hero" id="accueil">
 
-<div class="hero-content">
+  <div class="hero-watermark"></div>
 
-<div class="hero-kicker">NEXORAS GROUP</div>
+  <div class="hero-content">
 
-<h1>
-    L'automobile<br>
-    <span>sans frontières.</span>
-</h1>
+    <div class="hero-copy">
 
-<p data-i18n="heroText">
-    Découvrez une sélection de véhicules, de marques internationales
-    et d'appareils électroménagers avec NEXORAS GROUP.
-</p>
+      <div class="eyebrow">
+        ◆ NEXORAS GROUP
+      </div>
 
-<div class="hero-buttons">
+      <h1>
+        L'excellence<br>
+        <span>en mouvement.</span>
+      </h1>
 
-<a href="#vehicules" class="btn btn-gold">
-    Explorer les véhicules
-</a>
+      <p data-i18n="hero_text">
+        Découvrez une sélection automobile premium et une gamme
+        d'appareils électroménagers sélectionnés pour répondre
+        aux exigences des particuliers et des professionnels.
+      </p>
 
-<a href="#electromenager" class="btn btn-outline">
-    Électroménager
-</a>
+      <div class="hero-buttons">
+        <a href="#automobiles" class="btn btn-gold" data-i18n="discover_cars">
+          Explorer les automobiles
+        </a>
 
-<a
-href="https://wa.me/233539834824?text=Bonjour%20NEXORAS%20GROUP,%20je%20souhaite%20avoir%20des%20informations."
-target="_blank"
-class="btn btn-outline">
-    WhatsApp
-</a>
+        <a href="#electromenager" class="btn btn-dark" data-i18n="discover_home">
+          Voir l'électroménager
+        </a>
 
-</div>
+        <a
+          href="https://wa.me/233539834824?text=Bonjour%20NEXORAS%20GROUP%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20produits."
+          target="_blank"
+          class="btn btn-whatsapp">
+          WhatsApp
+        </a>
+      </div>
 
-</div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>50+</strong>
+          <span data-i18n="brands_stat">marques automobiles</span>
+        </div>
+
+        <div class="stat">
+          <strong>500+</strong>
+          <span data-i18n="models_stat">modèles accessibles</span>
+        </div>
+
+        <div class="stat">
+          <strong>24/7</strong>
+          <span data-i18n="support_stat">demande & assistance</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">NEXORAS</div>
+      <h2 class="section-title" data-i18n="category_title">
+        Un catalogue pensé pour <span>vous</span>
+      </h2>
+      <p class="section-subtitle" data-i18n="category_text">
+        Automobile, maison et équipements : explorez nos catégories
+        et demandez les disponibilités correspondant à vos besoins.
+      </p>
+    </div>
+  </div>
+
+  <div class="category-grid">
+
+    <div class="category-card" onclick="goTo('automobiles')">
+      <div class="category-icon">🚘</div>
+      <h3 data-i18n="cat_cars">Automobiles</h3>
+      <p data-i18n="cat_cars_text">
+        Berlines, SUV, coupés, sportives, électriques et véhicules premium.
+      </p>
+    </div>
+
+    <div class="category-card" onclick="goTo('electromenager')">
+      <div class="category-icon">🏠</div>
+      <h3 data-i18n="cat_home">Électroménager</h3>
+      <p data-i18n="cat_home_text">
+        Réfrigérateurs, climatiseurs, téléviseurs, lave-linge et équipements maison.
+      </p>
+    </div>
+
+    <div class="category-card" onclick="goTo('marques')">
+      <div class="category-icon">◇</div>
+      <h3 data-i18n="cat_brands">Grandes marques</h3>
+      <p data-i18n="cat_brands_text">
+        Une sélection de marques internationales et de constructeurs premium.
+      </p>
+    </div>
+
+    <div class="category-card" onclick="openChat()">
+      <div class="category-icon">✦</div>
+      <h3 data-i18n="cat_assistance">Assistance NEXORAS</h3>
+      <p data-i18n="cat_assistance_text">
+        Demandez un modèle, une marque ou un produit qui ne figure pas encore dans le catalogue.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= AUTOMOBILES ================= -->
+
+<section class="section" id="automobiles">
+
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">AUTOMOTIVE</div>
+
+      <h2 class="section-title" data-i18n="cars_title">
+        Catalogue <span>automobile</span>
+      </h2>
+
+      <p class="section-subtitle" data-i18n="cars_text">
+        Les prix et disponibilités sont communiqués sur demande.
+        Sélectionnez un véhicule pour demander les informations.
+      </p>
+    </div>
+  </div>
+
+  <div class="catalog-tools">
+
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="Rechercher une marque ou un modèle..."
+      data-i18n-placeholder="search">
+
+    <select id="bodyFilter" class="filter">
+      <option value="all">Tous les types</option>
+      <option value="SUV">SUV</option>
+      <option value="Berline">Berline</option>
+      <option value="Coupé">Coupé</option>
+      <option value="Sport">Sport</option>
+      <option value="Pickup">Pickup</option>
+      <option value="Électrique">Électrique</option>
+      <option value="Luxe">Luxe</option>
+    </select>
+
+    <select id="brandFilter" class="filter">
+      <option value="all">Toutes les marques</option>
+    </select>
+
+  </div>
+
+  <div class="brand-pills" id="brandPills"></div>
+
+  <div class="vehicle-grid" id="vehicleGrid"></div>
+
+  <div class="empty" id="emptyCars">
+    Aucun modèle ne correspond à votre recherche.
+  </div>
 
 </section>
 
+<!-- ================= ELECTROMENAGER ================= -->
 
-<!-- ================= STATS ================= -->
+<section class="section appliance-section" id="electromenager">
 
-<section class="stats">
-<div class="container">
+  <div class="section-head">
 
-<div class="stats-grid">
+    <div>
+      <div class="eyebrow">HOME APPLIANCES</div>
 
-<div class="stat">
-<strong>50+</strong>
-<span>Marques automobiles</span>
-</div>
+      <h2 class="section-title" data-i18n="appliances_title">
+        Électroménager <span>NEXORAS</span>
+      </h2>
 
-<div class="stat">
-<strong>500+</strong>
-<span>Modèles envisageables</span>
-</div>
+      <p class="section-subtitle" data-i18n="appliances_text">
+        Des équipements pour la maison et les espaces professionnels.
+        Disponibilités et tarifs sur demande.
+      </p>
+    </div>
 
-<div class="stat">
-<strong>4</strong>
-<span>Langues disponibles</span>
-</div>
+  </div>
 
-<div class="stat">
-<strong>24/7</strong>
-<span>Demande d'information</span>
-</div>
+  <div class="appliance-grid">
 
-</div>
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=85"
+          alt="Réfrigérateur"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
 
-</div>
+      <div class="appliance-info">
+        <h3>Réfrigérateurs</h3>
+        <p>Réfrigérateurs classiques, double porte et grandes capacités.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Réfrigérateur')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1631545806609-5b8d2e7a0e5f?auto=format&fit=crop&w=1000&q=85"
+          alt="Machine à laver"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Lave-linge</h3>
+        <p>Machines à laver et équipements de soin du linge.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Lave-linge')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1000&q=85"
+          alt="Climatiseur"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Climatisation</h3>
+        <p>Solutions de climatisation pour maisons et bureaux.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Climatiseur')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1000&q=85"
+          alt="Téléviseur"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Téléviseurs</h3>
+        <p>Smart TV, écrans grand format et solutions multimédia.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Téléviseur')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&w=1000&q=85"
+          alt="Four de cuisine"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Fours & cuisines</h3>
+        <p>Fours, plaques et équipements de cuisine modernes.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Four ou équipement de cuisine')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85"
+          alt="Cuisine équipée"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Équipement cuisine</h3>
+        <p>Solutions modernes pour cuisines domestiques et professionnelles.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Équipement cuisine')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=85"
+          alt="Équipement maison"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Maison</h3>
+        <p>Équipements et accessoires destinés au confort quotidien.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Équipement maison')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+    <article class="appliance-card">
+      <div class="appliance-image">
+        <img
+          src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=85"
+          alt="Petit électroménager"
+          loading="lazy"
+          onerror="this.src=applianceFallback">
+      </div>
+
+      <div class="appliance-info">
+        <h3>Petit électroménager</h3>
+        <p>Solutions pratiques pour la cuisine et le quotidien.</p>
+
+        <button class="small-btn"
+          onclick="requestProduct('Petit électroménager')">
+          Demander
+        </button>
+      </div>
+    </article>
+
+  </div>
 </section>
-
-
-<!-- ================= VEHICLES ================= -->
-
-<section class="section" id="vehicules">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-<div class="kicker">NEXORAS AUTO</div>
-<h2>Catalogue automobile</h2>
-</div>
-
-<p>
-Les véhicules affichés sont organisés par marque et modèle.
-Le prix est communiqué sur demande selon le véhicule,
-l'année, la configuration et la disponibilité.
-</p>
-
-</div>
-
-
-<div class="catalog-toolbar">
-
-<input
-id="search"
-class="field"
-placeholder="Rechercher une marque ou un modèle..."
->
-
-<select id="brandFilter" class="field">
-<option value="">Toutes les marques</option>
-</select>
-
-<select id="typeFilter" class="field">
-<option value="">Toutes les catégories</option>
-<option value="SUV">SUV</option>
-<option value="Berline">Berline</option>
-<option value="Coupé">Coupé</option>
-<option value="Pick-up">Pick-up</option>
-<option value="Utilitaire">Utilitaire</option>
-<option value="Électrique">Électrique</option>
-</select>
-
-<select id="fuelFilter" class="field">
-<option value="">Toutes motorisations</option>
-<option value="Essence">Essence</option>
-<option value="Diesel">Diesel</option>
-<option value="Hybride">Hybride</option>
-<option value="Électrique">Électrique</option>
-</select>
-
-</div>
-
-
-<div class="catalog-grid" id="catalog"></div>
-
-</div>
-
-</section>
-
 
 <!-- ================= BRANDS ================= -->
 
 <section class="section" id="marques">
 
-<div class="container">
+  <div class="section-head">
 
-<div class="section-head">
+    <div>
+      <div class="eyebrow">BRANDS</div>
 
-<div>
-<div class="kicker">WORLD AUTOMOTIVE</div>
-<h2>Nos marques</h2>
-</div>
+      <h2 class="section-title" data-i18n="brands_title">
+        Plus de <span>50 marques</span>
+      </h2>
 
-<p>
-NEXORAS développe progressivement un catalogue international
-de marques automobiles.
-</p>
+      <p class="section-subtitle" data-i18n="brands_text">
+        NEXORAS peut rechercher votre véhicule auprès de différentes
+        marques et vous communiquer les disponibilités sur demande.
+      </p>
+    </div>
 
-</div>
+  </div>
 
-<div class="brand-grid" id="brandGrid"></div>
-
-</div>
-
-</section>
-
-
-<!-- ================= APPLIANCES ================= -->
-
-<section class="section appliance-section" id="electromenager">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-<div class="kicker">NEXORAS HOME</div>
-<h2>Électroménager</h2>
-</div>
-
-<p>
-Équipez votre maison avec des appareils modernes et adaptés
-aux besoins des particuliers, entreprises et professionnels.
-</p>
-
-</div>
-
-
-<div class="appliance-grid">
-
-<div class="appliance">
-<img
-src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=85"
-alt="Réfrigérateur"
->
-<div class="appliance-overlay">
-<h3>Réfrigérateurs</h3>
-<p>Réfrigérateurs, congélateurs et solutions de conservation.</p>
-</div>
-</div>
-
-
-<div class="appliance">
-<img
-src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85"
-alt="Cuisine moderne"
->
-<div class="appliance-overlay">
-<h3>Cuisine</h3>
-<p>Fours, cuisinières, plaques et équipements de cuisine.</p>
-</div>
-</div>
-
-
-<div class="appliance">
-<img
-src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=85"
-alt="Machine à laver"
->
-<div class="appliance-overlay">
-<h3>Lavage</h3>
-<p>Machines à laver et solutions pour l'entretien du linge.</p>
-</div>
-</div>
-
-
-<div class="appliance">
-<img
-src="https://images.unsplash.com/photo-1603046891744-76e6300f5d0a?auto=format&fit=crop&w=1200&q=85"
-alt="Télévision"
->
-<div class="appliance-overlay">
-<h3>Multimédia</h3>
-<p>Téléviseurs et équipements multimédias pour la maison.</p>
-</div>
-</div>
-
-</div>
-
-</div>
+  <div class="brands-grid" id="brandsGrid"></div>
 
 </section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section class="section" id="services">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-<div class="kicker">NEXORAS SERVICES</div>
-<h2>Nos services</h2>
-</div>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service">
-<div class="service-icon">🚘</div>
-<h3>Recherche de véhicule</h3>
-<p>
-Vous recherchez un modèle précis ?
-Envoyez-nous la marque, le modèle et vos critères.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🌍</div>
-<h3>Approvisionnement international</h3>
-<p>
-NEXORAS peut rechercher des véhicules et produits
-auprès de fournisseurs et partenaires internationaux.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">💬</div>
-<h3>Conseil personnalisé</h3>
-<p>
-Notre équipe vous accompagne avant votre demande
-et vous oriente vers la solution adaptée.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 <!-- ================= ABOUT ================= -->
 
 <section class="section" id="apropos">
 
-<div class="container">
+  <div class="about">
 
-<div class="section-head">
+    <div>
 
-<div>
-<div class="kicker">NEXORAS GROUP</div>
-<h2>Une vision internationale</h2>
-</div>
+      <div class="eyebrow">NEXORAS GROUP</div>
 
-<p>
-NEXORAS GROUP ambitionne de construire une plateforme commerciale
-internationale permettant aux clients de découvrir, comparer
-et demander des véhicules et équipements auprès d'un interlocuteur unique.
-</p>
+      <h2 class="section-title">
+        Une vision <span>premium</span>.
+      </h2>
 
-</div>
+      <p class="section-subtitle">
+        NEXORAS GROUP développe une plateforme commerciale orientée
+        vers l'automobile, l'équipement de la maison et la mise en relation
+        avec des fournisseurs et partenaires.
+      </p>
 
-</div>
+      <div class="check-list">
+
+        <div class="check">
+          <b>✓</b>
+          <span>Catalogue international de véhicules.</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Recherche de modèles sur demande.</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Équipements électroménagers.</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Assistance commerciale via WhatsApp.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="about-box">
+
+      <div class="eyebrow">SERVICE</div>
+
+      <h3 style="font-size:30px;margin:20px 0 10px;">
+        Vous cherchez un modèle précis ?
+      </h3>
+
+      <p style="color:var(--muted);font-size:14px;">
+        Même s'il n'est pas affiché dans notre catalogue,
+        envoyez-nous la marque, le modèle, l'année et vos préférences.
+        Notre équipe peut effectuer une recherche.
+      </p>
+
+      <div style="margin-top:25px;display:flex;flex-wrap:wrap;gap:10px;">
+
+        <a
+          class="btn btn-whatsapp"
+          target="_blank"
+          href="https://wa.me/233539834824?text=Bonjour%20NEXORAS%20GROUP%2C%20je%20recherche%20un%20véhicule%20précis.">
+          WhatsApp
+        </a>
+
+        <a
+          class="btn btn-dark"
+          href="mailto:nexorasgroup.ng@gmail.com">
+          E-mail
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 
 <section class="section" id="contact">
 
-<div class="container">
+  <div class="contact-box">
 
-<div class="contact-box">
+    <div>
 
-<div>
+      <div class="eyebrow">CONTACT</div>
 
-<div class="kicker">CONTACT NEXORAS</div>
+      <h2 class="section-title" style="margin-top:20px;">
+        Parlons de votre <span>projet</span>.
+      </h2>
 
-<h2>
-Parlons de votre prochain projet.
-</h2>
+      <p class="section-subtitle">
+        Demandez un prix, une disponibilité, un modèle précis
+        ou un équipement électroménager.
+      </p>
 
-<p>
-Pour connaître le prix réel, la disponibilité ou demander
-un véhicule ou un appareil précis, contactez directement NEXORAS.
-</p>
+      <div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;">
 
-<div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;">
+        <a
+          href="https://wa.me/233539834824"
+          target="_blank"
+          class="btn btn-whatsapp">
+          Contacter sur WhatsApp
+        </a>
 
-<a
-href="https://wa.me/233539834824"
-target="_blank"
-class="btn btn-gold">
-WhatsApp
-</a>
+        <a
+          href="mailto:nexorasgroup.ng@gmail.com"
+          class="btn btn-gold">
+          Envoyer un e-mail
+        </a>
 
-<a
-href="mailto:nexorasgroup.ng@gmail.com"
-class="btn btn-outline">
-Envoyer un email
-</a>
+      </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="contact-list">
 
+      <a class="contact-item" href="https://wa.me/233539834824" target="_blank">
 
-<div class="contact-list">
+        <div class="contact-icon">☏</div>
 
-<div class="contact-item">
-<strong>WhatsApp</strong>
-<a href="https://wa.me/233539834824" target="_blank">
-+233 53 983 4824
-</a>
-</div>
+        <div>
+          <small>WHATSAPP</small>
+          <strong>+233 53 983 4824</strong>
+        </div>
 
-<div class="contact-item">
-<strong>Email</strong>
-<a href="mailto:nexorasgroup.ng@gmail.com">
-nexorasgroup.ng@gmail.com
-</a>
-</div>
+      </a>
 
-<div class="contact-item">
-<strong>Disponibilité</strong>
-<span>Réponse aux demandes commerciales</span>
-</div>
+      <a class="contact-item" href="mailto:nexorasgroup.ng@gmail.com">
 
-</div>
+        <div class="contact-icon">@</div>
 
-</div>
+        <div>
+          <small>EMAIL</small>
+          <strong>nexorasgroup.ng@gmail.com</strong>
+        </div>
 
-</div>
+      </a>
+
+      <div class="contact-item">
+
+        <div class="contact-icon">◆</div>
+
+        <div>
+          <small>NEXORAS GROUP</small>
+          <strong>Automotive & Home Appliances</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
+  <div class="footer-inner">
 
-<div class="footer-grid">
+    <div>
+      <div class="logo-text">NEXORAS</div>
+      <div class="footer-copy">
+        © <span id="year"></span> NEXORAS GROUP. Tous droits réservés.
+      </div>
+    </div>
 
-<div class="footer-col">
+    <div class="footer-links">
+      <a href="#automobiles">Automobiles</a>
+      <a href="#electromenager">Électroménager</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:nexorasgroup.ng@gmail.com">Email</a>
+    </div>
 
-<a href="#accueil" class="logo">
-<span class="logo-mark">N</span>
-<span>
-NEXORAS
-<small>GROUP</small>
-</span>
-</a>
-
-<p style="margin-top:15px;color:#8394a8;font-size:13px;">
-Automobile • Électroménager • Commerce international
-</p>
-
-</div>
-
-
-<div class="footer-col">
-
-<h4>Navigation</h4>
-
-<a href="#accueil">Accueil</a>
-<a href="#vehicules">Véhicules</a>
-<a href="#marques">Marques</a>
-<a href="#electromenager">Électroménager</a>
-
-</div>
-
-
-<div class="footer-col">
-
-<h4>Services</h4>
-
-<a href="#services">Recherche de véhicule</a>
-<a href="#services">Approvisionnement</a>
-<a href="#services">Conseil</a>
-
-</div>
-
-
-<div class="footer-col">
-
-<h4>Contact</h4>
-
-<a href="https://wa.me/233539834824" target="_blank">
-WhatsApp : +233 53 983 4824
-</a>
-
-<a href="mailto:nexorasgroup.ng@gmail.com">
-nexorasgroup.ng@gmail.com
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-© <span id="year"></span> NEXORAS GROUP. Tous droits réservés.
-</span>
-
-<span>
-Catalogue indicatif — prix et disponibilité sur demande.
-</span>
-
-</div>
-
-</div>
+  </div>
 
 </footer>
-
 
 <!-- ================= WHATSAPP ================= -->
 
 <a
-class="whatsapp"
-href="https://wa.me/233539834824?text=Bonjour%20NEXORAS%20GROUP,%20je%20souhaite%20faire%20une%20demande."
-target="_blank"
-aria-label="WhatsApp">
-⌕
+  class="whatsapp"
+  href="https://wa.me/233539834824?text=Bonjour%20NEXORAS%20GROUP%2C%20je%20souhaite%20avoir%20des%20informations."
+  target="_blank"
+  aria-label="WhatsApp">
+  ☏
 </a>
-
 
 <!-- ================= CHATBOT ================= -->
 
-<button class="chat-button" id="chatButton">
-✦
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Assistant">
+  ✦
 </button>
 
-<div class="chat-box" id="chatBox">
+<div class="chatbot" id="chatbot">
 
-<div class="chat-header">
+  <div class="chat-header">
 
-<strong>NEXORAS Assistant</strong>
+    <strong>✦ NEXORAS Assistant</strong>
 
-<button class="chat-close" id="chatClose">
-✕
-</button>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
 
-</div>
+  </div>
 
-<div class="chat-messages" id="chatMessages">
+  <div class="chat-body" id="chatBody">
 
-<div class="msg bot">
-Bonjour. Je suis l'assistant NEXORAS. Que recherchez-vous ?
-</div>
+    <div class="message bot">
+      Bonjour. Je peux vous aider à trouver une voiture,
+      une marque, un modèle ou un appareil électroménager.
+    </div>
 
-</div>
+  </div>
 
-<div class="chat-input">
+  <form class="chat-form" id="chatForm">
 
-<input
-id="chatInput"
-placeholder="Écrivez votre demande..."
->
+    <input
+      id="chatInput"
+      autocomplete="off"
+      placeholder="Ex : Toyota Land Cruiser...">
 
-<button id="chatSend">
-➤
-</button>
+    <button type="submit">➤</button>
 
-</div>
+  </form>
 
 </div>
-
 
 <!-- ================= MODAL ================= -->
 
-<div class="modal" id="vehicleModal">
+<div class="modal" id="productModal">
 
-<div class="modal-content">
+  <div class="modal-box">
 
-<button class="modal-close" id="modalClose">
-✕
-</button>
+    <div class="modal-image">
+      <img id="modalImage" src="" alt="">
+    </div>
 
-<div class="modal-image">
-<img id="modalImage" src="" alt="">
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <div class="vehicle-brand" id="modalBrand"></div>
+
+      <h2 id="modalName" style="font-size:30px;margin:5px 0 10px;"></h2>
+
+      <p id="modalDescription" style="color:var(--muted);font-size:14px;"></p>
+
+      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+
+        <a
+          id="modalWhatsApp"
+          target="_blank"
+          class="btn btn-whatsapp">
+          Demander sur WhatsApp
+        </a>
+
+        <a
+          href="mailto:nexorasgroup.ng@gmail.com"
+          class="btn btn-dark">
+          E-mail
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
-
-<div class="modal-body">
-
-<div class="kicker" id="modalBrand"></div>
-
-<h2 id="modalName"></h2>
-
-<p id="modalDescription"
-style="color:#9caec4;margin:12px 0 20px;">
-</p>
-
-<div class="car-meta" id="modalMeta"></div>
-
-<div class="price-request">
-Prix sur demande
-<span>Contactez NEXORAS pour le prix et la disponibilité.</span>
-</div>
-
-<a
-id="modalWhatsapp"
-class="btn btn-gold"
-target="_blank">
-Demander sur WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</div>
-
 
 <script>
 
-/* ============================================================
+/* ==========================================================
    NEXORAS V7
-   CATALOGUE CENTRAL
-   ============================================================
+   CATALOGUE
+   ========================================================== */
 
-   IMPORTANT :
+/*
+  IMPORTANT :
 
-   Chaque véhicule possède son propre champ "image".
+  Les images automobiles sont recherchées automatiquement
+  auprès de Wikipedia/Wikimedia à partir du NOM EXACT du modèle.
 
-   Pour remplacer une photo :
-   1. trouver le modèle dans VEHICLES
-   2. remplacer uniquement la valeur "image"
-   3. ne rien modifier au reste du système.
+  Exemple :
+  "Toyota Land Cruiser 300"
+  "Mercedes-Benz G-Class"
+  "BMW X5"
+  etc.
 
-   Exemple :
+  Cela évite d'afficher par erreur une photo d'une autre voiture.
 
-   image:
-   "https://votre-site.com/photo-toyota-land-cruiser.jpg"
+  Si Wikipedia ne retourne pas d'image appropriée,
+  une image de secours est utilisée.
+*/
 
-   Cette architecture permet d'étendre le catalogue à
-   plusieurs centaines de modèles sans modifier le design.
-============================================================ */
+const fallbackCar =
+"https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80";
+
+const applianceFallback =
+"https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&w=1000&q=80";
 
 
 /* ================= VEHICLES ================= */
 
-const VEHICLES = [
-
-/* TOYOTA */
-
-{
-brand:"Toyota",
-model:"Land Cruiser",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2024%20Toyota%20Land%20Cruiser.jpg",
-description:"SUV Toyota Land Cruiser."
-},
-
-{
-brand:"Toyota",
-model:"Land Cruiser Prado",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Land%20Cruiser%20Prado%202023.jpg",
-description:"SUV Toyota Land Cruiser Prado."
-},
-
-{
-brand:"Toyota",
-model:"Hilux",
-type:"Pick-up",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Toyota%20Hilux.jpg",
-description:"Pick-up Toyota Hilux."
-},
-
-{
-brand:"Toyota",
-model:"Corolla",
-type:"Berline",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Toyota%20Corolla.jpg",
-description:"Berline Toyota Corolla."
-},
-
-{
-brand:"Toyota",
-model:"RAV4",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Toyota%20RAV4.jpg",
-description:"SUV Toyota RAV4."
-},
-
-{
-brand:"Toyota",
-model:"Camry",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Toyota%20Camry.jpg",
-description:"Berline Toyota Camry."
-},
-
-/* MERCEDES */
-
-{
-brand:"Mercedes-Benz",
-model:"G-Class",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2024%20Mercedes-Benz%20G%20500%20AMG%20Line%20IMG%203581.jpg",
-description:"Mercedes-Benz G-Class."
-},
-
-{
-brand:"Mercedes-Benz",
-model:"GLC",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2023%20Mercedes-Benz%20GLC%20300%20e.jpg",
-description:"Mercedes-Benz GLC."
-},
-
-{
-brand:"Mercedes-Benz",
-model:"C-Class",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2022%20Mercedes-Benz%20C%20200%20AMG%20Line.jpg",
-description:"Mercedes-Benz C-Class."
-},
-
-{
-brand:"Mercedes-Benz",
-model:"E-Class",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20E-Class%20W214.jpg",
-description:"Mercedes-Benz E-Class."
-},
-
-{
-brand:"Mercedes-Benz",
-model:"S-Class",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz%20S%20500%204MATIC.jpg",
-description:"Mercedes-Benz S-Class."
-},
-
-/* BMW */
-
-{
-brand:"BMW",
-model:"X5",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20G05%20X5.jpg",
-description:"BMW X5."
-},
-
-{
-brand:"BMW",
-model:"X6",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20G06%20X6.jpg",
-description:"BMW X6."
-},
-
-{
-brand:"BMW",
-model:"X7",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20G07%20X7.jpg",
-description:"BMW X7."
-},
-
-{
-brand:"BMW",
-model:"3 Series",
-type:"Berline",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/BMW%203%20Series%20G20.jpg",
-description:"BMW Série 3."
-},
-
-{
-brand:"BMW",
-model:"7 Series",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/BMW%207%20Series%20G70.jpg",
-description:"BMW Série 7."
-},
-
-/* AUDI */
-
-{
-brand:"Audi",
-model:"Q5",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Audi%20Q5%20FY.jpg",
-description:"Audi Q5."
-},
-
-{
-brand:"Audi",
-model:"Q7",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Audi%20Q7%204M.jpg",
-description:"Audi Q7."
-},
-
-{
-brand:"Audi",
-model:"Q8",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Audi%20Q8%20Typ%204M.jpg",
-description:"Audi Q8."
-},
-
-{
-brand:"Audi",
-model:"A6",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Audi%20A6%20C8.jpg",
-description:"Audi A6."
-},
-
-/* RANGE ROVER */
-
-{
-brand:"Land Rover",
-model:"Range Rover",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Range%20Rover%20L460.jpg",
-description:"Range Rover."
-},
-
-{
-brand:"Land Rover",
-model:"Range Rover Sport",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Range%20Rover%20Sport%20L461.jpg",
-description:"Range Rover Sport."
-},
-
-{
-brand:"Land Rover",
-model:"Defender",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Land%20Rover%20Defender%20L663.jpg",
-description:"Land Rover Defender."
-},
-
-/* PORSCHE */
-
-{
-brand:"Porsche",
-model:"Cayenne",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20Cayenne%20III.jpg",
-description:"Porsche Cayenne."
-},
-
-{
-brand:"Porsche",
-model:"911",
-type:"Coupé",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20911%20992.jpg",
-description:"Porsche 911."
-},
-
-{
-brand:"Porsche",
-model:"Panamera",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Porsche%20Panamera%20II.jpg",
-description:"Porsche Panamera."
-},
-
-/* VOLKSWAGEN */
-
-{
-brand:"Volkswagen",
-model:"Touareg",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Volkswagen%20Touareg%20III.jpg",
-description:"Volkswagen Touareg."
-},
-
-{
-brand:"Volkswagen",
-model:"Tiguan",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Volkswagen%20Tiguan%20II.jpg",
-description:"Volkswagen Tiguan."
-},
-
-{
-brand:"Volkswagen",
-model:"Golf",
-type:"Berline",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Volkswagen%20Golf%20VIII.jpg",
-description:"Volkswagen Golf."
-},
-
-/* HYUNDAI */
-
-{
-brand:"Hyundai",
-model:"Santa Fe",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Santa%20Fe%20MX5.jpg",
-description:"Hyundai Santa Fe."
-},
-
-{
-brand:"Hyundai",
-model:"Tucson",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Tucson%20NX4.jpg",
-description:"Hyundai Tucson."
-},
-
-{
-brand:"Hyundai",
-model:"Kona",
-type:"SUV",
-fuel:"Électrique",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Kona%20Electric%20OS.jpg",
-description:"Hyundai Kona."
-},
-
-{
-brand:"Hyundai",
-model:"Ioniq 5",
-type:"Électrique",
-fuel:"Électrique",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Hyundai%20Ioniq%205.jpg",
-description:"Hyundai Ioniq 5."
-},
-
-/* KIA */
-
-{
-brand:"Kia",
-model:"Sportage",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Kia%20Sportage%20NQ5.jpg",
-description:"Kia Sportage."
-},
-
-{
-brand:"Kia",
-model:"Sorento",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Kia%20Sorento%20MQ4.jpg",
-description:"Kia Sorento."
-},
-
-{
-brand:"Kia",
-model:"EV6",
-type:"Électrique",
-fuel:"Électrique",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Kia%20EV6.jpg",
-description:"Kia EV6."
-},
-
-/* FORD */
-
-{
-brand:"Ford",
-model:"Ranger",
-type:"Pick-up",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Ford%20Ranger%20T9.jpg",
-description:"Ford Ranger."
-},
-
-{
-brand:"Ford",
-model:"Everest",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Ford%20Everest%20U704.jpg",
-description:"Ford Everest."
-},
-
-{
-brand:"Ford",
-model:"Mustang",
-type:"Coupé",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/2024%20Ford%20Mustang%20GT.jpg",
-description:"Ford Mustang."
-},
-
-/* LEXUS */
-
-{
-brand:"Lexus",
-model:"LX",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20LX%20600.jpg",
-description:"Lexus LX."
-},
-
-{
-brand:"Lexus",
-model:"RX",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20RX%20500h.jpg",
-description:"Lexus RX."
-},
-
-{
-brand:"Lexus",
-model:"ES",
-type:"Berline",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Lexus%20ES%20300h.jpg",
-description:"Lexus ES."
-},
-
-/* NISSAN */
-
-{
-brand:"Nissan",
-model:"Patrol",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Nissan%20Patrol%20Y63.jpg",
-description:"Nissan Patrol."
-},
-
-{
-brand:"Nissan",
-model:"X-Trail",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Nissan%20X-Trail%20T33.jpg",
-description:"Nissan X-Trail."
-},
-
-/* HONDA */
-
-{
-brand:"Honda",
-model:"CR-V",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Honda%20CR-V%20VI.jpg",
-description:"Honda CR-V."
-},
-
-{
-brand:"Honda",
-model:"Civic",
-type:"Berline",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Honda%20Civic%20XI.jpg",
-description:"Honda Civic."
-},
-
-/* VOLVO */
-
-{
-brand:"Volvo",
-model:"XC90",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Volvo%20XC90%20II.jpg",
-description:"Volvo XC90."
-},
-
-{
-brand:"Volvo",
-model:"XC60",
-type:"SUV",
-fuel:"Hybride",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Volvo%20XC60%20II.jpg",
-description:"Volvo XC60."
-},
-
-/* TESLA */
-
-{
-brand:"Tesla",
-model:"Model Y",
-type:"SUV",
-fuel:"Électrique",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Tesla%20Model%20Y%20Juniper.jpg",
-description:"Tesla Model Y."
-},
-
-{
-brand:"Tesla",
-model:"Model 3",
-type:"Berline",
-fuel:"Électrique",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Tesla%20Model%203%20Highland.jpg",
-description:"Tesla Model 3."
-},
-
-/* JEEP */
-
-{
-brand:"Jeep",
-model:"Wrangler",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Jeep%20Wrangler%20JL.jpg",
-description:"Jeep Wrangler."
-},
-
-{
-brand:"Jeep",
-model:"Grand Cherokee",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Jeep%20Grand%20Cherokee%20WL.jpg",
-description:"Jeep Grand Cherokee."
-},
-
-/* MASERATI */
-
-{
-brand:"Maserati",
-model:"Grecale",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Maserati%20Grecale.jpg",
-description:"Maserati Grecale."
-},
-
-/* BENTLEY */
-
-{
-brand:"Bentley",
-model:"Bentayga",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Bentley%20Bentayga%20II.jpg",
-description:"Bentley Bentayga."
-},
-
-/* ROLLS ROYCE */
-
-{
-brand:"Rolls-Royce",
-model:"Cullinan",
-type:"SUV",
-fuel:"Essence",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Rolls-Royce%20Cullinan.jpg",
-description:"Rolls-Royce Cullinan."
-},
-
-/* RANGE ROVER / DEFENDER */
-
-{
-brand:"Land Rover",
-model:"Discovery",
-type:"SUV",
-fuel:"Diesel",
-image:"https://commons.wikimedia.org/wiki/Special:FilePath/Land%20Rover%20Discovery%20L462.jpg",
-description:"Land Rover Discovery."
-}
+const vehicles = [
+
+  /* TOYOTA */
+
+  {brand:"Toyota",model:"Land Cruiser 300",body:"SUV",year:"2026",search:"Toyota Land Cruiser 300"},
+  {brand:"Toyota",model:"Land Cruiser Prado",body:"SUV",year:"2026",search:"Toyota Land Cruiser Prado"},
+  {brand:"Toyota",model:"Hilux",body:"Pickup",year:"2026",search:"Toyota Hilux"},
+  {brand:"Toyota",model:"RAV4",body:"SUV",year:"2026",search:"Toyota RAV4"},
+  {brand:"Toyota",model:"Camry",body:"Berline",year:"2026",search:"Toyota Camry"},
+  {brand:"Toyota",model:"Corolla",body:"Berline",year:"2026",search:"Toyota Corolla"},
+  {brand:"Toyota",model:"Fortuner",body:"SUV",year:"2026",search:"Toyota Fortuner"},
+
+  /* MERCEDES-BENZ */
+
+  {brand:"Mercedes-Benz",model:"G-Class",body:"Luxe",year:"2026",search:"Mercedes-Benz G-Class"},
+  {brand:"Mercedes-Benz",model:"GLE",body:"SUV",year:"2026",search:"Mercedes-Benz GLE"},
+  {brand:"Mercedes-Benz",model:"GLS",body:"SUV",year:"2026",search:"Mercedes-Benz GLS"},
+  {brand:"Mercedes-Benz",model:"S-Class",body:"Berline",year:"2026",search:"Mercedes-Benz S-Class"},
+  {brand:"Mercedes-Benz",model:"E-Class",body:"Berline",year:"2026",search:"Mercedes-Benz E-Class"},
+  {brand:"Mercedes-Benz",model:"C-Class",body:"Berline",year:"2026",search:"Mercedes-Benz C-Class"},
+  {brand:"Mercedes-Benz",model:"AMG GT",body:"Sport",year:"2026",search:"Mercedes-AMG GT"},
+
+  /* BMW */
+
+  {brand:"BMW",model:"X5",body:"SUV",year:"2026",search:"BMW X5"},
+  {brand:"BMW",model:"X6",body:"SUV",year:"2026",search:"BMW X6"},
+  {brand:"BMW",model:"X7",body:"Luxe",year:"2026",search:"BMW X7"},
+  {brand:"BMW",model:"XM",body:"Sport",year:"2026",search:"BMW XM"},
+  {brand:"BMW",model:"7 Series",body:"Luxe",year:"2026",search:"BMW 7 Series"},
+  {brand:"BMW",model:"5 Series",body:"Berline",year:"2026",search:"BMW 5 Series"},
+  {brand:"BMW",model:"M4",body:"Sport",year:"2026",search:"BMW M4"},
+
+  /* AUDI */
+
+  {brand:"Audi",model:"Q8",body:"SUV",year:"2026",search:"Audi Q8"},
+  {brand:"Audi",model:"Q7",body:"SUV",year:"2026",search:"Audi Q7"},
+  {brand:"Audi",model:"Q5",body:"SUV",year:"2026",search:"Audi Q5"},
+  {brand:"Audi",model:"A8",body:"Luxe",year:"2026",search:"Audi A8"},
+  {brand:"Audi",model:"A6",body:"Berline",year:"2026",search:"Audi A6"},
+  {brand:"Audi",model:"RS6 Avant",body:"Sport",year:"2026",search:"Audi RS6 Avant"},
+
+  /* RANGE ROVER */
+
+  {brand:"Range Rover",model:"Range Rover",body:"Luxe",year:"2026",search:"Range Rover"},
+  {brand:"Range Rover",model:"Range Rover Sport",body:"SUV",year:"2026",search:"Range Rover Sport"},
+  {brand:"Range Rover",model:"Range Rover Velar",body:"SUV",year:"2026",search:"Range Rover Velar"},
+  {brand:"Range Rover",model:"Range Rover Evoque",body:"SUV",year:"2026",search:"Range Rover Evoque"},
+
+  /* PORSCHE */
+
+  {brand:"Porsche",model:"Cayenne",body:"SUV",year:"2026",search:"Porsche Cayenne"},
+  {brand:"Porsche",model:"Panamera",body:"Berline",year:"2026",search:"Porsche Panamera"},
+  {brand:"Porsche",model:"911",body:"Sport",year:"2026",search:"Porsche 911"},
+  {brand:"Porsche",model:"Taycan",body:"Électrique",year:"2026",search:"Porsche Taycan"},
+
+  /* TESLA */
+
+  {brand:"Tesla",model:"Model S",body:"Électrique",year:"2026",search:"Tesla Model S"},
+  {brand:"Tesla",model:"Model 3",body:"Électrique",year:"2026",search:"Tesla Model 3"},
+  {brand:"Tesla",model:"Model X",body:"Électrique",year:"2026",search:"Tesla Model X"},
+  {brand:"Tesla",model:"Model Y",body:"Électrique",year:"2026",search:"Tesla Model Y"},
+
+  /* LEXUS */
+
+  {brand:"Lexus",model:"LX 600",body:"Luxe",year:"2026",search:"Lexus LX 600"},
+  {brand:"Lexus",model:"GX",body:"SUV",year:"2026",search:"Lexus GX"},
+  {brand:"Lexus",model:"RX",body:"SUV",year:"2026",search:"Lexus RX"},
+  {brand:"Lexus",model:"ES",body:"Berline",year:"2026",search:"Lexus ES"},
+
+  /* VOLVO */
+
+  {brand:"Volvo",model:"XC90",body:"SUV",year:"2026",search:"Volvo XC90"},
+  {brand:"Volvo",model:"XC60",body:"SUV",year:"2026",search:"Volvo XC60"},
+  {brand:"Volvo",model:"EX90",body:"Électrique",year:"2026",search:"Volvo EX90"},
+
+  /* FORD */
+
+  {brand:"Ford",model:"Ranger",body:"Pickup",year:"2026",search:"Ford Ranger"},
+  {brand:"Ford",model:"F-150",body:"Pickup",year:"2026",search:"Ford F-150"},
+  {brand:"Ford",model:"Everest",body:"SUV",year:"2026",search:"Ford Everest"},
+  {brand:"Ford",model:"Mustang",body:"Sport",year:"2026",search:"Ford Mustang"},
+
+  /* JEEP */
+
+  {brand:"Jeep",model:"Wrangler",body:"SUV",year:"2026",search:"Jeep Wrangler"},
+  {brand:"Jeep",model:"Grand Cherokee",body:"SUV",year:"2026",search:"Jeep Grand Cherokee"},
+  {brand:"Jeep",model:"Gladiator",body:"Pickup",year:"2026",search:"Jeep Gladiator"},
+
+  /* VOLKSWAGEN */
+
+  {brand:"Volkswagen",model:"Touareg",body:"SUV",year:"2026",search:"Volkswagen Touareg"},
+  {brand:"Volkswagen",model:"Tiguan",body:"SUV",year:"2026",search:"Volkswagen Tiguan"},
+  {brand:"Volkswagen",model:"Golf",body:"Berline",year:"2026",search:"Volkswagen Golf"},
+
+  /* HYUNDAI */
+
+  {brand:"Hyundai",model:"Santa Fe",body:"SUV",year:"2026",search:"Hyundai Santa Fe"},
+  {brand:"Hyundai",model:"Tucson",body:"SUV",year:"2026",search:"Hyundai Tucson"},
+  {brand:"Hyundai",model:"Palisade",body:"SUV",year:"2026",search:"Hyundai Palisade"},
+
+  /* KIA */
+
+  {brand:"Kia",model:"Sportage",body:"SUV",year:"2026",search:"Kia Sportage"},
+  {brand:"Kia",model:"Sorento",body:"SUV",year:"2026",search:"Kia Sorento"},
+  {brand:"Kia",model:"Telluride",body:"SUV",year:"2026",search:"Kia Telluride"},
+
+  /* NISSAN */
+
+  {brand:"Nissan",model:"Patrol",body:"SUV",year:"2026",search:"Nissan Patrol"},
+  {brand:"Nissan",model:"X-Trail",body:"SUV",year:"2026",search:"Nissan X-Trail"},
+  {brand:"Nissan",model:"Navara",body:"Pickup",year:"2026",search:"Nissan Navara"},
+  {brand:"Nissan",model:"GT-R",body:"Sport",year:"2026",search:"Nissan GT-R"},
+
+  /* HONDA */
+
+  {brand:"Honda",model:"CR-V",body:"SUV",year:"2026",search:"Honda CR-V"},
+  {brand:"Honda",model:"Pilot",body:"SUV",year:"2026",search:"Honda Pilot"},
+  {brand:"Honda",model:"Civic",body:"Berline",year:"2026",search:"Honda Civic"},
+
+  /* FERRARI */
+
+  {brand:"Ferrari",model:"Roma",body:"Sport",year:"2026",search:"Ferrari Roma"},
+  {brand:"Ferrari",model:"296 GTB",body:"Sport",year:"2026",search:"Ferrari 296 GTB"},
+  {brand:"Ferrari",model:"Purosangue",body:"Luxe",year:"2026",search:"Ferrari Purosangue"},
+
+  /* LAMBORGHINI */
+
+  {brand:"Lamborghini",model:"Urus",body:"SUV",year:"2026",search:"Lamborghini Urus"},
+  {brand:"Lamborghini",model:"Revuelto",body:"Sport",year:"2026",search:"Lamborghini Revuelto"},
+  {brand:"Lamborghini",model:"Huracán",body:"Sport",year:"2026",search:"Lamborghini Huracan"},
+
+  /* BENTLEY */
+
+  {brand:"Bentley",model:"Bentayga",body:"Luxe",year:"2026",search:"Bentley Bentayga"},
+  {brand:"Bentley",model:"Continental GT",body:"Luxe",year:"2026",search:"Bentley Continental GT"},
+  {brand:"Bentley",model:"Flying Spur",body:"Luxe",year:"2026",search:"Bentley Flying Spur"},
+
+  /* ROLLS-ROYCE */
+
+  {brand:"Rolls-Royce",model:"Cullinan",body:"Luxe",year:"2026",search:"Rolls-Royce Cullinan"},
+  {brand:"Rolls-Royce",model:"Phantom",body:"Luxe",year:"2026",search:"Rolls-Royce Phantom"},
+  {brand:"Rolls-Royce",model:"Ghost",body:"Luxe",year:"2026",search:"Rolls-Royce Ghost"},
+
+  /* MASERATI */
+
+  {brand:"Maserati",model:"Grecale",body:"SUV",year:"2026",search:"Maserati Grecale"},
+  {brand:"Maserati",model:"Levante",body:"SUV",year:"2026",search:"Maserati Levante"},
+  {brand:"Maserati",model:"GranTurismo",body:"Sport",year:"2026",search:"Maserati GranTurismo"},
+
+  /* ASTON MARTIN */
+
+  {brand:"Aston Martin",model:"DB12",body:"Sport",year:"2026",search:"Aston Martin DB12"},
+  {brand:"Aston Martin",model:"DBX",body:"SUV",year:"2026",search:"Aston Martin DBX"},
+  {brand:"Aston Martin",model:"Vantage",body:"Sport",year:"2026",search:"Aston Martin Vantage"},
+
+  /* MCLAREN */
+
+  {brand:"McLaren",model:"750S",body:"Sport",year:"2026",search:"McLaren 750S"},
+  {brand:"McLaren",model:"Artura",body:"Sport",year:"2026",search:"McLaren Artura"},
+
+  /* BUGATTI */
+
+  {brand:"Bugatti",model:"Chiron",body:"Sport",year:"2026",search:"Bugatti Chiron"},
+  {brand:"Bugatti",model:"Tourbillon",body:"Sport",year:"2026",search:"Bugatti Tourbillon"},
+
+  /* BYD */
+
+  {brand:"BYD",model:"Seal",body:"Électrique",year:"2026",search:"BYD Seal"},
+  {brand:"BYD",model:"Atto 3",body:"Électrique",year:"2026",search:"BYD Atto 3"},
+  {brand:"BYD",model:"Tang",body:"Électrique",year:"2026",search:"BYD Tang"},
+
+  /* GEELY */
+
+  {brand:"Geely",model:"Monjaro",body:"SUV",year:"2026",search:"Geely Monjaro"},
+  {brand:"Geely",model:"Coolray",body:"SUV",year:"2026",search:"Geely Coolray"},
+
+  /* CHANGAN */
+
+  {brand:"Changan",model:"CS75 Plus",body:"SUV",year:"2026",search:"Changan CS75 Plus"},
+  {brand:"Changan",model:"UNI-K",body:"SUV",year:"2026",search:"Changan UNI-K"},
+
+  /* GAC */
+
+  {brand:"GAC",model:"GS8",body:"SUV",year:"2026",search:"GAC GS8"},
+  {brand:"GAC",model:"Emkoo",body:"SUV",year:"2026",search:"GAC Emkoo"}
 
 ];
 
 
-/* ============================================================
+/* ==========================================================
    MARQUES
-   ============================================================ */
+   ========================================================== */
 
-const BRANDS = [
+const allBrands = [
 
 "Toyota",
 "Mercedes-Benz",
 "BMW",
 "Audi",
-"Land Rover",
+"Range Rover",
 "Porsche",
+"Tesla",
+"Lexus",
+"Volvo",
+"Ford",
+"Jeep",
 "Volkswagen",
 "Hyundai",
 "Kia",
-"Ford",
-"Lexus",
 "Nissan",
 "Honda",
-"Volvo",
-"Tesla",
-"Jeep",
-"Maserati",
-"Bentley",
-"Rolls-Royce",
 "Ferrari",
 "Lamborghini",
+"Bentley",
+"Rolls-Royce",
+"Maserati",
 "Aston Martin",
 "McLaren",
+"Bugatti",
+"BYD",
+"Geely",
+"Changan",
+"GAC",
 "Cadillac",
 "Chevrolet",
-"Dodge",
+"Lincoln",
 "Genesis",
 "Infiniti",
 "Acura",
 "Subaru",
+"Mazda",
 "Mitsubishi",
+"Suzuki",
+"Isuzu",
 "Peugeot",
 "Renault",
 "Citroën",
-"DS",
-"Opel",
 "Fiat",
 "Alfa Romeo",
-"Mini",
+"Volvo",
 "Jaguar",
-"Geely",
-"BYD",
-"Chery",
-"Changan",
-"Great Wall",
-"MG",
-"Isuzu",
-"Mahindra",
-"Suzuki",
-"Foton",
-"JAC",
-"FAW",
-"BAIC",
-"Jetour",
-"Li Auto",
-"Zeekr",
+"Land Rover",
+"Lotus",
+"Mini",
+"Polestar",
 "Lucid",
-"Rivian"
+"Rivian",
+"Koenigsegg",
+"Pagani",
+"Maybach",
+"Smart"
 
 ];
 
 
-/* ============================================================
-   LOGOS
-   ============================================================
+/* ================= BRAND SHORT LOGOS ================= */
 
-   Les logos restent volontairement petits dans les cartes.
-
-   Pour une version commerciale définitive, il est préférable
-   d'héberger les logos NEXORAS dans le repository GitHub
-   afin d'éviter les dépendances externes.
-============================================================ */
-
-function brandLogo(brand){
-
-    const encoded = encodeURIComponent(brand);
-
-    return `https://www.google.com/s2/favicons?domain=${encoded}.com&sz=128`;
-
-}
-
-
-/* ============================================================
-   RENDER CATALOG
-   ============================================================ */
-
-const catalog = document.getElementById("catalog");
-
-function renderCatalog(){
-
-    const search =
-        document.getElementById("search").value.toLowerCase().trim();
-
-    const brand =
-        document.getElementById("brandFilter").value;
-
-    const type =
-        document.getElementById("typeFilter").value;
-
-    const fuel =
-        document.getElementById("fuelFilter").value;
+const brandShort = {
+  "Toyota":"TOY",
+  "Mercedes-Benz":"MB",
+  "BMW":"BMW",
+  "Audi":"AUDI",
+  "Range Rover":"RR",
+  "Porsche":"POR",
+  "Tesla":"TES",
+  "Lexus":"LEX",
+  "Volvo":"VOL",
+  "Ford":"FORD",
+  "Jeep":"JEEP",
+  "Volkswagen":"VW",
+  "Hyundai":"HYU",
+  "Kia":"KIA",
+  "Nissan":"NIS",
+  "Honda":"HON",
+  "Ferrari":"FER",
+  "Lamborghini":"LAM",
+  "Bentley":"BEN",
+  "Rolls-Royce":"RR",
+  "Maserati":"MAS",
+  "Aston Martin":"AM",
+  "McLaren":"MCL",
+  "Bugatti":"BUG",
+  "BYD":"BYD",
+  "Geely":"GEE",
+  "Changan":"CHA",
+  "GAC":"GAC"
+};
 
 
-    const filtered = VEHICLES.filter(car => {
+/* ==========================================================
+   IMAGE CACHE
+   ========================================================== */
 
-        const text =
-            `${car.brand} ${car.model}`.toLowerCase();
-
-        const searchOk =
-            !search || text.includes(search);
-
-        const brandOk =
-            !brand || car.brand === brand;
-
-        const typeOk =
-            !type || car.type === type;
-
-        const fuelOk =
-            !fuel || car.fuel === fuel;
-
-        return searchOk &&
-               brandOk &&
-               typeOk &&
-               fuelOk;
-
-    });
+const imageCache = {};
 
 
-    if(!filtered.length){
+/*
+  Recherche d'image par modèle exact.
 
-        catalog.innerHTML = `
-        <div style="
-            grid-column:1/-1;
-            padding:50px;
-            text-align:center;
-            color:#8ea0b4;
-            border:1px solid var(--line);
-            border-radius:18px;
-        ">
-            Aucun véhicule correspondant à votre recherche.
-        </div>
-        `;
+  L'API Wikipedia renvoie la miniature de la page
+  correspondant au modèle.
+*/
 
-        return;
+async function getExactModelImage(search){
+
+  if(imageCache[search]){
+    return imageCache[search];
+  }
+
+  try{
+
+    const api =
+      "https://en.wikipedia.org/w/api.php" +
+      "?action=query" +
+      "&generator=search" +
+      "&gsrsearch=" + encodeURIComponent(search) +
+      "&gsrnamespace=0" +
+      "&gsrlimit=5" +
+      "&prop=pageimages" +
+      "&piprop=thumbnail" +
+      "&pithumbsize=1000" +
+      "&format=json" +
+      "&origin=*";
+
+    const response = await fetch(api);
+
+    if(!response.ok){
+      throw new Error("Wikipedia unavailable");
     }
 
+    const data = await response.json();
 
-    catalog.innerHTML = filtered.map((car,index)=>`
+    const pages = data.query && data.query.pages
+      ? Object.values(data.query.pages)
+      : [];
 
-        <article class="car-card">
+    /*
+      On privilégie une page dont le titre contient
+      réellement une partie du nom recherché.
+    */
 
-            <div class="car-image">
+    const normalized = search.toLowerCase();
 
-                <img
-                    src="${car.image}"
-                    alt="${car.brand} ${car.model}"
-                    loading="lazy"
-                    onerror="this.src='https://placehold.co/1200x700/101b29/d9a441?text=${encodeURIComponent(car.brand+' '+car.model)}'"
-                >
+    let selected =
+      pages.find(p =>
+        p.thumbnail &&
+        p.title &&
+        p.title.toLowerCase().includes(
+          normalized.split(" ").slice(-1)[0]
+        )
+      );
 
-                <div class="brand-badge">
+    if(!selected){
+      selected = pages.find(p => p.thumbnail);
+    }
 
-                    <img
-                        src="${brandLogo(car.brand)}"
-                        alt="${car.brand}"
-                        onerror="this.style.display='none'"
-                    >
+    if(selected && selected.thumbnail){
 
-                </div>
+      imageCache[search] = selected.thumbnail.source;
 
-                <div class="vehicle-status">
-                    SUR DEMANDE
-                </div>
+      return selected.thumbnail.source;
+    }
 
-            </div>
+  }catch(error){
 
+    console.warn(
+      "Image non récupérée pour :",
+      search,
+      error
+    );
 
-            <div class="car-body">
+  }
 
-                <div class="car-brand">
-                    ${car.brand}
-                </div>
-
-                <div class="car-name">
-                    ${car.model}
-                </div>
-
-                <div class="car-meta">
-
-                    <span>${car.type}</span>
-                    <span>${car.fuel}</span>
-
-                </div>
-
-                <div class="price-request">
-
-                    Prix sur demande
-
-                    <span>
-                        Disponibilité à confirmer
-                    </span>
-
-                </div>
-
-                <div class="card-actions">
-
-                    <button
-                        class="btn btn-outline"
-                        onclick="openVehicle(${VEHICLES.indexOf(car)})">
-                        Détails
-                    </button>
-
-                    <a
-                        class="btn btn-gold"
-                        target="_blank"
-                        href="https://wa.me/233539834824?text=${encodeURIComponent(
-                            `Bonjour NEXORAS GROUP, je suis intéressé par le ${car.brand} ${car.model}. Je souhaite connaître le prix et la disponibilité.`
-                        )}">
-                        WhatsApp
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-    `).join("");
-
+  return fallbackCar;
 }
 
 
-/* ============================================================
-   BRAND FILTER
-   ============================================================ */
+/* ==========================================================
+   RENDER VEHICLES
+   ========================================================== */
 
-const brandFilter =
-    document.getElementById("brandFilter");
+const vehicleGrid = document.getElementById("vehicleGrid");
 
-BRANDS.forEach(brand=>{
+async function renderVehicles(list){
 
-    const option =
-        document.createElement("option");
+  vehicleGrid.innerHTML = "";
 
-    option.value=brand;
-    option.textContent=brand;
+  document.getElementById("emptyCars").style.display =
+    list.length ? "none" : "block";
 
-    brandFilter.appendChild(option);
+  list.forEach((car,index)=>{
 
-});
+    const card = document.createElement("article");
 
+    card.className = "vehicle-card";
 
-/* ============================================================
-   BRAND GRID
-   ============================================================ */
+    card.innerHTML = `
 
-const brandGrid =
-    document.getElementById("brandGrid");
-
-brandGrid.innerHTML = BRANDS.map(brand=>`
-
-    <button
-        class="brand-item"
-        onclick="filterBrand('${brand.replace(/'/g,"\\'")}')">
+      <div class="vehicle-image">
 
         <img
-            src="${brandLogo(brand)}"
-            alt="${brand}"
-            onerror="this.style.display='none'"
-        >
+          id="car-img-${index}"
+          src="${fallbackCar}"
+          alt="${car.brand} ${car.model}"
+          loading="lazy">
 
-        <span>${brand}</span>
+        <div class="brand-badge">
+          ${brandShort[car.brand] || car.brand.slice(0,4).toUpperCase()}
+        </div>
 
-    </button>
+        <div class="type-badge">
+          ${car.body}
+        </div>
 
-`).join("");
+      </div>
 
+      <div class="vehicle-info">
 
-function filterBrand(brand){
+        <div class="vehicle-brand">
+          ${car.brand}
+        </div>
 
-    brandFilter.value=brand;
+        <div class="vehicle-name">
+          ${car.model}
+        </div>
 
-    document
-        .getElementById("vehicules")
-        .scrollIntoView({behavior:"smooth"});
+        <div class="vehicle-meta">
+          <span class="meta">${car.year}</span>
+          <span class="meta">${car.body}</span>
+          <span class="meta">Prix sur demande</span>
+        </div>
 
-    renderCatalog();
+        <div class="vehicle-bottom">
 
-}
+          <span class="request-price">
+            Prix sur demande
+          </span>
 
+          <button
+            class="small-btn"
+            onclick='openVehicle(${JSON.stringify(car).replace(/'/g,"&#39;")})'>
+            Détails
+          </button>
 
-/* ============================================================
-   FILTER EVENTS
-   ============================================================ */
+        </div>
 
-document
-.getElementById("search")
-.addEventListener("input",renderCatalog);
-
-document
-.getElementById("brandFilter")
-.addEventListener("change",renderCatalog);
-
-document
-.getElementById("typeFilter")
-.addEventListener("change",renderCatalog);
-
-document
-.getElementById("fuelFilter")
-.addEventListener("change",renderCatalog);
-
-
-/* ============================================================
-   VEHICLE MODAL
-   ============================================================ */
-
-const modal =
-    document.getElementById("vehicleModal");
-
-function openVehicle(index){
-
-    const car=VEHICLES[index];
-
-    document.getElementById("modalImage").src=car.image;
-
-    document.getElementById("modalImage").alt=
-        `${car.brand} ${car.model}`;
-
-    document.getElementById("modalBrand").textContent=
-        car.brand;
-
-    document.getElementById("modalName").textContent=
-        car.model;
-
-    document.getElementById("modalDescription").textContent=
-        car.description;
-
-    document.getElementById("modalMeta").innerHTML=`
-
-        <span>${car.type}</span>
-        <span>${car.fuel}</span>
-        <span>Prix sur demande</span>
+      </div>
 
     `;
 
-    document.getElementById("modalWhatsapp").href=
-        `https://wa.me/233539834824?text=${
-            encodeURIComponent(
-                `Bonjour NEXORAS GROUP, je souhaite connaître le prix et la disponibilité du ${car.brand} ${car.model}.`
-            )
-        }`;
+    vehicleGrid.appendChild(card);
 
-    modal.style.display="flex";
+    /*
+      Chaque image est chargée séparément.
+    */
 
-}
+    getExactModelImage(car.search).then(url=>{
 
+      const img = document.getElementById(`car-img-${index}`);
 
-document
-.getElementById("modalClose")
-.addEventListener("click",()=>{
-    modal.style.display="none";
-});
+      if(img){
 
+        img.src = url;
 
-modal.addEventListener("click",e=>{
+        img.onerror = function(){
 
-    if(e.target===modal){
-        modal.style.display="none";
-    }
+          this.onerror = null;
 
-});
+          this.src = fallbackCar;
 
+        };
 
-/* ============================================================
-   MOBILE MENU
-   ============================================================ */
+      }
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-const navLinks =
-    document.getElementById("navLinks");
-
-mobileMenu.addEventListener("click",()=>{
-
-    navLinks.classList.toggle("open");
-
-});
-
-document
-.querySelectorAll(".nav-links a")
-.forEach(link=>{
-
-    link.addEventListener("click",()=>{
-        navLinks.classList.remove("open");
     });
 
-});
+  });
+
+}
 
 
-/* ============================================================
+/* ==========================================================
+   FILTERS
+   ========================================================== */
+
+const searchInput = document.getElementById("search");
+const bodyFilter = document.getElementById("bodyFilter");
+const brandFilter = document.getElementById("brandFilter");
+
+function filterVehicles(){
+
+  const query =
+    searchInput.value.trim().toLowerCase();
+
+  const body =
+    bodyFilter.value;
+
+  const brand =
+    brandFilter.value;
+
+  const filtered = vehicles.filter(car=>{
+
+    const matchesSearch =
+      !query ||
+      car.brand.toLowerCase().includes(query) ||
+      car.model.toLowerCase().includes(query);
+
+    const matchesBody =
+      body === "all" ||
+      car.body === body;
+
+    const matchesBrand =
+      brand === "all" ||
+      car.brand === brand;
+
+    return matchesSearch &&
+           matchesBody &&
+           matchesBrand;
+
+  });
+
+  renderVehicles(filtered);
+}
+
+searchInput.addEventListener("input",filterVehicles);
+bodyFilter.addEventListener("change",filterVehicles);
+brandFilter.addEventListener("change",filterVehicles);
+
+
+/* ==========================================================
+   BRAND FILTER
+   ========================================================== */
+
+function createBrandFilters(){
+
+  const uniqueBrands = [
+    ...new Set(vehicles.map(v=>v.brand))
+  ];
+
+  uniqueBrands.sort();
+
+  uniqueBrands.forEach(brand=>{
+
+    const option =
+      document.createElement("option");
+
+    option.value = brand;
+    option.textContent = brand;
+
+    brandFilter.appendChild(option);
+
+  });
+
+  const pills =
+    document.getElementById("brandPills");
+
+  const all =
+    document.createElement("button");
+
+  all.className = "brand-pill active";
+  all.textContent = "Toutes";
+  all.dataset.brand = "all";
+
+  pills.appendChild(all);
+
+  uniqueBrands.forEach(brand=>{
+
+    const button =
+      document.createElement("button");
+
+    button.className = "brand-pill";
+    button.textContent = brand;
+    button.dataset.brand = brand;
+
+    pills.appendChild(button);
+
+  });
+
+  pills.addEventListener("click",e=>{
+
+    const button =
+      e.target.closest(".brand-pill");
+
+    if(!button)return;
+
+    document.querySelectorAll(".brand-pill")
+      .forEach(x=>x.classList.remove("active"));
+
+    button.classList.add("active");
+
+    brandFilter.value =
+      button.dataset.brand;
+
+    filterVehicles();
+
+  });
+
+}
+
+
+/* ==========================================================
+   BRAND GRID
+   ========================================================== */
+
+function renderBrandGrid(){
+
+  const grid =
+    document.getElementById("brandsGrid");
+
+  allBrands.forEach(brand=>{
+
+    const item =
+      document.createElement("div");
+
+    item.className = "brand-item";
+
+    item.textContent = brand;
+
+    item.onclick = ()=>{
+
+      const exists =
+        vehicles.some(v=>v.brand===brand);
+
+      if(exists){
+
+        brandFilter.value = brand;
+
+        document.getElementById("automobiles")
+          .scrollIntoView({
+            behavior:"smooth"
+          });
+
+        filterVehicles();
+
+      }else{
+
+        openChat();
+
+        setTimeout(()=>{
+
+          addBotMessage(
+            `La marque ${brand} n'est pas encore affichée dans le catalogue. Je peux néanmoins vous aider à effectuer une demande spécifique.`
+          );
+
+        },400);
+
+      }
+
+    };
+
+    grid.appendChild(item);
+
+  });
+
+}
+
+
+/* ==========================================================
+   MODAL
+   ========================================================== */
+
+function openVehicle(car){
+
+  document.getElementById("modalBrand")
+    .textContent = car.brand;
+
+  document.getElementById("modalName")
+    .textContent = car.model;
+
+  document.getElementById("modalDescription")
+    .textContent =
+      `${car.brand} ${car.model} — ${car.body}, ${car.year}. Prix et disponibilité sur demande auprès de NEXORAS GROUP.`;
+
+  const modalImage =
+    document.getElementById("modalImage");
+
+  modalImage.src = fallbackCar;
+
+  getExactModelImage(car.search).then(url=>{
+    modalImage.src = url;
+  });
+
+  const text =
+    `Bonjour NEXORAS GROUP, je souhaite connaître le prix et la disponibilité du ${car.brand} ${car.model}.`;
+
+  document.getElementById("modalWhatsApp").href =
+    "https://wa.me/233539834824?text=" +
+    encodeURIComponent(text);
+
+  document.getElementById("productModal")
+    .classList.add("open");
+
+}
+
+function closeModal(){
+
+  document.getElementById("productModal")
+    .classList.remove("open");
+
+}
+
+document.getElementById("productModal")
+  .addEventListener("click",e=>{
+
+    if(e.target.id === "productModal"){
+      closeModal();
+    }
+
+  });
+
+
+/* ==========================================================
+   APPLIANCES
+   ========================================================== */
+
+function requestProduct(product){
+
+  const text =
+    `Bonjour NEXORAS GROUP, je souhaite connaître le prix et la disponibilité pour : ${product}.`;
+
+  window.open(
+    "https://wa.me/233539834824?text=" +
+    encodeURIComponent(text),
+    "_blank"
+  );
+
+}
+
+
+/* ==========================================================
    CHATBOT
-   ============================================================ */
+   ========================================================== */
 
-const chatButton =
-    document.getElementById("chatButton");
+function toggleChat(){
 
-const chatBox =
-    document.getElementById("chatBox");
-
-const chatClose =
-    document.getElementById("chatClose");
-
-const chatMessages =
-    document.getElementById("chatMessages");
-
-const chatInput =
-    document.getElementById("chatInput");
-
-const chatSend =
-    document.getElementById("chatSend");
-
-
-chatButton.addEventListener("click",()=>{
-
-    chatBox.style.display =
-        chatBox.style.display==="block"
-        ? "none"
-        : "block";
-
-});
-
-
-chatClose.addEventListener("click",()=>{
-
-    chatBox.style.display="none";
-
-});
-
-
-function addMessage(text,type){
-
-    const div=
-        document.createElement("div");
-
-    div.className=`msg ${type}`;
-
-    div.textContent=text;
-
-    chatMessages.appendChild(div);
-
-    chatMessages.scrollTop=
-        chatMessages.scrollHeight;
+  document
+    .getElementById("chatbot")
+    .classList.toggle("open");
 
 }
 
+function openChat(){
 
-function botReply(message){
-
-    const text=message.toLowerCase();
-
-    if(
-        text.includes("prix") ||
-        text.includes("tarif") ||
-        text.includes("combien")
-    ){
-
-        return "Les véhicules NEXORAS sont affichés avec « Prix sur demande ». Contactez-nous sur WhatsApp au +233 53 983 4824 pour obtenir le prix correspondant au modèle recherché.";
-
-    }
-
-
-    if(
-        text.includes("whatsapp") ||
-        text.includes("contact")
-    ){
-
-        return "Vous pouvez contacter NEXORAS directement sur WhatsApp au +233 53 983 4824 ou par email à nexorasgroup.ng@gmail.com.";
-
-    }
-
-
-    if(
-        text.includes("electro") ||
-        text.includes("réfrigérateur") ||
-        text.includes("machine")
-    ){
-
-        return "NEXORAS propose également une rubrique Électroménager avec des catégories comme réfrigérateurs, cuisine, lavage et multimédia.";
-
-    }
-
-
-    if(
-        text.includes("toyota") ||
-        text.includes("mercedes") ||
-        text.includes("bmw") ||
-        text.includes("land cruiser")
-    ){
-
-        return "Nous pouvons rechercher le modèle automobile que vous souhaitez. Indiquez simplement la marque et le modèle.";
-
-    }
-
-
-    return "Je peux vous aider à rechercher un véhicule, connaître son prix sur demande, obtenir sa disponibilité ou contacter NEXORAS. Que recherchez-vous ?";
+  document
+    .getElementById("chatbot")
+    .classList.add("open");
 
 }
 
+function addUserMessage(text){
 
-function sendChat(){
+  const body =
+    document.getElementById("chatBody");
+
+  const div =
+    document.createElement("div");
+
+  div.className = "message user";
+
+  div.textContent = text;
+
+  body.appendChild(div);
+
+  body.scrollTop = body.scrollHeight;
+
+}
+
+function addBotMessage(text){
+
+  const body =
+    document.getElementById("chatBody");
+
+  const div =
+    document.createElement("div");
+
+  div.className = "message bot";
+
+  div.textContent = text;
+
+  body.appendChild(div);
+
+  body.scrollTop = body.scrollHeight;
+
+}
+
+document.getElementById("chatForm")
+  .addEventListener("submit",e=>{
+
+    e.preventDefault();
+
+    const input =
+      document.getElementById("chatInput");
 
     const message =
-        chatInput.value.trim();
+      input.value.trim();
 
     if(!message)return;
 
-    addMessage(message,"user");
+    addUserMessage(message);
 
-    chatInput.value="";
+    input.value = "";
 
     setTimeout(()=>{
 
-        addMessage(
-            botReply(message),
-            "bot"
-        );
+      const lower =
+        message.toLowerCase();
 
-    },450);
+      let response =
+        "Je peux vous aider à rechercher une marque, un modèle automobile ou un appareil électroménager. Pour le prix et la disponibilité, contactez NEXORAS sur WhatsApp.";
 
-}
+      if(
+        lower.includes("prix") ||
+        lower.includes("coût") ||
+        lower.includes("combien")
+      ){
+
+        response =
+          "Les prix NEXORAS sont communiqués sur demande selon le modèle, l'année, la configuration et la disponibilité. Utilisez le bouton WhatsApp pour recevoir une offre.";
+
+      }
+
+      else if(
+        lower.includes("whatsapp") ||
+        lower.includes("contact")
+      ){
+
+        response =
+          "Vous pouvez contacter NEXORAS GROUP sur WhatsApp au +233 53 983 4824 ou par e-mail à nexorasgroup.ng@gmail.com.";
+
+      }
+
+      else if(
+        lower.includes("électroménager") ||
+        lower.includes("electromenager") ||
+        lower.includes("frigo") ||
+        lower.includes("réfrigérateur") ||
+        lower.includes("climatiseur")
+      ){
+
+        response =
+          "NEXORAS propose également des équipements électroménagers : réfrigérateurs, lave-linge, climatisation, téléviseurs, fours et équipements de cuisine.";
+
+      }
+
+      else if(
+        lower.includes("toyota")
+      ){
+
+        response =
+          "Toyota est disponible dans notre catalogue avec notamment Land Cruiser 300, Land Cruiser Prado, Hilux, RAV4, Camry, Corolla et Fortuner.";
+
+      }
+
+      else if(
+        lower.includes("mercedes")
+      ){
+
+        response =
+          "Mercedes-Benz est disponible avec notamment G-Class, GLE, GLS, S-Class, E-Class, C-Class et AMG GT.";
+
+      }
+
+      else if(
+        lower.includes("bmw")
+      ){
+
+        response =
+          "BMW est disponible avec notamment X5, X6, X7, XM, Série 7, Série 5 et M4.";
+
+      }
+
+      addBotMessage(response);
+
+    },500);
+
+  });
 
 
-chatSend.addEventListener("click",sendChat);
+/* ==========================================================
+   MOBILE MENU
+   ========================================================== */
 
-chatInput.addEventListener("keydown",e=>{
+document.getElementById("mobileMenu")
+  .addEventListener("click",()=>{
 
-    if(e.key==="Enter"){
-        sendChat();
-    }
+    document
+      .getElementById("mainNav")
+      .classList.toggle("open");
 
-});
+  });
+
+document.querySelectorAll("#mainNav a")
+  .forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+      document
+        .getElementById("mainNav")
+        .classList.remove("open");
+
+    });
+
+  });
 
 
-/* ============================================================
+/* ==========================================================
    TRANSLATIONS
-   ============================================================ */
+   ========================================================== */
 
-const translations={
+const translations = {
 
-fr:{
-home:"Accueil",
-vehicles:"Véhicules",
-brands:"Marques",
-appliances:"Électroménager",
-services:"Services",
-about:"À propos",
-contact:"Contact",
-heroText:"Découvrez une sélection de véhicules, de marques internationales et d'appareils électroménagers avec NEXORAS GROUP."
-},
+  fr:{
+    nav_home:"Accueil",
+    nav_cars:"Automobiles",
+    nav_homeappliance:"Électroménager",
+    nav_brands:"Marques",
+    nav_about:"À propos",
+    nav_contact:"Contact",
 
-en:{
-home:"Home",
-vehicles:"Vehicles",
-brands:"Brands",
-appliances:"Home Appliances",
-services:"Services",
-about:"About",
-contact:"Contact",
-heroText:"Discover a selection of vehicles, international brands and home appliances with NEXORAS GROUP."
-},
+    hero_text:"Découvrez une sélection automobile premium et une gamme d'appareils électroménagers sélectionnés pour répondre aux exigences des particuliers et des professionnels.",
 
-es:{
-home:"Inicio",
-vehicles:"Vehículos",
-brands:"Marcas",
-appliances:"Electrodomésticos",
-services:"Servicios",
-about:"Nosotros",
-contact:"Contacto",
-heroText:"Descubra una selección de vehículos, marcas internacionales y electrodomésticos con NEXORAS GROUP."
-},
+    discover_cars:"Explorer les automobiles",
+    discover_home:"Voir l'électroménager",
 
-pt:{
-home:"Início",
-vehicles:"Veículos",
-brands:"Marcas",
-appliances:"Eletrodomésticos",
-services:"Serviços",
-about:"Sobre nós",
-contact:"Contacto",
-heroText:"Descubra uma seleção de veículos, marcas internacionais e eletrodomésticos com a NEXORAS GROUP."
-}
+    brands_stat:"marques automobiles",
+    models_stat:"modèles accessibles",
+    support_stat:"demande & assistance",
+
+    category_title:"Un catalogue pensé pour <span>vous</span>",
+    category_text:"Automobile, maison et équipements : explorez nos catégories et demandez les disponibilités correspondant à vos besoins.",
+
+    cat_cars:"Automobiles",
+    cat_cars_text:"Berlines, SUV, coupés, sportives, électriques et véhicules premium.",
+
+    cat_home:"Électroménager",
+    cat_home_text:"Réfrigérateurs, climatiseurs, téléviseurs, lave-linge et équipements maison.",
+
+    cat_brands:"Grandes marques",
+    cat_brands_text:"Une sélection de marques internationales et de constructeurs premium.",
+
+    cat_assistance:"Assistance NEXORAS",
+    cat_assistance_text:"Demandez un modèle, une marque ou un produit qui ne figure pas encore dans le catalogue.",
+
+    cars_title:"Catalogue <span>automobile</span>",
+    cars_text:"Les prix et disponibilités sont communiqués sur demande. Sélectionnez un véhicule pour demander les informations.",
+
+    appliances_title:"Électroménager <span>NEXORAS</span>",
+    appliances_text:"Des équipements pour la maison et les espaces professionnels. Disponibilités et tarifs sur demande.",
+
+    brands_title:"Plus de <span>50 marques</span>",
+    brands_text:"NEXORAS peut rechercher votre véhicule auprès de différentes marques et vous communiquer les disponibilités sur demande."
+  },
+
+  en:{
+    nav_home:"Home",
+    nav_cars:"Automobiles",
+    nav_homeappliance:"Home Appliances",
+    nav_brands:"Brands",
+    nav_about:"About",
+    nav_contact:"Contact",
+
+    hero_text:"Discover a premium automotive selection and a range of home appliances selected for individuals and professionals.",
+
+    discover_cars:"Explore automobiles",
+    discover_home:"View home appliances",
+
+    brands_stat:"automotive brands",
+    models_stat:"available models",
+    support_stat:"request & assistance",
+
+    category_title:"A catalogue designed for <span>you</span>",
+    category_text:"Automotive, home and equipment: explore our categories and request availability according to your needs.",
+
+    cat_cars:"Automobiles",
+    cat_cars_text:"Sedans, SUVs, coupes, sports cars, electric and premium vehicles.",
+
+    cat_home:"Home Appliances",
+    cat_home_text:"Refrigerators, air conditioners, televisions, washing machines and home equipment.",
+
+    cat_brands:"Major brands",
+    cat_brands_text:"A selection of international and premium manufacturers.",
+
+    cat_assistance:"NEXORAS Assistance",
+    cat_assistance_text:"Request a model, brand or product that is not yet displayed in the catalogue.",
+
+    cars_title:"Automotive <span>catalogue</span>",
+    cars_text:"Prices and availability are provided on request. Select a vehicle to request information.",
+
+    appliances_title:"NEXORAS <span>Home Appliances</span>",
+    appliances_text:"Equipment for homes and professional spaces. Availability and prices on request.",
+
+    brands_title:"More than <span>50 brands</span>",
+    brands_text:"NEXORAS can search for your desired vehicle across different brands and provide availability upon request."
+  },
+
+  es:{
+    nav_home:"Inicio",
+    nav_cars:"Automóviles",
+    nav_homeappliance:"Electrodomésticos",
+    nav_brands:"Marcas",
+    nav_about:"Nosotros",
+    nav_contact:"Contacto",
+
+    hero_text:"Descubra una selección automovilística premium y una gama de electrodomésticos para particulares y profesionales.",
+
+    discover_cars:"Explorar automóviles",
+    discover_home:"Ver electrodomésticos",
+
+    brands_stat:"marcas automovilísticas",
+    models_stat:"modelos disponibles",
+    support_stat:"solicitud y asistencia",
+
+    category_title:"Un catálogo pensado para <span>usted</span>",
+    category_text:"Automóviles, hogar y equipamiento: explore nuestras categorías y solicite disponibilidad.",
+
+    cat_cars:"Automóviles",
+    cat_cars_text:"Sedanes, SUV, coupés, deportivos, eléctricos y vehículos premium.",
+
+    cat_home:"Electrodomésticos",
+    cat_home_text:"Frigoríficos, aires acondicionados, televisores, lavadoras y equipamiento del hogar.",
+
+    cat_brands:"Grandes marcas",
+    cat_brands_text:"Una selección de fabricantes internacionales y premium.",
+
+    cat_assistance:"Asistencia NEXORAS",
+    cat_assistance_text:"Solicite un modelo, una marca o un producto que todavía no aparece en el catálogo.",
+
+    cars_title:"Catálogo <span>automovilístico</span>",
+    cars_text:"Los precios y la disponibilidad se comunican bajo solicitud.",
+
+    appliances_title:"Electrodomésticos <span>NEXORAS</span>",
+    appliances_text:"Equipamiento para hogares y espacios profesionales.",
+
+    brands_title:"Más de <span>50 marcas</span>",
+    brands_text:"NEXORAS puede buscar su vehículo entre diferentes marcas y comunicarle la disponibilidad."
+  },
+
+  pt:{
+    nav_home:"Início",
+    nav_cars:"Automóveis",
+    nav_homeappliance:"Eletrodomésticos",
+    nav_brands:"Marcas",
+    nav_about:"Sobre",
+    nav_contact:"Contato",
+
+    hero_text:"Descubra uma seleção automotiva premium e uma gama de eletrodomésticos para particulares e profissionais.",
+
+    discover_cars:"Explorar automóveis",
+    discover_home:"Ver eletrodomésticos",
+
+    brands_stat:"marcas automotivas",
+    models_stat:"modelos disponíveis",
+    support_stat:"pedido e assistência",
+
+    category_title:"Um catálogo pensado para <span>você</span>",
+    category_text:"Automóveis, casa e equipamentos: explore nossas categorias e solicite disponibilidade.",
+
+    cat_cars:"Automóveis",
+    cat_cars_text:"Sedãs, SUVs, cupês, esportivos, elétricos e veículos premium.",
+
+    cat_home:"Eletrodomésticos",
+    cat_home_text:"Geladeiras, ar-condicionado, televisores, máquinas de lavar e equipamentos domésticos.",
+
+    cat_brands:"Grandes marcas",
+    cat_brands_text:"Uma seleção de fabricantes internacionais e premium.",
+
+    cat_assistance:"Assistência NEXORAS",
+    cat_assistance_text:"Solicite um modelo, marca ou produto que ainda não esteja no catálogo.",
+
+    cars_title:"Catálogo <span>automotivo</span>",
+    cars_text:"Preços e disponibilidade são fornecidos mediante solicitação.",
+
+    appliances_title:"Eletrodomésticos <span>NEXORAS</span>",
+    appliances_text:"Equipamentos para residências e espaços profissionais.",
+
+    brands_title:"Mais de <span>50 marcas</span>",
+    brands_text:"A NEXORAS pode pesquisar seu veículo entre diferentes marcas e informar a disponibilidade."
+  }
 
 };
 
 
-const language =
-    document.getElementById("language");
+function translatePage(lang){
 
+  const data =
+    translations[lang] || translations.fr;
 
-language.addEventListener("change",()=>{
-
-    const lang=language.value;
-
-    document
-    .querySelectorAll("[data-i18n]")
+  document.querySelectorAll("[data-i18n]")
     .forEach(element=>{
 
-        const key=
-            element.getAttribute("data-i18n");
+      const key =
+        element.dataset.i18n;
 
-        if(
-            translations[lang] &&
-            translations[lang][key]
-        ){
+      if(data[key] !== undefined){
 
-            element.textContent=
-                translations[lang][key];
+        element.innerHTML =
+          data[key];
 
-        }
+      }
 
     });
 
-});
+  document.querySelectorAll("[data-i18n-placeholder]")
+    .forEach(element=>{
+
+      const key =
+        element.dataset.i18nPlaceholder;
+
+      if(key === "search"){
+
+        const placeholders = {
+          fr:"Rechercher une marque ou un modèle...",
+          en:"Search a brand or model...",
+          es:"Buscar una marca o modelo...",
+          pt:"Pesquisar uma marca ou modelo..."
+        };
+
+        element.placeholder =
+          placeholders[lang];
+
+      }
+
+    });
+
+  document.documentElement.lang = lang;
+
+  localStorage.setItem(
+    "nexoras_language",
+    lang
+  );
+
+}
 
 
-/* ============================================================
-   YEAR
-   ============================================================ */
+document.getElementById("language")
+  .addEventListener("change",e=>{
 
-document.getElementById("year").textContent=
-    new Date().getFullYear();
+    translatePage(e.target.value);
+
+  });
 
 
-/* ============================================================
-   INITIAL RENDER
-   ============================================================ */
+/* ==========================================================
+   HELPERS
+   ========================================================== */
 
-renderCatalog();
+function goTo(id){
 
+  document.getElementById(id)
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* ==========================================================
+   INIT
+   ========================================================== */
+
+document.getElementById("year")
+  .textContent = new Date().getFullYear();
+
+createBrandFilters();
+
+renderBrandGrid();
+
+renderVehicles(vehicles);
+
+const savedLanguage =
+  localStorage.getItem("nexoras_language");
+
+if(savedLanguage){
+
+  document.getElementById("language")
+    .value = savedLanguage;
+
+  translatePage(savedLanguage);
+
+}
+
+
+/* ==========================================================
+   IMAGE ERROR HANDLING — GLOBAL
+   ========================================================== */
+
+document.addEventListener("error",function(event){
+
+  const element = event.target;
+
+  if(element.tagName === "IMG"){
+
+    if(
+      !element.dataset.fallbackUsed &&
+      !element.src.includes("images.unsplash.com")
+    ){
+
+      element.dataset.fallbackUsed = "true";
+
+      element.src = fallbackCar;
+
+    }
+
+  }
+
+},true);
 
 </script>
 
